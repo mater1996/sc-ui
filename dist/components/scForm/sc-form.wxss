@@ -1,4 +1,4 @@
-@import "../sc-ui.wxss";
+@import "../../sc-ui.wxss";
 
 .sc-ripple {
     border-radius: 100%;

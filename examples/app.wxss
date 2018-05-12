@@ -1,0 +1,17 @@
+/**app.wxss**/
+
+@import "assets/lib/scui/sc-ui.wxss";
+@import "assets/lib/scui/font-icon/font-icon.wxss";
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200 rpx 0;
+    box-sizing: border-box;
+}
+
+
+

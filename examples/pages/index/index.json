@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "首页",
+  "usingComponents":{
+    "sc-button":"../../assets/lib/scui/scButton/sc-button",
+    "sc-input":"../../assets/lib/scui/scInput/sc-input",
+    "sc-progress":"../../assets/lib/scui/scProgress/sc-progress",
+    "sc-textarea":"../../assets/lib/scui/scTextarea/sc-textarea",
+    "sc-checkbox":"../../assets/lib/scui/scCheckbox/sc-checkbox",
+    "sc-checkbox-group":"../../assets/lib/scui/scCheckboxGroup/sc-checkbox-group",
+    "sc-form":"../../assets/lib/scui/scForm/sc-form",
+    "sc-switch":"../../assets/lib/scui/scSwitch/sc-switch",
+    "sc-radio":"../../assets/lib/scui/scRadio/sc-radio",
+    "sc-radio-group":"../../assets/lib/scui/scRadioGroup/sc-radio-group"
+  }
+}

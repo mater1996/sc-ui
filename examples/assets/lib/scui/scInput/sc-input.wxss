@@ -1,0 +1,37 @@
+@import "../sc-ui.wxss";
+
+.sc-input-label{
+    display: block;
+    width: 100%;
+    font-size: 32rpx;
+    pointer-events:none; /* 该元素不会成为鼠标事件的target*/
+    transform-origin: left;  /* transition旋转或移动的基点*/
+    -webkit-transition: all .2s;
+    -webkit-transform-origin: left;
+}
+
+.sc-textfield-disabled .sc-input-label{
+    color: rgba(0,0,0,.42);
+}
+
+.sc-textfield{
+    margin: 8px;
+}
+
+.sc-textfield-floating-label{
+    position: relative;
+}
+
+.sc-textfield-floating-label .sc-input-label{
+    -webkit-transform: scale(1) translateY(54rpx);
+    transform: scale(1) translateY(54rpx);
+}
+
+.sc-textfield-floating-label .sc-input-label-focus{
+    -webkit-transform: scale(.75) translateY(0);
+    transform: scale(.75) translateY(0);
+}
+
+.sc-textfield-floating-label .sc-input-focus::after{
+    width: 100%;
+}

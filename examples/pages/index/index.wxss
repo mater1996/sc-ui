@@ -1,0 +1,29 @@
+/**index.wxss**/
+@import "../../assets/lib/scui/sc-ui.wxss";
+
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userinfo-avatar {
+    width: 128 rpx;
+    height: 128 rpx;
+    margin: 20 rpx;
+    border-radius: 50%;
+}
+
+.userinfo-nickname {
+    color: #aaa;
+}
+
+.usermotto {
+    margin-top: 200px;
+}
+
+.redText{
+    color:white;
+    background-color: #0b93d5;
+    height: 80px;
+}

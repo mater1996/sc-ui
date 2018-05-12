@@ -1,0 +1,57 @@
+@import "../sc-ui.wxss";
+
+.sc-ripple {
+    border-radius: 100%;
+    background-color: #000000;
+    left: 20px;
+    top: 20px;
+    opacity: 0.3;
+    transform: scale(0.3);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+
+.sc-ripple-animation-slow {
+    animation: sc-ripple 0.6s ease-out;
+    /*兼容各大浏览器*/
+    -moz-animation: sc-ripple 0.6s ease-out;
+    -webkit-animation: sc-ripple 0.6s ease-out;
+    -o-animation: sc-ripple 0.6s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.sc-ripple-animation-slow-hold {
+    animation: sc-ripple-hold 1s ease-out;
+    /*兼容各大浏览器*/
+    -moz-animation: sc-ripple-hold 1s ease-out;
+    -webkit-animation: sc-ripple-hold 1s ease-out;
+    -o-animation: sc-ripple-hold 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sc-ripple {
+    from {
+        transform: scale(0.1);
+        opacity: 0.3;
+    }
+
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes sc-ripple-hold {
+    from {
+        transform: scale(0.1);
+        opacity: 0.3;
+    }
+
+    to {
+        transform: scale(2.5);
+        opacity: 0.3;
+    }
+}
+
+

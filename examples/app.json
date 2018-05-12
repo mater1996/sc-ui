@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/person/person"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "partTimeJob",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "selectedColor":"black",
+    "backgroundColor":"#ECEFF1",
+    "borderStyle":"#EDE7F6",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"assets/img/icon/homeUnSelected.png",
+      "selectedIconPath":"assets/img/icon/homeSelected.png"
+    }, {
+      "pagePath": "pages/person/person",
+      "text": "我的兼职",
+      "iconPath":"assets/img/icon/meUnSelected.png",
+      "selectedIconPath":"assets/img/icon/meSelected.png"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}
