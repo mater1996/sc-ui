@@ -14,16 +14,16 @@
 在要使用的页面中注册组件
 ```
   "usingComponents":{
-    "sc-button":"../../assets/lib/scui/dist/components/scButton/sc-button",
-    "sc-input":"../../assets/lib/scui/dist/components/scInput/sc-input",
-    "sc-progress":"../../assets/lib/scui/dist/components/scProgress/sc-progress",
-    "sc-textarea":"../../assets/lib/scui/dist/components/scTextarea/sc-textarea",
-    "sc-checkbox":"../../assets/lib/scui/dist/components/scCheckbox/sc-checkbox",
-    "sc-checkbox-group":"../../assets/lib/scui/dist/components/scCheckboxGroup/sc-checkbox-group",
-    "sc-form":"../../assets/lib/scui/dist/components/scForm/sc-form",
-    "sc-switch":"../../assets/lib/scui/dist/components/scSwitch/sc-switch",
-    "sc-radio":"../../assets/lib/scui/dist/components/scRadio/sc-radio",
-    "sc-radio-group":"../../assets/lib/scui/dist/components/scRadioGroup/sc-radio-group"
+    "sc-button":"scui/dist/components/scButton/sc-button",
+    "sc-input":"scui/dist/components/scInput/sc-input",
+    "sc-progress":"scui/dist/components/scProgress/sc-progress",
+    "sc-textarea":"scui/dist/components/scTextarea/sc-textarea",
+    "sc-checkbox":"scui/dist/components/scCheckbox/sc-checkbox",
+    "sc-checkbox-group":"lib/scui/dist/components/scCheckboxGroup/sc-checkbox-group",
+    "sc-form":"scui/dist/components/scForm/sc-form",
+    "sc-switch":"scui/dist/components/scSwitch/sc-switch",
+    "sc-radio":"scui/dist/components/scRadio/sc-radio",
+    "sc-radio-group":"scui/dist/components/scRadioGroup/sc-radio-group"
   }
 ```
 
