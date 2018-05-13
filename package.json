@@ -1,0 +1,73 @@
+{
+  "_from": "wxa-compressor",
+  "_id": "wxa-compressor@0.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-70B7BHvQOv+8Pw0LJWAzcAse33I=",
+  "_location": "/wxa-compressor",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "wxa-compressor",
+    "name": "wxa-compressor",
+    "escapedName": "wxa-compressor",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/wxa-compressor/-/wxa-compressor-0.0.1.tgz",
+  "_shasum": "ef407b047bd03affbc3f0d0b256033700b1edf72",
+  "_spec": "wxa-compressor",
+  "_where": "E:\\program\\mini-program\\sc-ui\\sc-ui",
+  "author": {
+    "name": "wangshuov",
+    "email": "nbagonet@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/nbagonet/wxa-compressor/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "微信小程序代码压缩器",
+  "dependencies": {
+    "autoprefixer": "^6.6.0",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-latest": "^6.16.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-jsonlint": "^1.2.0",
+    "gulp-jsonminify2": "^1.0.0",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8",
+    "run-sequence": "^1.2.2",
+    "stream-combiner2": "^1.1.1"
+  },
+  "homepage": "https://github.com/nbagonet/wxa-compressor#readme",
+  "keywords": [],
+  "license": "MIT",
+  "name": "wxa-compressor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbagonet/wxa-compressor.git"
+  },
+  "scripts": {
+    "build": "gulp prod --silent",
+    "clean": "gulp clean --silent",
+    "dev": "gulp watch --silent"
+  },
+  "version": "0.0.1"
+}

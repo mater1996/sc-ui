@@ -1,7 +1,1 @@
-<!-- 
- Created by bai on 2018/5/2
--->
-<view class="sc-class">
-    <view wx-if="{{type === 'determinate'}}" style="width: {{width > 100 ? 100 : width}}%"
-          class="sc-progress-determinate"></view>
-</view>
+<view class="sc-class"><view wx-if="{{type === 'determinate'}}" style="width: {{width > 100 ? 100 : width}}%" class="sc-progress-determinate"></view></view>
