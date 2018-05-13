@@ -17,5 +17,8 @@ Page({
     },
     submit(e){
         console.log('表单提交，携带value值为：', e.detail.value)
+    },
+    switchChange(e){
+        console.log('switch发生change事件',e.detail)
     }
 });

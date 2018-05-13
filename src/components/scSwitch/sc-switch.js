@@ -16,6 +16,9 @@ Component({
         },
         name:{
             type:String,
+        },
+        value:{
+            type:null
         }
     },
     data: {
@@ -26,7 +29,7 @@ Component({
     ready(){
         this.setData({
             checked:this.properties.checked,
-            value:this.properties.checked,
+            value:this.properties.value,
             name:this.properties.name || 'switch'+swicthCount++
         })
     },
@@ -43,7 +46,7 @@ Component({
                 clicked:true
             });
 
-            this.triggerEvent(`change`, {value:this.data.checked}, { bubbles: true, composed: true });
+            this.triggerEvent(`change`, {value:this.data.value,checked:this.data.checked}, { bubbles: true, composed: true });
         },
         _animationend(){
             this.setData({

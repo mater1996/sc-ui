@@ -80,3 +80,98 @@
 |ripple | Boolean| true|点击是否有涟漪的效果|
 
 
+#### 3.2 sc-check-box
+##### 注意 请结合 sc-check-box-group 使用
+```
+<sc-checkbox-group sc-class="sc-checkbox-group-row" bindchange="checkboxChange">
+    <sc-checkbox sc-class="sc-checkbox" label="初始选中" checked="{{true}}" value="check1"></sc-checkbox>
+    <sc-checkbox sc-class="sc-checkbox" label="初始未选中" checked="{{false}}"  value="check2"></sc-checkbox>
+    <sc-checkbox disabled="{{true}}" sc-class="sc-checkbox" label="禁用" checked="{{false}}"></sc-checkbox>
+</sc-checkbox-group>
+```
+| 属性名  | 类型  |	默认值 |	说明 |
+| ------------ | ------------ | ------------ | ------------ |
+|value |   null |default | \<checkbox/>标识，选中时触发\<sc-checkbox-group/>的 change 事件，并携带 <checkbox/> 的 value ||
+| disabled  | Boolean  |	false |	是否禁用 |
+| checked  | Boolean  |	false |	当前是否选中，可用来设置默认选中 |
+|bindcheckchange|Handle||状态更改时的触发事件|
+|sc-class|||建议使用 sc-checkbox样式|
+|group上的sc-class|||sc-checkbox-group-row横向的radio组、sc-check-group-column纵向的radio组|
+
+#### 3.3 sc-input
+input组件
+
+```
+<sc-input sc-class="sc-input" label="测试" bindinput="input"></sc-input>
+```
+
+##### 注意 目前label不可和placeholder一起使用
+
+| 属性名  | 类型  |	默认值 |	说明 |		生效时机 |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+|value |   String | | 输入框的初始内容 ||
+|type |   String | "text" | input 的类型 ||
+|password |   Boolean	 |false | 是否是密码类型 ||
+|value |   String | | 输入框的初始内容 ||
+|placeholder |   String | | 	输入框为空时占位符 ||
+|placeholder-style |   String | | 	指定 placeholder 的样式 ||
+|placeholder-class |   String | 	"input-placeholder" | 指定 placeholder 的样式类 ||
+|disabled |   Boolean |false | 是否禁用 ||
+|maxlength |   Number |140 | 最大输入长度，设置为 -1 的时候不限制最大长度	 ||
+|cursor-spacing |   Number |0 | 指定光标与键盘的距离，单位 px 。取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离 ||
+|focus	|   	Boolean | 	false| 获取焦点 ||
+|confirm-type | String | "done"| 设置键盘右下角按钮的文字 ||
+|confirm-hold |   Boolean |false | 	点击键盘右下角按钮时是否保持键盘不收起 ||
+|cursor |   Number | | 	指定focus时的光标位置 ||
+|selection-start |   	Number | 	-1| 光标起始位置，自动聚集时有效，需与selection-end搭配使用 ||
+|selection-end |   	Number |-1 | 		光标结束位置，自动聚集时有效，需与selection-start搭配使用 ||
+|adjust-position |   Boolean |	true | 	键盘弹起时，是否自动上推页面 ||
+|bindinput |   EventHandle	 | | 	当键盘输入时，触发input事件，event.detail = {value, cursor}，处理函数可以直接 return 一个字符串，将替换输入框的内容。 ||
+|bindfocus |   EventHandle	 | | 		输入框聚焦时触发，event.detail = { value, height }，height 为键盘高度，在基础库 1.9.90 起支持 ||
+|bindblur |   EventHandle	 | | 	输入框失去焦点时触发，event.detail = {value: value} ||
+|bindconfirm |   EventHandle | | 		点击完成按钮时触发，event.detail = {value: value} ||
+|sc-class|Stirng||对input标签使用的class类 推荐使用 sc-input|
+##### 类型等请到 https://developers.weixin.qq.com/miniprogram/dev/component/input.html 比对
+
+#### 3.4 sc-progress
+```
+ <sc-progress sc-class="sc-progress sc-progress-indeterminate" style="width: 100%" width="{{width}}"></sc-progress>
+ <sc-progress sc-class="sc-progress" style="width: 100%" type="determinate" width="{{width}}"></sc-progress>
+```
+| 属性名  | 类型  |	默认值 |	说明 |
+| ------------ | ------------ | ------------ | ------------ |
+| sc-class  |   | |	对内部元素应用的class名称 使用 sc-progress sc-progress sc-progress-indeterminate 为随机进度条|
+|type|determinate||将这个进度条声明为固定进度条 请不要加入 sc-progress-indeterminate类|
+|width|number||固定进度条的长度|
+
+#### 3.5 sc-radio
+##### 注意 请结合 sc-radio-group 使用
+```
+ <sc-radio-group bind:change="radioChange">
+      <sc-radio style="margin-right: 8px" label="测试" sc-class="sc-radio" checked="{{true}}" value="radio1"></sc-radio>
+      <sc-radio style="margin-right: 8px" label="测试" sc-class="sc-radio" value="radio2"></sc-radio>
+      <sc-radio style="margin-right: 8px" label="测试" sc-class="sc-radio" checked disabled></sc-radio>
+</sc-radio-group>
+```
+
+| 属性名  | 类型  |	默认值 |	说明 |
+| ------------ | ------------ | ------------ | ------------ |
+| bind:change |   |	 | radio组change事件|
+|sc-class|String || 推荐sc-radio|
+|label|String||radio的标签|
+|checked|Boolean|false|radio的选中(请不要设置多个，如果有多个则只会设置第一个)|
+|value|||chenge事件携带的value|
+|disabled|Boolean|false|禁用|
+
+#### 3.6 sc-switch
+
+```
+ <sc-switch style="height: 36px" sc-class="sc-switch" bind:change="checkChange"></sc-switch>
+```
+
+| 属性名  | 类型  |	默认值 |	说明 |
+| ------------ | ------------ | ------------ | ------------ |
+| bind:change |   |	 | switch change事件|
+|sc-class|String || 推荐sc-switch|
+|value|||chenge事件携带的value|
+|disabled|Boolean|false|禁用|
