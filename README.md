@@ -175,3 +175,26 @@ input组件
 |sc-class|String || 推荐sc-switch|
 |value|||chenge事件携带的value|
 |disabled|Boolean|false|禁用|
+
+#### 3.7 st-form
+
+实验中
+
+```
+ <sc-form bind:submit="submit" report-submit>
+        <sc-input sc-class="sc-input" label="姓名" name="name" bindinput="input"></sc-input>
+        <sc-radio-group name="sex">
+            <sc-radio style="margin-right: 8px" label="男" sc-class="sc-radio" checked="{{true}}" value="man"></sc-radio>
+            <sc-radio style="margin-right: 8px" label="女" sc-class="sc-radio" value="women"></sc-radio>
+        </sc-radio-group>
+        <sc-checkbox-group name="like" sc-class="sc-checkbox-group-row" bindchange="checkboxChange">
+            <sc-checkbox sc-class="sc-checkbox" label="音乐" checked="{{true}}" value="music"></sc-checkbox>
+            <sc-checkbox sc-class="sc-checkbox" label="电影" checked="{{false}}" value="movie"></sc-checkbox>
+            <sc-checkbox sc-class="sc-checkbox" label="书籍" checked="{{false}}" value="book"></sc-checkbox>
+        </sc-checkbox-group>
+</sc-form>
+```
+
+
+#### 3.8 sc-textarea
+##### 实验中
