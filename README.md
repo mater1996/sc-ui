@@ -1,8 +1,4 @@
 # sc-ui
-<<<<<<< HEAD
-
-
-给个赞
 =======
 微信小程序material ui
 
@@ -81,28 +77,3 @@
 |  bindgetphonenumber|  Handler |	|获取用户手机号回调|open-type="getphonenumber"|
 |  binderror|  Handler |	Handler|当使用开放能力时，发生错误的回调|open-type="launchApp"|
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> dev
