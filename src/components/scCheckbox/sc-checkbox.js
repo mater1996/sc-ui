@@ -38,15 +38,12 @@ Component({
     },
     externalClasses: ['sc-class'],
     methods: {
-        _longPress(e) {
-            this._addRipple(e, true);
-        },
         _changeCheck(e) {
             this.setData({
                 checked: !this.data.checked,
                 clicked: true
             });
-            this.triggerEvent(`checkChange`, {checked:this.data.checked,value:this.properties.value}, { bubbles: true, composed: true });
+            this.triggerEvent(`checkchange`, {checked:this.data.checked,value:this.properties.value}, { bubbles: true, composed: true });
         },
         _animationend() {
             this.setData({

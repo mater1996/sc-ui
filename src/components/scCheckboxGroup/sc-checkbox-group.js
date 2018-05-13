@@ -38,7 +38,7 @@ Component({
             // 使用getRelationNodes可以获得nodes数组，包含所有已关联的custom-li，且是有序的
             return this.getRelationNodes('../scCheckbox/sc-checkbox');
         },
-        checkChange(e){
+        _checkChange(e){
             let value = this.data.value =[];
             for(let i of this.items){
                 if(i.data.checked){

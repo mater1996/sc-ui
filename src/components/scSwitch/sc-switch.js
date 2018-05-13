@@ -37,7 +37,7 @@ Component({
     },
     externalClasses: ['sc-class'],
     methods: {
-        _changeChecked(){
+        _changeSwitch(){
             this.setData({
                 checked:!this.data.checked,
                 clicked:true

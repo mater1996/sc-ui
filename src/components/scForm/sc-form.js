@@ -5,9 +5,9 @@
 Component({
     properties: {
         // 绑定未冒泡的事件手动触发到上一层
-        reportSubmit:{
-            type:Boolean,
-            value:false
+        reportSubmit: {
+            type: Boolean,
+            value: false
         }
     },
     relations: {
@@ -39,7 +39,7 @@ Component({
     },
     externalClasses: ['sc-form-class'],
     ready() {
-        this.fomrControls = this._getAllControl();
+        this.formControllers = this._getAllControl();
     },
     methods: {
         _getAllControl: function () {
@@ -49,49 +49,24 @@ Component({
                 inputs: this.getRelationNodes('../scInput/sc-input'),
                 textareas: this.getRelationNodes('../scTextarea/sc-textarea'),
                 switchs: this.getRelationNodes('../scSwitch/sc-switch'),
-                radioGroups: this.getRelationNodes('../scRadioGroup/sc-radio-group'),
+                radioGroups: this.getRelationNodes('../scRadioGroup/sc-radio-group')
             };
         },
         _formSubmit(e) {
-            let {checkboxGroups,inputs,textareas,switchs,radioGroups} = this.fomrControls;
+            let formControllers = this.formControllers;
             let value = {
-                formId:e.detail.formId
+                formId: e.detail.formId
             };
-            inputs.length > 0 ? inputs.map(v => {
-                Object.defineProperty(value, v.data.name, {
-                    writable: false,
-                    value: v.data.inputValue
-                })
-            }) : null;
-
-            textareas.length > 0 ? textareas.map(v => {
-                Object.defineProperty(value, v.data.name, {
-                    writable: false,
-                    value: v.data.inputValue
-                })
-            }) : null;
-
-            radioGroups.length > 0 ? radioGroups.map(v => {
-                Object.defineProperty(value, v.data.name, {
-                    writable: false,
-                    value: v.data.value
-                })
-            }) : null;
-
-            switchs.length > 0 ? switchs.map(v => {
-                Object.defineProperty(value, v.data.name, {
-                    writable: false,
-                    value: v.data.value
-                })
-            }) : null;
-
-            checkboxGroups.length > 0 ? checkboxGroups.map(v => {
-                Object.defineProperty(value, v.data.name, {
-                    writable: false,
-                    value: v.data.value
-                })
-            }) : null;
-
+            for (let key in this.formControllers) {
+                if (formControllers.hasOwnProperty(key)) {
+                    formControllers[key].length > 0 ? formControllers[key].map(v => {
+                        Object.defineProperty(value, v.data.name, {
+                            writable: false,
+                            value: v.data.value
+                        })
+                    }) : null;
+                }
+            }
             this.triggerEvent(`submit`, {value: value}, {bubbles: true, composed: true})
         },
         _addRipple(e, holdAnimate) {

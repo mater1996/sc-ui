@@ -1,1 +1,1 @@
-<view class="sc-class" catch:checkchange="checkChange"><slot></slot></view>
+<view class="sc-class" catch:radiochange="_radioChange"><slot></slot></view>

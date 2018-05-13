@@ -1,6 +1,6 @@
 <!-- 
  Created by bai on 2018/5/2
  -->
-<view class="sc-class" catch:checkChange="checkChange">
+<view class="sc-class" catch:checkchange="_checkChange">
     <slot></slot>
 </view>

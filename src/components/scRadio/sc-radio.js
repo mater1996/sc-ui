@@ -41,13 +41,13 @@ Component({
     },
     externalClasses: ['sc-class'],
     methods: {
-        _changeChecked(){
+        _changeRadio(){
             this.setData({
                 checked:true,
                 clicked:true,
                 showRipple:true
             });
-            this.triggerEvent(`checkChange`, {}, { bubbles: true, composed: true });
+            this.triggerEvent(`radiochange`, {}, { bubbles: true, composed: true });
         },
         _animationend(){
             this.setData({

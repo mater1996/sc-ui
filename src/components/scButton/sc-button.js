@@ -149,19 +149,11 @@ Component({
                     rippleList: this.data.rippleList
                 });
             }
-            this.triggerEvent(`submit`, e, { bubbles: true, composed: true})
         },
         _returnEventData(e) {
             if (!this.properties.disabled) {
                 this.triggerEvent(`${this.data.openTypeToBindEvent[this.properties.openType]}`, e, {})
             }
-        },
-        formSubmit(e){
-            console.log(e)
-        },
-        submit(e){
-            console.log(111111111111);
-            this.triggerEvent(`submit`, e, {bubbles: true, composed: true})
         }
     }
 });

@@ -39,7 +39,7 @@ Component({
         _getAllRadios: function () {
             return this.getRelationNodes('../scRadio/sc-radio');
         },
-        checkChange(e) {
+        _radioChange(e) {
             for (let i of this.items) {
                 if (!i.data.clicked) {
                     if (!i.data.disabled) {
