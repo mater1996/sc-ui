@@ -75,5 +75,8 @@
 |  show-message-card|  Handler ||客服消息回调|open-type="contact"|
 | bindcontact|  String |当前分享路径|会话内消息卡片点击跳转小程序路径|open-type="contact"|
 |  bindgetphonenumber|  Handler |	|获取用户手机号回调|open-type="getphonenumber"|
-|  binderror|  Handler |	Handler|当使用开放能力时，发生错误的回调|open-type="launchApp"|
+|  binderror|  Handler |	|当使用开放能力时，发生错误的回调|open-type="launchApp"|
+| sc-class| String | | 对sc-button 内的button元素修改样式 注意:sc-btn 为推荐样式||
+|ripple | Boolean| true|点击是否有涟漪的效果|
+
 
