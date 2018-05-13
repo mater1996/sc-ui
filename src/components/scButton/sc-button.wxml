@@ -2,9 +2,9 @@
  Created by bai on 2018/5/2
  -->
 <button class="sc-class"
-        capture-bind:tap="_addRipple"
-        capture-bind:longpress="_longPress"
-        capture-bind:touchend="_touchend"
+        capture-bind:tap="{{ripple ? '_addRipple' : ''}}"
+        capture-bind:longpress="{{ripple ? '_longPress' : ''}}"
+        capture-bind:touchend="{{ripple ? '_touchend' : ''}}"
         bind:getuserinfo="{{openType === 'getUserInfo' ? '_returnEventData' : '' }}"
         bind:getphonenumber="{{openType === 'getphonenumber' ? '_returnEventData' : '' }}"
         bind:error="{{openType === 'launchApp' ? '_returnEventData' : '' }}"

@@ -3,7 +3,7 @@
  -->
 <view class="sc-textfield-floating-label">
     <label wx-if="{{label ? true : false}}"
-           class="sc-textarea-label {{focus || inputValue ? 'sc-textarea-label-focus' :''}}">{{label}}</label>
+           class="sc-textarea-label {{focus || value ? 'sc-textarea-label-focus' :''}}">{{label}}</label>
     <!--{{height}}-->
     <textarea
               class="sc-class {{focus ? 'sc-textarea-focus' :''}}"

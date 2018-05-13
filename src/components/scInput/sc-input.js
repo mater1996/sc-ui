@@ -75,7 +75,7 @@ Component({
         }
     },
     data: {
-        inputValue:null,
+        value:null,
     },
     relations: {
         '../scForm/sc-form': {
@@ -85,7 +85,7 @@ Component({
     externalClasses: ['sc-class'],
     ready(){
         this.setData({
-            inputValue:this.properties.value,
+            value:this.properties.value,
             placeholder:this.properties.label ? null: this.properties.placeholder,
             name:this.properties.name || 'input' + inputCount++
         })
@@ -110,7 +110,7 @@ Component({
         _input(e){
             if(!this.properties.disabled){
                 this.setData({
-                    inputValue:e.detail.value
+                    value:e.detail.value
                 });
                 this.triggerEvent('input', e.detail, {})
             }

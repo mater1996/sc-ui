@@ -1,8 +1,7 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/person/person"
+    "pages/scuitest/sc-ui-test",
+    "pages/index/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -21,10 +20,10 @@
       "iconPath":"assets/img/icon/homeUnSelected.png",
       "selectedIconPath":"assets/img/icon/homeSelected.png"
     }, {
-      "pagePath": "pages/person/person",
-      "text": "我的兼职",
-      "iconPath":"assets/img/icon/meUnSelected.png",
-      "selectedIconPath":"assets/img/icon/meSelected.png"
+      "pagePath": "pages/scuitest/sc-ui-test",
+      "text": "ui测试",
+      "iconPath":"assets/img/icon/testUnSelected.png",
+      "selectedIconPath":"assets/img/icon/testSelected.png"
     }]
   },
   "networkTimeout": {

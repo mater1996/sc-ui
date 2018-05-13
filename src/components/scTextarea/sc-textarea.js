@@ -91,7 +91,7 @@ Component({
         }
     },
     data: {
-        inputValue:null,
+        value:null,
     },
     externalClasses: ['sc-class'],
     relations: {
@@ -101,7 +101,7 @@ Component({
     },
     ready(){
         this.setData({
-            inputValue:this.properties.value,
+            value:this.properties.value,
             placeholder:this.properties.label ? null: this.properties.placeholder,
             name:this.properties.name || 'textarea' + textareaCount++
         })
@@ -136,7 +136,7 @@ Component({
         _input(e){
             if(!this.properties.disabled){
                 this.setData({
-                    inputValue:e.detail.value
+                    value:e.detail.value
                 });
                 this.triggerEvent('input', e, {})
             }

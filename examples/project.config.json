@@ -12,8 +12,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.98",
-	"appid": "wx4420c8158bf1615c",
-	"projectname": "smallCat",
+	"appid": "touristappid",
+	"projectname": "scui%20-%20example",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

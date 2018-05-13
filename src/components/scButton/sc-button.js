@@ -4,6 +4,10 @@
 
 Component({
     properties: {
+        ripple:{
+            type:Boolean,
+            value:true
+        },
         // 绑定未冒泡的事件手动触发到上一层
         openType: {
             type: String
@@ -152,7 +156,7 @@ Component({
         },
         _returnEventData(e) {
             if (!this.properties.disabled) {
-                this.triggerEvent(`${this.data.openTypeToBindEvent[this.properties.openType]}`, e, {})
+                this.triggerEvent(`${this.data.openTypeToBindEvent[this.properties.openType]}`, e.detail, {})
             }
         }
     }
