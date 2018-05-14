@@ -14,7 +14,6 @@
 
 .sc-ripple-animation-slow {
     animation: sc-ripple 0.6s ease-out;
-    /*兼容各大浏览器*/
     -moz-animation: sc-ripple 0.6s ease-out;
     -webkit-animation: sc-ripple 0.6s ease-out;
     -o-animation: sc-ripple 0.6s ease-out;

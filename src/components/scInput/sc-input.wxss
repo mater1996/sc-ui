@@ -8,6 +8,7 @@
     transform-origin: left;  /* transition旋转或移动的基点*/
     -webkit-transition: all .2s;
     -webkit-transform-origin: left;
+    text-align: left;
 }
 
 .sc-textfield-disabled .sc-input-label{
@@ -15,7 +16,7 @@
 }
 
 .sc-textfield{
-    margin: 8px;
+    padding: 8px;
 }
 
 .sc-textfield-floating-label{

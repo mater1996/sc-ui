@@ -3,7 +3,7 @@
  -->
 <view class="sc-textfield sc-textfield-floating-label {{disabled ? 'sc-textfield-disabled' : ''}}">
     <label wx-if="{{label ? true : false}}" class="sc-input-label {{focus || value ? 'sc-input-label-focus' :''}}">{{label}}</label>
-    <input class="sc-class {{focus ? 'sc-input-focus' :''}}"
+    <input class="sc-class sc-input {{focus ? 'sc-input-focus' :''}}"
            bind:focus="_focus"
            bind:blur="_blur"
            bindinput="_input"

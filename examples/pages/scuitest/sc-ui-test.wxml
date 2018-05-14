@@ -46,8 +46,8 @@
     <view style="margin: 16px">
         <view style="text-align: center;margin-bottom: 16px">switch组件</view>
         <view>
-            <sc-switch style="height: 36px" sc-class="sc-switch" bind:change="switchChange" value="1111"></sc-switch>
-            <sc-switch style="margin-left: 16px" sc-class="sc-switch" disabled="{{true}}" bind:change="switchChange"></sc-switch>
+            <sc-switch style="height: 36px" sc-class="sc-switch" bind:change="checkChange"></sc-switch>
+            <sc-switch style="margin-left: 16px" sc-class="sc-switch" disabled="{{true}}" bind:change="checkChange"></sc-switch>
             <sc-checkbox sc-class="sc-checkbox" label="初始选中" value="value" checked="{{true}}" bind:checkChange="checkChange"></sc-checkbox>
         </view>
     </view>
@@ -73,9 +73,9 @@
 
 
     <text>form表单</text>
-    <sc-form bind:submit="submit" report-submit>
-        <sc-input sc-class="sc-input" label="姓名" name="name" bindinput="input"></sc-input>
-        <sc-radio-group name="sex">
+    <sc-form bind:submit="submit" report-submit style="width: 100%;text-align: center">
+        <sc-input sc-class="sc-input" label="姓名" name="name" bindinput="input" selection-start="{{-1}}" cursor="0"></sc-input>
+        <sc-radio-group sc-class="sc-radio-group" name="sex">
             <sc-radio style="margin-right: 8px" label="男" sc-class="sc-radio" checked="{{true}}" value="man"></sc-radio>
             <sc-radio style="margin-right: 8px" label="女" sc-class="sc-radio" value="women"></sc-radio>
         </sc-radio-group>
