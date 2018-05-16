@@ -1,12 +1,5 @@
 @import "../../sc-ui.wxss";
 
-checkbox{
-    position: relative;
-    width: 25px;
-    height: 25px;
-    margin-right: 8px;
-}
-
 .sc-checkbox-icon{
     position: relative;
     display: flex;

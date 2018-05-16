@@ -10,14 +10,14 @@
     <view style="margin: 16px">
         <view style="text-align: center;margin-bottom: 16px">button测试</view>
         <view style="display: flex;justify-content: center;align-items: center">
-            <sc-button sc-class="sc-btn box-shadow-9 new-color" style="display: inline-block;margin-right: 16px"
+            <sc-button sc-class="box-shadow-9 new-color sc-btn" style="display: inline-block;margin-right: 16px"
                        open-type="getUserInfo" bind:getuserinfo="getUserInfo">
                 普通
             </sc-button>
-            <sc-button sc-class="sc-btn sc-btn-icon box-shadow-9" style="display: inline-block;margin-right: 16px">
+            <sc-button sc-class="sc-btn-icon box-shadow-9" style="display: inline-block;margin-right: 16px">
                 <text class="sc-icon iconfont icon-phone"></text>
             </sc-button>
-            <sc-button sc-class="sc-btn box-shadow-9" style="display: inline-block;margin-right: 16px" disabled="true">
+            <sc-button sc-class="box-shadow-9" style="display: inline-block;margin-right: 16px" disabled="true">
                 禁用
             </sc-button>
         </view>
@@ -25,9 +25,10 @@
 
     <view style="margin: 16px">
         <view style="text-align: center;margin-bottom: 16px">input组件测试</view>
-        <view style="display: flex;justify-content: center;align-items: center;flex-direction: column">
-            <sc-input sc-class="sc-input" label="测试" bindinput="input"></sc-input>
-            <sc-input sc-class="sc-input" label="禁用" bindinput="input" disabled="{{true}}"></sc-input>
+        <view style="">
+            <sc-input sc-class="sc-input" float="{{true}}" label="普通"  placeholder="aaaa" bindinput="input"></sc-input>
+            <sc-input sc-class="sc-input" float="{{true}}" label="带图标"  placeholder="aaaa" bindinput="input"></sc-input>
+            <sc-input  sc-class="sc-input" label="禁用" bindinput="input" disabled="{{true}}"></sc-input>
             <sc-textarea sc-class="sc-textarea" style="width: 80%" label="hahaha"></sc-textarea><!-- 高度控制问题 -->
         </view>
     </view>
@@ -46,8 +47,8 @@
     <view style="margin: 16px">
         <view style="text-align: center;margin-bottom: 16px">switch组件</view>
         <view>
-            <sc-switch style="height: 36px" sc-class="sc-switch" bind:change="checkChange"></sc-switch>
-            <sc-switch style="margin-left: 16px" sc-class="sc-switch" disabled="{{true}}" bind:change="checkChange"></sc-switch>
+            <sc-switch style="height: 36px" sc-class="" bind:change="checkChange"></sc-switch>
+            <sc-switch style="margin-left: 16px" sc-class="" disabled="{{true}}" bind:change="checkChange"></sc-switch>
             <sc-checkbox sc-class="sc-checkbox" label="初始选中" value="value" checked="{{true}}" bind:checkChange="checkChange"></sc-checkbox>
         </view>
     </view>
@@ -55,10 +56,10 @@
     <view style="margin: 16px">
         <view style="text-align: center;margin-bottom: 16px">radio组件</view>
         <view>
-            <sc-radio-group bind:change="radioChange">
-                <sc-radio style="margin-right: 8px" label="测试" sc-class="sc-radio" checked="{{true}}" value="radio1"></sc-radio>
-                <sc-radio style="margin-right: 8px" label="测试" sc-class="sc-radio" value="radio2"></sc-radio>
-                <sc-radio style="margin-right: 8px" label="测试" sc-class="sc-radio" checked disabled></sc-radio>
+            <sc-radio-group bind:change="radioChange" sc-class="">
+                <sc-radio style="margin-right: 8px" label="测试" sc-class="" checked="{{true}}" value="radio1"></sc-radio>
+                <sc-radio style="margin-right: 8px" label="测试" sc-class="" value="radio2"></sc-radio>
+                <sc-radio style="margin-right: 8px" label="测试" sc-class="" checked disabled></sc-radio>
             </sc-radio-group>
         </view>
     </view>
@@ -66,18 +67,18 @@
     <view style="margin: 16px;width: 80%;">
         <view style="text-align: center;margin-bottom: 16px">进度条组件</view>
         <view style="width: 100%;text-align: center">
-            <sc-progress sc-class="sc-progress sc-progress-indeterminate" style="width: 100%" width="{{width}}"></sc-progress>
-            <sc-progress sc-class="sc-progress" style="width: 100%" type="determinate" width="{{width}}"></sc-progress>
+            <sc-progress sc-class="" style="width: 100%" width="{{width}}"></sc-progress>
+            <sc-progress sc-class="" style="width: 100%" type="determinate" width="{{width}}"></sc-progress>
         </view>
     </view>
 
 
     <text>form表单</text>
     <sc-form bind:submit="submit" report-submit style="width: 100%;text-align: center">
-        <sc-input sc-class="sc-input" label="姓名" name="name" bindinput="input" selection-start="{{-1}}" cursor="0"></sc-input>
+        <sc-input sc-class="" label="姓名" name="name" bindinput="input" selection-start="{{-1}}" cursor="0"></sc-input>
         <sc-radio-group sc-class="sc-radio-group" name="sex">
-            <sc-radio style="margin-right: 8px" label="男" sc-class="sc-radio" checked="{{true}}" value="man"></sc-radio>
-            <sc-radio style="margin-right: 8px" label="女" sc-class="sc-radio" value="women"></sc-radio>
+            <sc-radio style="margin-right: 8px" label="男" sc-class="" checked="{{true}}" value="man"></sc-radio>
+            <sc-radio style="margin-right: 8px" label="女" sc-class="" value="women"></sc-radio>
         </sc-radio-group>
         <sc-checkbox-group name="like" sc-class="sc-checkbox-group-row" bindchange="checkboxChange">
             <sc-checkbox sc-class="sc-checkbox" label="音乐" checked="{{true}}" value="music"></sc-checkbox>

@@ -1,1 +1,1 @@
-<view class="sc-class"><view wx-if="{{type === 'determinate'}}" style="width: {{width > 100 ? 100 : width}}%" class="sc-progress-determinate"></view></view>
+<view class="sc-class progress {{type === 'determinate' ? '' : 'progress-indeterminate'}}"><view wx-if="{{type === 'determinate'}}" style="width: {{width > 100 ? 100 : width}}%" class="sc-determinate-class progress-determinate"></view></view>

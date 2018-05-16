@@ -8,6 +8,13 @@ Component({
         reportSubmit: {
             type: Boolean,
             value: false
+        },
+        submitText:{
+            type: String,
+        },
+        showSubmit:{
+            type: Boolean,
+            value: true
         }
     },
     relations: {
@@ -37,7 +44,7 @@ Component({
         rippleDeleteTimer: null,
         rippleColor: '#ffffff',
     },
-    externalClasses: ['sc-form-class'],
+    externalClasses: ['sc-form-class','submit-btn-class'],
     ready() {
         this.formControllers = this._getAllControl();
     },
@@ -71,7 +78,7 @@ Component({
         },
         _addRipple(e, holdAnimate) {
             if (!this.properties.disabled) {
-                this._queryMultipleNodes('.sc-btn-class').then(res => {
+                this._queryMultipleNodes('.submit-btn-class').then(res => {
                     const button = res[0], viewPort = res[1];
                     const boxWidth = parseInt(button.width);
                     const boxHeight = parseInt(button.height);

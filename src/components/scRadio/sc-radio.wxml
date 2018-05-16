@@ -1,7 +1,7 @@
 <!--
  Created by bai on 2018/5/2
  -->
-<view class="sc-class {{disabled ? 'sc-radio-disabled': ''}} {{checked ? 'sc-radio-checked': ''}}"
+<view class="sc-class sc-radio {{disabled ? 'sc-radio-disabled': ''}} {{checked ? 'sc-radio-checked': ''}}"
       capture-bind:tap="{{!disabled ? '_changeRadio' :''}}">
     <view class="sc-radio-icon">
         <view class="sc-ripple">

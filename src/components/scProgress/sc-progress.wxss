@@ -1,11 +1,76 @@
 @import "../../sc-ui.wxss";
 
-.sc-progress-determinate {
+.progress{
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.progress-indeterminate:before{
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: #3f51b5;
+    content: '' ;
+    background-color: inherit;
+    -webkit-animation: progress-animate 1.5s linear infinite;
+    animation: progress-animate 1.5s linear infinite;
+    animation-name: progress-animate;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: initial;
+    animation-iteration-count: infinite;
+    animation-direction: initial;
+    animation-fill-mode: initial;
+    animation-play-state: initial;
+    will-change: left,width;
+}
+
+
+.progress-determinate {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
     -webkit-transition: width .3s linear;
     transition: width .3s linear
+}
+
+@-webkit-keyframes progress-animate {
+    0%{
+        left: 0;
+        width: 0;
+    }
+
+    33%{
+        left: 33%;
+        width: 33%;
+    }
+
+    66%{
+        left: 66%;
+        width: 66%;
+    }
+
+    100%{
+        left: 100%;
+        width: 0;
+    }
+}
+
+@keyframes progress-animate {
+    0%{
+        left: 0;
+        width: 0;
+    }
+
+    50%{
+        left: 30%;
+        width: 70%;
+    }
+
+    100%{
+        left: 100%;
+        width: 0;
+    }
 }

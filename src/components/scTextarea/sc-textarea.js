@@ -88,6 +88,10 @@ Component({
         },
         name:{
             type:String
+        },
+        float:{
+            type:Boolean,
+            value:true
         }
     },
     data: {

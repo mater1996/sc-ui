@@ -1,4 +1,5 @@
 /**testui.wxss**/
+@import "../../assets/lib/scui/dist/sc-ui.wxss";
 
 .userinfo {
     display: flex;
@@ -28,5 +29,13 @@
 }
 
 .new-color{
-    background-color: #0b93d5;
+    background-color: blue;
+}
+
+.new-border{
+    border-bottom:1px solid blue;
+}
+
+.sc-switch-icon-color {
+    background-color: blue;
 }

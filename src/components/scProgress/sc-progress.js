@@ -14,7 +14,7 @@ Component({
             value:0
         }
     },
-    externalClasses: ['sc-class'],
+    externalClasses: ['sc-class','sc-determinate-class'],
     data: {
 
     },

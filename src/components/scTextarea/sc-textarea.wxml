@@ -1,12 +1,12 @@
 <!-- 
  Created by bai on 2018/5/2
  -->
-<view class="sc-textfield sc-textfield-floating-label">
+<view class="sc-textfield {{float ? 'sc-textfield-floating-label' : ''}}">
     <label wx-if="{{label ? true : false}}"
            class="sc-textarea-label {{focus || value ? 'sc-textarea-label-focus' :''}}">{{label}}</label>
     <!--{{height}}-->
     <textarea
-              class="sc-class {{focus ? 'sc-textarea-focus' :''}}"
+              class="sc-class sc-textarea {{focus ? 'sc-textarea-focus' :''}}"
               bind:focus="_focus"
               bind:blur="_blur"
               bindinput="_input"
@@ -15,7 +15,7 @@
               value="{{value}}"
               type="{{type}}"
               password="{{password}}"
-              placeholder="{{placeholder}}"
+              placeholder="{{float ? label && focus ? placeholder : '' : placeholder}}"
               placeholder-style="{{placeholderStyle}}"
               placeholder-class="{{placeholderClass}}"
               disabled="{{disabled}}"

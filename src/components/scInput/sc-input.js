@@ -72,6 +72,10 @@ Component({
         },
         name:{
             type:String
+        },
+        float:{
+            type:Boolean,
+            value:true
         }
     },
     data: {
@@ -86,7 +90,7 @@ Component({
     ready(){
         this.setData({
             value:this.properties.value,
-            placeholder:this.properties.label ? null: this.properties.placeholder,
+            placeholder:this.properties.placeholder,
             name:this.properties.name || 'input' + inputCount++
         })
     },

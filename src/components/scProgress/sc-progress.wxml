@@ -1,7 +1,7 @@
 <!-- 
  Created by bai on 2018/5/2
 -->
-<view class="sc-class">
+<view class="sc-class progress {{type === 'determinate' ? '' : 'progress-indeterminate'}}">
     <view wx-if="{{type === 'determinate'}}" style="width: {{width > 100 ? 100 : width}}%"
-          class="sc-progress-determinate"></view>
+          class="sc-determinate-class progress-determinate"></view>
 </view>

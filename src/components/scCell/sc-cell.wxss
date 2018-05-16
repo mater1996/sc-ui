@@ -1,0 +1,9 @@
+@import "../../sc-ui.wxss";
+
+.cell{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+}

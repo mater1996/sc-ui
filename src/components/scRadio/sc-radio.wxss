@@ -1,5 +1,13 @@
 @import "../../sc-ui.wxss";
 
+.sc-radio{
+    position: relative;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 28px;
+}
+
 .sc-radio-icon{
     position: absolute;
     display: inline-block;

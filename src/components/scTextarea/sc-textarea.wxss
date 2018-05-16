@@ -1,5 +1,37 @@
 @import "../../sc-ui.wxss";
 
+.sc-textarea{
+    position: relative;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 20px;
+    resize: none;
+    background: 0 0;
+    border: none;
+    text-align: left;
+
+
+}
+
+.sc-textarea::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: currentColor;
+    transition: width 10s;
+    -moz-transition: width .2s; /* Firefox 4 */
+    -webkit-transition: width .2s; /* Safari 和 Chrome */
+    -o-transition: width .2s; /* Opera */
+}
+
 .sc-textarea-label{
     display: block;
     width: 100%;
