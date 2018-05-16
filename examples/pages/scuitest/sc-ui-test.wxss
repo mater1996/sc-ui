@@ -1,5 +1,4 @@
 /**testui.wxss**/
-@import "../../assets/lib/scui/dist/sc-ui.wxss";
 
 .userinfo {
     display: flex;
@@ -29,13 +28,24 @@
 }
 
 .new-color{
-    background-color: blue;
+    width: 180px;
+    background-color: #0b93d5;
 }
 
-.new-border{
-    border-bottom:1px solid blue;
+.submit-btn{
+    width: 180px;
 }
 
-.sc-switch-icon-color {
-    background-color: blue;
+/*主背景色*/
+
+.progress{
+    background-color: rgba(255,33,56,0.5);
+}
+/*随机条背景色*/
+.progress-indeterminate:before{
+    background-color: aliceblue !important;
+}
+/*固定条背景色*/
+.sc-progress-determinate{
+    background-color:rgba(80,33,56,0.5);
 }
