@@ -1,0 +1,1 @@
+<view class="sc-class sc-radio {{disabled ? 'sc-radio-disabled': ''}} {{checked ? 'sc-radio-checked': ''}}" capture-bind:tap="{{!disabled ? '_changeRadio' :''}}"><view class="sc-radio-icon"><view class="sc-ripple"><view class="{{showRipple ? 'sc-ripple-animate' : ''}}" bind:animationend="_animationend"></view></view></view>{{label}}</view>

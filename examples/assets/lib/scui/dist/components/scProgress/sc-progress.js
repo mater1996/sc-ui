@@ -1,0 +1,1 @@
+"use strict";Component({properties:{type:{type:String,value:"indeterminate"},width:{type:Number,value:0}},externalClasses:["sc-class","sc-determinate-class"],data:{},methods:{}});
