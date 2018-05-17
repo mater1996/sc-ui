@@ -1,5 +1,3 @@
-@import "../../sc-ui.wxss";
-
 input{
     position: relative;
     display: block;

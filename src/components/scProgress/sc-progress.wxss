@@ -1,5 +1,3 @@
-@import "../../sc-ui.wxss";
-
 .progress{
     position: relative;
     display: block;

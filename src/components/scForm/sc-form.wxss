@@ -1,6 +1,3 @@
-@import "../../sc-ui.wxss";
-
-
 button{
     display: flex;
     justify-content: center;

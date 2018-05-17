@@ -11,6 +11,7 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const rename = require("gulp-rename");
 const minifycss = require('gulp-minify-css');
+const cleanCSS = require('gulp-clean-css');
 const runSequence = require('run-sequence');
 const jsonlint = require("gulp-jsonlint");
 
@@ -77,7 +78,7 @@ gulp.task('wxssPro', () => {
             'iOS >= 8',
             'Android >= 4.1'
         ]),
-        minifycss(),
+        cleanCSS(),
         rename((path) => path.extname = '.wxss'),
         gulp.dest('./dist')
     ]);

@@ -1,4 +1,3 @@
-@import "../../sc-ui.wxss";
 @import "../../assets/font-icon/font-icon.wxss";
 
 .cell{
@@ -14,7 +13,7 @@
     overflow: hidden;
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
-    padding: 0 16rpx;
+    padding: 0 32rpx;
 }
 
 .cell-left{

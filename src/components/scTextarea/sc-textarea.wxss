@@ -1,4 +1,4 @@
-@import "../../sc-ui.wxss";
+
 
 .sc-textarea{
     position: relative;
