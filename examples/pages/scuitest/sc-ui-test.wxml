@@ -77,8 +77,8 @@
         <view style="">
             <sc-cell-group>
                 <sc-cell sub-header="subheader" ripple="{{false}}">header</sc-cell>
-                <sc-cell left-icon="icon-phone">header</sc-cell>
-                <sc-cell right-icon="icon-right">header</sc-cell>
+                <sc-cell left-icon="iconfont icon-phone">header</sc-cell>
+                <sc-cell right-icon="iconfont icon-right">header</sc-cell>
                 <sc-cell switch ripple="{{false}}" value="cellSwitch" checked bind:cellSwitchChange="cellChange">header</sc-cell>
             </sc-cell-group>
         </view>

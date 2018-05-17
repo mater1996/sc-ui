@@ -22,12 +22,12 @@ Component({
             type:Boolean,
             value:false
         },
-        leftIcon:{
-            type:String
-        },
-        rightIcon:{
-            type:String
-        },
+        // leftIcon:{
+        //     type:String
+        // },
+        // rightIcon:{
+        //     type:String
+        // },
         checked:{
             type:Boolean,
             value:false
@@ -61,7 +61,7 @@ Component({
             type: 'parent',
         }
     },
-    externalClasses: ['sc-class','sc-switch-class'],
+    externalClasses: ['sc-class','sc-switch-class','left-icon','right-icon'],
     methods: {
         _addRipple(e, holdAnimate) {
             if(!this.properties.disabled){

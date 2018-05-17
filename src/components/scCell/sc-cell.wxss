@@ -1,4 +1,4 @@
-@import "../../assets/font-icon/font-icon.wxss";
+/*@import "../../assets/font-icon/font-icon.wxss";*/
 
 .cell{
     position: relative;
