@@ -1,6 +1,27 @@
 <!-- 
  Created by bai on 2018/5/2
  -->
-<view class="sc-class cell">
-
+<view class="sc-class cell"
+      capture-bind:tap="{{ripple ? '_addRipple' : ''}}"
+      capture-bind:longpress="{{ripple ? '_longPress' : ''}}"
+      capture-bind:touchend="{{ripple ? '_touchend' : ''}}"
+>
+    <view class="cell-left">
+        <text wx:if="leftIcon" class="iconfont {{leftIcon}}"></text>
+        <view class="cell-left-container">
+            <view class="cell-header"><slot></slot></view>
+            <view wx:if="{{subHeader}}" class="cell-sub-header">{{subHeader}}</view>
+        </view>
+    </view>
+    <view class="cell-right">
+        <text wx:if="{{rightIcon}}" class="iconfont {{rightIcon}}"></text>
+        <sc-switch wx:if="{{switch}}" checked="{{checked}}" name="{{name}}" disabled="{{disabled}}" value="{{value}}" class="sc-switch-class" catch:change="_switchChange"></sc-switch>
+    </view>
+    <view wx:for="{{rippleList}}"
+          wx:key="rippleId"
+          id="{{item.rippleId}}"
+          style="width:{{item.width}}px;height:{{item.height}}px;left:{{item.left}}px;top:{{item.top}}px"
+          class="sc-ripple {{item.startAnimate ? item.holdAnimate ? 'sc-ripple-animation-slow-hold' :'sc-ripple-animation-slow' : ''}}"
+          bind:animationend="{{item.holdAnimate ? null : '_scbuttonrippleAnimationend'}}">
+    </view>
 </view>

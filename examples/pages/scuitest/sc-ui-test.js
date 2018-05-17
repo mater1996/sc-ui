@@ -18,5 +18,11 @@ Page({
     },
     submit(e){
         console.log('表单提交，携带value值为：', e.detail.value)
+    },
+    cellChange(e){
+        console.log('cell switch change 携带value值为：',e.detail.value)
+    },
+    switchChange(e){
+        console.log(' switch change 携带value值为：',e.detail.value)
     }
 });

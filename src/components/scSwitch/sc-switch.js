@@ -45,8 +45,7 @@ Component({
                 checked:!this.data.checked,
                 clicked:true
             });
-
-            this.triggerEvent(`change`, {value:this.data.value,checked:this.data.checked}, { bubbles: true, composed: true });
+            this.triggerEvent(`change`, {value:this.data.value,checked:this.data.checked}, { bubbles: true });
         },
         _animationend(){
             this.setData({

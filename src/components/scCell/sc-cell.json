@@ -1,3 +1,6 @@
 {
-  "component":true
+  "component":true,
+  "usingComponents": {
+    "sc-switch": "../scSwitch/sc-switch"
+  }
 }

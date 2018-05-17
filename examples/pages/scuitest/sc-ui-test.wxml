@@ -47,8 +47,8 @@
     <view style="margin: 16px">
         <view style="text-align: center;margin-bottom: 16px">switch组件</view>
         <view>
-            <sc-switch style="height: 36px" sc-class="sc-switch" bind:change="checkChange"></sc-switch>
-            <sc-switch style="margin-left: 16px" sc-class="sc-switch" disabled="{{true}}" bind:change="checkChange"></sc-switch>
+            <sc-switch style="height: 36px" sc-class="sc-switch" bind:change="switchChange"></sc-switch>
+            <sc-switch style="margin-left: 16px" sc-class="sc-switch" disabled="{{true}}" bind:change="switchChange"></sc-switch>
             <sc-checkbox sc-class="sc-checkbox" label="初始选中" value="value" checked="{{true}}" bind:checkChange="checkChange"></sc-checkbox>
         </view>
     </view>
@@ -69,6 +69,18 @@
         <view style="width: 100%;text-align: center">
             <sc-progress sc-class="sc-progress"></sc-progress>
             <sc-progress sc-class="sc-progress" sc-determinate-class="sc-progress-determinate" type="determinate"  width="{{80}}"></sc-progress>
+        </view>
+    </view>
+
+    <view style="margin: 16px;width: 80%;">
+        <view style="text-align: center;margin-bottom: 16px">cell组件</view>
+        <view style="">
+            <sc-cell-group>
+                <sc-cell sub-header="subheader" ripple="{{false}}">header</sc-cell>
+                <sc-cell left-icon="icon-phone">header</sc-cell>
+                <sc-cell right-icon="icon-right">header</sc-cell>
+                <sc-cell switch ripple="{{false}}" value="cellSwitch" checked bind:cellSwitchChange="cellChange">header</sc-cell>
+            </sc-cell-group>
         </view>
     </view>
 

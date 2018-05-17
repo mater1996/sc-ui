@@ -10,6 +10,8 @@
     "sc-form":"../../assets/lib/scui/dist/components/scForm/sc-form",
     "sc-switch":"../../assets/lib/scui/dist/components/scSwitch/sc-switch",
     "sc-radio":"../../assets/lib/scui/dist/components/scRadio/sc-radio",
-    "sc-radio-group":"../../assets/lib/scui/dist/components/scRadioGroup/sc-radio-group"
+    "sc-radio-group":"../../assets/lib/scui/dist/components/scRadioGroup/sc-radio-group",
+    "sc-cell":"../../assets/lib/scui/dist/components/scCell/sc-cell",
+    "sc-cell-group":"../../assets/lib/scui/dist/components/scCellGroup/sc-cell-group"
   }
 }
