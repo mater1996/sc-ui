@@ -1,0 +1,1 @@
+<view class="sc-class loading" style="border: 2px solid {{circleColor}};"><view class="loading-circle loading-circle-active" style="border-bottom: 2px solid {{circleActiveColor}};"></view></view>

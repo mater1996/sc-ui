@@ -1,0 +1,1 @@
+"use strict";Component({properties:{circleColor:{type:String,color:"#000000"},circleActiveColor:{type:String,value:"#ffffff"}},externalClasses:["sc-class"],data:{},methods:{}});

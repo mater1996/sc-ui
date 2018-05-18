@@ -177,6 +177,12 @@ button::after{
     align-items: center;
 }
 
+/*loading*/
+.sc-loading{
+    width: 18px;
+    height: 18px;
+}
+
 /* layout 会覆盖之前的样式*/
 
 .layout-row{

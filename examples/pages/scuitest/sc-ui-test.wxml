@@ -83,6 +83,12 @@
             </sc-cell-group>
         </view>
     </view>
+    <view style="margin: 16px;width: 80%;">
+        <view style="text-align: center;margin-bottom: 16px">loading组件</view>
+        <view style="">
+            <sc-loading sc-class="sc-loading" circle-color="#45FF40"></sc-loading>
+        </view>
+    </view>
 
     <text>form表单</text>
     <sc-form bind:submit="submit" report-submit submit-text="submit" submit-btn-class="sc-btn submit-btn" style="width: 100%;text-align: center">
