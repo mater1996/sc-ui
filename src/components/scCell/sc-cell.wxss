@@ -11,7 +11,7 @@
     min-height: 96rpx;
     font-size: 32rpx;
     overflow: hidden;
-    border-top: 1px solid lightgrey;
+    /*border-top: 1px solid lightgrey;*/
     border-bottom: 1px solid lightgrey;
     padding: 0 32rpx;
 }
@@ -35,7 +35,7 @@
 }
 
 .cell-left-container .cell-header{
-
+    font-size: 28rpx;
 }
 
 .cell-left-container .cell-sub-header{

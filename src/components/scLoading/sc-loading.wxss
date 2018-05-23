@@ -1,8 +1,6 @@
 .loading{
     position: relative;
     border-radius: 50%;
-
-    /*box-sizing: border-box;*/
 }
 
 .loading-circle{
@@ -15,7 +13,6 @@
     border-radius: 50%;
     left: -2px;
     top: -2px;
-    /*box-sizing: border-box;*/
 }
 
 .loading-circle-active{
