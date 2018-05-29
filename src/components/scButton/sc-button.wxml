@@ -31,7 +31,7 @@
           wx:key="rippleId"
           id="{{item.rippleId}}"
           style="width:{{item.width}}px;height:{{item.height}}px;left:{{item.left}}px;top:{{item.top}}px"
-          class="sc-ripple {{item.startAnimate ? item.holdAnimate ? 'sc-ripple-animation-slow-hold' :'sc-ripple-animation-slow' : ''}}"
+          class="sc-ripple-class sc-ripple {{item.startAnimate ? item.holdAnimate ? 'sc-ripple-animation-slow-hold' :'sc-ripple-animation-slow' : ''}}"
           bind:animationend="{{item.holdAnimate ? null : '_scbuttonrippleAnimationend'}}">
     </view>
 </button>

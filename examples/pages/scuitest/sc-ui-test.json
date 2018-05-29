@@ -13,6 +13,8 @@
     "sc-radio-group":"../../assets/lib/scui/dist/components/scRadioGroup/sc-radio-group",
     "sc-cell":"../../assets/lib/scui/dist/components/scCell/sc-cell",
     "sc-cell-group":"../../assets/lib/scui/dist/components/scCellGroup/sc-cell-group",
-    "sc-loading":"../../assets/lib/scui/dist/components/scLoading/sc-loading"
+    "sc-loading":"../../assets/lib/scui/dist/components/scLoading/sc-loading",
+    "sc-select":"../../assets/lib/scui/dist/components/scSelect/sc-select",
+    "sc-option":"../../assets/lib/scui/dist/components/scOption/sc-option"
   }
 }

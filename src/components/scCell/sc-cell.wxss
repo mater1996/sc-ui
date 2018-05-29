@@ -102,3 +102,9 @@
         opacity: 0.3;
     }
 }
+
+.right-text{
+    display: inline-block;
+    color: rgba(0,0,0,.26);
+    font-size: 28rpx;
+}

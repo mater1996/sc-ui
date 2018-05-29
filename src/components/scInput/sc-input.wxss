@@ -1,3 +1,16 @@
+.sc-textfield-main{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+.sc-textfield{
+    width: 100%;
+}
+
 input{
     position: relative;
     display: block;
@@ -11,6 +24,7 @@ input{
     resize: none;
     border: none;
     text-align: left;
+    width: 100%;
 }
 
 input::before {
@@ -69,4 +83,27 @@ input::before {
 
 .sc-textfield-floating-label .sc-input-focus::before{
     width: 100%;
+}
+
+.error-text {
+    padding-left: 8px;
+    color: red;
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in; /* Firefox 4 */
+    -webkit-transition: opacity .3s ease-in; /* Safari 和 Chrome */
+    -o-transition: opacity .3s ease-in; /* Opera */
+    opacity: 0;
+}
+
+.text-6 {
+    font-size: 24rpx;
+}
+
+.icon{
+    font-size: 58rpx;
+}
+
+.icon-err{
+    align-self: flex-end;
+    padding-bottom: 10px;
 }

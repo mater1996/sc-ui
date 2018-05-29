@@ -85,7 +85,7 @@ Component({
             type: 'parent', // 关联的目标节点应为父节点
         }
     },
-    externalClasses: ['sc-class'],
+    externalClasses: ['sc-class','sc-ripple-class'],
     methods: {
         _addRipple(e, holdAnimate) {
             if(!this.properties.disabled){

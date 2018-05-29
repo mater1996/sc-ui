@@ -76,6 +76,12 @@ Component({
         float:{
             type:Boolean,
             value:true
+        },
+        errText:{
+            type:String
+        },
+        errStatus:{
+            type:Boolean
         }
     },
     data: {
@@ -86,7 +92,7 @@ Component({
             type: 'parent', // 关联的目标节点应为父节点
         }
     },
-    externalClasses: ['sc-class'],
+    externalClasses: ['sc-class','icon'],
     ready(){
         this.setData({
             value:this.properties.value,

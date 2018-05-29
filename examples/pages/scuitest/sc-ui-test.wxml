@@ -78,7 +78,7 @@
             <sc-cell-group>
                 <sc-cell sub-header="subheader" ripple="{{false}}">header</sc-cell>
                 <sc-cell left-icon="iconfont icon-phone">header</sc-cell>
-                <sc-cell right-icon="iconfont icon-right">header</sc-cell>
+                <sc-cell right-icon="iconfont icon-right" right-text="右侧">header</sc-cell>
                 <sc-cell switch ripple="{{false}}" value="cellSwitch" checked bind:cellSwitchChange="cellChange">header</sc-cell>
             </sc-cell-group>
         </view>
@@ -89,7 +89,16 @@
             <sc-loading sc-class="sc-loading" circle-color="#45FF40"></sc-loading>
         </view>
     </view>
-
+    <view style="margin: 16px;width: 80%;">
+        <view style="text-align: center;margin-bottom: 16px">select组件</view>
+        <view style="">
+            <sc-select>
+                <sc-option>111</sc-option>
+                <sc-option>222</sc-option>
+                <sc-option>2333</sc-option>
+            </sc-select>
+        </view>
+    </view>
     <text>form表单</text>
     <sc-form bind:submit="submit" report-submit submit-text="submit" submit-btn-class="sc-btn submit-btn" style="width: 100%;text-align: center">
         <sc-input sc-class="sc-input" label="姓名" name="name" bindinput="input" selection-start="{{-1}}" cursor="0"></sc-input>

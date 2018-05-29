@@ -41,6 +41,9 @@ Component({
         },
         value:{
             type:null
+        },
+        rightText:{
+            type:String
         }
     },
     data: {

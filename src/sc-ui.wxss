@@ -61,19 +61,19 @@ button::after {
     height: 36px;
     padding: 0 16px;
     margin: 0;
-    font-size: 32 rpx;
+    font-size: 32rpx;
     border-radius: 2px;
 }
 
 .sc-btn-icon {
-    width: 76 rpx !important;
-    min-width: 76 rpx !important;
-    height: 76 rpx !important;
+    width: 76rpx !important;
+    min-width: 76rpx !important;
+    height: 76rpx !important;
     padding: 0;
     margin-right: 0;
     margin-left: 0;
     overflow: hidden;
-    font-size: 38 rpx;
+    font-size: 38rpx;
     line-height: normal;
     border-radius: 50% !important;
     border-style: none;
@@ -85,12 +85,12 @@ button::after {
     left: 50%;
     width: 54 rpx !important;
     line-height: 54 rpx;
-    -webkit-transform: translate(-27 rpx, -27 rpx);
-    transform: translate(-27 rpx, -27 rpx);
+    -webkit-transform: translate(-27rpx, -27rpx);
+    transform: translate(-27rpx, -27rpx);
 }
 
 .sc-icon, .sc-icon::before {
-    font-size: 54 rpx;
+    font-size: 54rpx;
     font-style: normal;
     font-weight: 400;
     line-height: 1;
@@ -111,7 +111,7 @@ button::after {
 }
 
 .sc-input-icon {
-    font-size: 58 rpx;
+    font-size: 58rpx;
 }
 
 .sc-input-icon + sc-input {
@@ -274,9 +274,16 @@ button::after {
 }
 
 /* font-size*/
+.text-large {
+    font-size: 48rpx;
+}
+
+.text-0 {
+    font-size: 42rpx;
+}
 
 .text-1 {
-    font-size: 38 rpx;
+    font-size: 38rpx;
 }
 
 .text-2 {
@@ -312,5 +319,12 @@ button::after {
 }
 
 .text-driver{
+    width: 90%;
+    border-bottom: 1px solid rgba(0,0,0,.26);
+    display: block;
     color: rgba(0, 0, 0, .12);
+}
+
+.text-bolder{
+    font-weight: bolder;
 }
