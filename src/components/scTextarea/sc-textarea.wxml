@@ -6,7 +6,7 @@
            class="sc-textarea-label {{focus || value ? 'sc-textarea-label-focus' :''}}">{{label}}</label>
     <!--{{height}}-->
     <textarea
-              class="sc-class sc-textarea {{focus ? 'sc-textarea-focus' :''}}"
+              class="sc-class textarea {{focus ? 'sc-textarea-focus' :''}}"
               bind:focus="_focus"
               bind:blur="_blur"
               bindinput="_input"

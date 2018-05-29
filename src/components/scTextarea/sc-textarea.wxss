@@ -1,6 +1,4 @@
-
-
-.sc-textarea{
+.textarea{
     position: relative;
     display: block;
     -webkit-box-sizing: border-box;
@@ -11,13 +9,10 @@
     line-height: 20px;
     resize: none;
     background: 0 0;
-    border: none;
     text-align: left;
-
-
 }
 
-.sc-textarea::after {
+.textarea::after {
     content: '';
     position: absolute;
     left: 0;
