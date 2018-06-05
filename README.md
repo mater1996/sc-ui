@@ -27,6 +27,9 @@
   }
 ```
 
+图标库
+http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512&cid=33
+
 ### 2. 使用
 
 ##### 示例 button 使用
@@ -58,7 +61,7 @@
 |  disabled|  Boolean |false|是否禁用|
 |  loading|  Boolean |false|名称前是否带 loading 图标|
 |  disabled|  Boolean |false|是否禁用|
-|  form-type|  String	 ||用于 <form/> 组件，点击分别会触发 <form/> 组件的 submit/reset 事件|
+|  form-type|  String	 || 此选项组件不可用,请使用sc-form来修正 |
 |  open-type|  String	 ||	微信开放能力|
 |  app-parameter|  String	 ||打开 APP 时，向 APP 传递的参数|	open-type="launchApp"|
 |  disabled|  Boolean |false|是否禁用|
@@ -130,7 +133,11 @@ input组件
 |bindfocus |   EventHandle	 | | 		输入框聚焦时触发，event.detail = { value, height }，height 为键盘高度，在基础库 1.9.90 起支持 ||
 |bindblur |   EventHandle	 | | 	输入框失去焦点时触发，event.detail = {value: value} ||
 |bindconfirm |   EventHandle | | 		点击完成按钮时触发，event.detail = {value: value} ||
+|name|Stirng||配合sc-form使用时提交获得的key|
 |sc-class|Stirng||对input标签使用的class类 推荐使用 sc-input|
+|required|Boolean||是否required请配置err-text使用required提示|
+|err-status|Boolean||是否进行错误提示|
+|err-text|Stirng||错误提示文本|
 ##### 类型等请到 https://developers.weixin.qq.com/miniprogram/dev/component/input.html 比对
 
 #### 3.4 sc-progress
@@ -176,6 +183,31 @@ input组件
 |value|||chenge事件携带的value|
 |disabled|Boolean|false|禁用|
 
+
+#### 3.7 sc-cell
+可以不和sc-cell-group联合使用
+
+```
+<sc-cell-group>
+    <sc-cell sub-header="subheader" ripple="{{false}}">header</sc-cell>
+    <sc-cell left-icon="iconfont icon-phone">header</sc-cell>
+    <sc-cell right-icon="iconfont icon-right" right-text="右侧">header</sc-cell>
+    <sc-cell switch ripple="{{false}}" value="cellSwitch" checked bind:cellSwitchChange="cellChange">header</sc-cell>
+</sc-cell-group>
+```
+
+| 属性名  | 类型  |	默认值 |	说明 |
+| ------------ | ------------ | ------------ | ------------ |
+| slot| String  |	 | 主标题|
+| sub-header|   |	 | 子标题|
+|sc-class|String || 推荐sc-cell|
+|ripple|||是否有涟漪效果,在含有switch的时候建议关闭|
+|switch|Boolean|false|启用带switch的cell|
+|cellSwitchChange|handler||switch改变的触发事件|
+|left-icon|String||左侧图标  assets/fonticon的图标  例如iconfont icon-phoe|
+|right-icon|String||右侧图标|
+|right-text|String||右侧文字,在图标左侧|
+
 #### 3.7 st-form
 
 实验中
@@ -195,6 +227,13 @@ input组件
 </sc-form>
 ```
 
+| 属性名  | 类型  |	默认值 |	说明 |
+| ------------ | ------------ | ------------ | ------------ |
+| bind:submit| handler  |	 | 提交事件,携带formId|
+| report-submit| false  |	 |与上面的事件配合使用|
+|sc-class|String||form表的内部样式|
+|submit-btn-class|String||form表中的提交btn的样式|
 
 #### 3.8 sc-textarea
 ##### 实验中
+可以使用 但会有bug
