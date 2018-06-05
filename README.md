@@ -208,7 +208,7 @@ input组件
 |right-icon|String||右侧图标|
 |right-text|String||右侧文字,在图标左侧|
 
-#### 3.7 st-form
+#### 3.8 st-form
 
 实验中
 
@@ -234,6 +234,6 @@ input组件
 |sc-class|String||form表的内部样式|
 |submit-btn-class|String||form表中的提交btn的样式|
 
-#### 3.8 sc-textarea
+#### 3.9 sc-textarea
 ##### 实验中
 可以使用 但会有bug
