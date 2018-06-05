@@ -2,7 +2,7 @@
  Created by bai on 2018/5/2
  -->
 <view class="sc-textfield-main">
-    <text class="icon {{errText?'':'icon-err'}}" style=""></text>
+    <text class="icon {{errText ? '' :'icon-err'}}"></text>
     <view class="sc-textfield {{float ? 'sc-textfield-floating-label' : ''}} {{disabled ? 'sc-textfield-disabled' : ''}}">
         <label wx:if="{{label ? true : false}}"
                class="sc-label {{focus || value ? 'sc-label-focus' :''}}">{{label}}</label>
@@ -28,7 +28,7 @@
                selection-end="{{selectionEnd}}"
                adjust-position="{{adjustPosition}}"
         />
-        <text wx:if="{{errText}}" class="error-text text-6" style="opacity: {{errStatus}}">{{errText}}</text>
+        <text wx:if="{{errText}}" class="error-text text-6" style="opacity: {{errStatus? '1' :'0'}}">{{errText}}</text>
     </view>
 
 </view>

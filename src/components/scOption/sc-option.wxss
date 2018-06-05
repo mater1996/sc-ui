@@ -1,4 +1,3 @@
-@import "../../assets/font-icon/font-icon.wxss";
 .sc-option{
     display: block;
     width: 100%;

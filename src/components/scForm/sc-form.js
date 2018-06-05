@@ -44,7 +44,7 @@ Component({
         rippleDeleteTimer: null,
         rippleColor: '#ffffff',
     },
-    externalClasses: ['sc-form-class','submit-btn-class'],
+    externalClasses: ['sc-class','submit-btn-class'],
     ready() {
         this.formControllers = this._getAllControl();
     },

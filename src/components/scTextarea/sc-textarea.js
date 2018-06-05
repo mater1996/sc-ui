@@ -142,16 +142,16 @@ Component({
                 this.setData({
                     value:e.detail.value
                 });
-                this.triggerEvent('input', e, {})
+                this.triggerEvent('input',e.detail, {})
             }
         },
         _confirm(e){
             if(!this.properties.disabled)
-            this.triggerEvent('confirm', e, {})
+            this.triggerEvent('confirm', e.detail, {})
         },
         _linechange(e){
             if(!this.properties.disabled){
-                this.triggerEvent('linechange', e, {})
+                this.triggerEvent('linechange', e.detail, {})
             }
         }
     }

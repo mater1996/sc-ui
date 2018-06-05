@@ -82,6 +82,10 @@ Component({
         },
         errStatus:{
             type:Boolean
+        },
+        required:{
+            type: Boolean,
+            value:false
         }
     },
     data: {
@@ -119,9 +123,24 @@ Component({
         },
         _input(e){
             if(!this.properties.disabled){
-                this.setData({
-                    value:e.detail.value
-                });
+                if(this.properties.required){
+                    this.setData({
+                        errStatus:!e.detail.value
+                    });
+                    if(!this.properties.errStatus){
+                        this.setData({
+                            value:e.detail.value
+                        });
+                    }else{
+                        this.setData({
+                            value: null
+                        });
+                    }
+                }else{
+                    this.setData({
+                        value:e.detail.value
+                    });
+                }
                 this.triggerEvent('input', e.detail, {})
             }
         },

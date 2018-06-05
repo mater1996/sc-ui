@@ -35,7 +35,7 @@ input::before {
     bottom: 0;
     height: 2px;
     width: 0;
-    background-color: blue;
+    background-color: currentColor;
     transition: width 10s;
     -moz-transition: width .2s;	/* Firefox 4 */
     -webkit-transition: width .2s;	/* Safari 和 Chrome */
@@ -51,6 +51,7 @@ input::before {
     -webkit-transition: all .2s;
     -webkit-transform-origin: left;
     text-align: left;
+    color: rgba(0,0,0,.54);
 }
 
 .sc-textfield-disabled .sc-label{
@@ -73,6 +74,7 @@ input::before {
 }
 
 .sc-textfield-floating-label .sc-label-focus{
+    color: currentColor;
     -webkit-transform: scale(.8) translateY(0);
     transform: scale(.8) translateY(0);
 }
@@ -86,7 +88,8 @@ input::before {
 }
 
 .error-text {
-    padding-left: 8px;
+    display: block;
+    text-align: left;
     color: red;
     transition: opacity .3s ease-in;
     -moz-transition: opacity .3s ease-in; /* Firefox 4 */

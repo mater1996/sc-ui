@@ -1,7 +1,7 @@
 <!-- 
  Created by bai on 2018/5/2
  -->
-<view style="padding: 16px" class="sc-form-class">
+<view class="sc-class">
     <slot></slot>
     <form bindsubmit="_formSubmit" bindreset="_formReset" report-submit="{{reportSubmit}}">
         <view class="sc-hide-form-class">

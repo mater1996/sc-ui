@@ -49,11 +49,13 @@
 .sc-textfield-floating-label .sc-textarea-label{
     -webkit-transform: scale(1) translateY(27px);
     transform: scale(1) translateY(27px);
+    color: rgba(0,0,0,.54);
 }
 
 .sc-textfield-floating-label .sc-textarea-label-focus{
     -webkit-transform: scale(.75) translateY(0);
     transform: scale(.75) translateY(0);
+    color: currentColor;
 }
 
 .sc-textfield-floating-label .sc-textarea-focus::after{
