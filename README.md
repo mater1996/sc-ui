@@ -2,6 +2,8 @@
 =======
 微信小程序material ui
 此ui为参加高校小程序设计，请勿做商用
+利用此ui设计的小程序已完成 欢迎大家前往观看
+https://v.qq.com/x/page/m0682e7bjon.html
 ## get start
 ##### 下载：目前不支持npm install 请直接clone或下载
 ### 1. 引入文件
