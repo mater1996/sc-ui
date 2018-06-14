@@ -9,7 +9,10 @@
                     capture-bind:tap="_addRipple"
                     capture-bind:longpress="_longPress"
                     capture-bind:touchend="_touchend"
-                    form-type="submit">{{submitText}}
+                    form-type="submit">
+                <text style="font-size: inherit">
+                    {{submitText}}
+                </text>
                 <view wx:for="{{rippleList}}"
                       wx:key="rippleId"
                       id="{{item.rippleId}}"

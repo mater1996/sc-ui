@@ -40,6 +40,7 @@
 
 .sc-textfield{
     padding: 8px;
+    box-sizing: border-box;
 }
 
 .sc-textfield-floating-label{
