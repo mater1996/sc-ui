@@ -1,7 +1,13 @@
 # sc-ui
 =======
 微信小程序material ui
+<<<<<<< HEAD
 此ui为参加高校小程序大赛时设计，更新不会太快，谢谢。
+=======
+此ui为参加高校小程序设计，请勿做商用
+利用此ui设计的小程序已完成 欢迎大家前往观看
+https://v.qq.com/x/page/m0682e7bjon.html
+>>>>>>> c1c4e2abc6882ad6b2a5a16c316708c76bc0ab57
 ## get start
 ##### 下载：目前不支持npm install 请直接clone或下载
 ### 1. 引入文件
