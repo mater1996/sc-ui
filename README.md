@@ -6,7 +6,7 @@
 https://v.qq.com/x/page/m0682e7bjon.html
 
 
-##### [小程序代码片段](wechatide://minicode/bGhfWdm77WGd)
+[小程序代码片段](wechatide://minicode/bGhfWdm77WGd)
 
 ## get start
 ##### 下载：目前不支持npm install 请直接clone或下载
