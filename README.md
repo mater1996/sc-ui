@@ -3,12 +3,10 @@
 微信小程序material ui
 此ui为参加高校小程序设计，请勿做商用
 利用此ui设计的小程序已完成 欢迎大家前往观看
-https://v.qq.com/x/page/m0682e7bjon.html
 
+[鲸猫兼职小程序](https://v.qq.com/x/page/m0682e7bjon.html)
 
-<wechatide://minicode/bGhfWdm77WGd>
-
-[我的小窝](http://www.lunarsf.club "我的个人网站")
+<a href="wechatide://minicode/bGhfWdm77WGd" target="_blank">小程序代码片段</a>
 
 ## get start
 ##### 下载：目前不支持npm install 请直接clone或下载
