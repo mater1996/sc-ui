@@ -1,0 +1,23 @@
+<scroll-view scroll-x class="tab-bar" scroll-with-animation scroll-left="{{scrollLeft}}" bindscroll="_scroll">
+    <view class="layout-row layout-start-center">
+        <view style="flex: 1 1 auto">
+            <view class="tab-bar-list layout-row layout-start-center" style="flex: 1 1 auto">
+                <sc-button style="flex: 1;min-width: 88px" sc-class="sc-btn" wx:for="{{tabList}}" wx:key="id" data-idx="{{index}}" ripple="{{ripple}}"
+                           class="tab-bar-item {{currentTab === index ? 'active' : ''}}"
+                           bindtap="_tabBarTap">
+                    <text class="text-6 text-secondary">{{item.label}}</text>
+                </sc-button>
+            </view>
+            <view class="tab-bar-driver"
+                  style="width:{{100/tabList.length}}%;transform: translateX({{100*currentTab}}%)">
+            </view>
+        </view>
+    </view>
+</scroll-view>
+
+<!--已申请-->
+<view style="overflow: hidden;min-height: 100%;" bind:touchmove="_touchmove" bind:touchend="_touchend">
+    <view class="layout-row tab-container" style="transform: translateX({{-100*currentTab}}%)">
+        <slot></slot>
+    </view>
+</view>
