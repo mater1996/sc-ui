@@ -236,7 +236,7 @@ input组件
 | 属性名  | 类型  |	默认值 |	说明 |
 | ------------ | ------------ | ------------ | ------------ |
 | bind:submit| handler  |	 | 提交事件,携带formId|
-| report-submit| false  |	 |与上面的事件配合使用|
+| report-submit| Boolean  |	false |与上面的事件配合使用|
 |sc-class|String||form表的内部样式|
 |submit-btn-class|String||form表中的提交btn的样式|
 
