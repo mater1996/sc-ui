@@ -6,7 +6,7 @@
 
 [鲸猫兼职小程序](https://v.qq.com/x/page/m0682e7bjon.html)
 
-<a href="wechatide://minicode/bGhfWdm77WGd" target="_blank">小程序代码片段</a>
+小程序代码片段：wechatide://minicode/bGhfWdm77WGd (请复制到自己的开发工具打开)
 
 ## get start
 ##### 下载：目前不支持npm install 请直接clone或下载
