@@ -15,6 +15,8 @@
     "sc-cell-group":"../../assets/lib/scui/dist/components/scCellGroup/sc-cell-group",
     "sc-loading":"../../assets/lib/scui/dist/components/scLoading/sc-loading",
     "sc-select":"../../assets/lib/scui/dist/components/scSelect/sc-select",
-    "sc-option":"../../assets/lib/scui/dist/components/scOption/sc-option"
+    "sc-option":"../../assets/lib/scui/dist/components/scOption/sc-option",
+    "sc-tab-group":"../../assets/lib/scui/dist/components/scTabGroup/sc-tab-group",
+    "sc-tab":"../../assets/lib/scui/dist/components/scTab/sc-tab"
   }
 }

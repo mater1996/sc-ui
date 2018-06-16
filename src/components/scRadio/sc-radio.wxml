@@ -8,5 +8,5 @@
             <view class="{{showRipple ? 'sc-ripple-animate' : ''}}" bind:animationend="_animationend"></view>
         </view>
     </view>
-    {{label}}
+    <text class="text-6">{{label}}</text>
 </view>

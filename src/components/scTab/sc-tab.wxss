@@ -1,0 +1,3 @@
+.nav-item{
+    transition: height .3ms linear;
+}

@@ -239,3 +239,18 @@ input组件
 #### 3.9 sc-textarea
 ##### 实验中
 可以使用 但会有bug
+
+#### 3.10 sc-tab
+
+```
+<sc-tab-group tab-list="{{tabList}}">
+   <sc-tab>111</sc-tab>
+   <sc-tab>222</sc-tab>
+   <sc-tab>333</sc-tab>
+</sc-tab-group>
+```
+| 属性名  | 类型  |	默认值 |	说明 |
+| ------------ | ------------ | ------------ | ------------ |
+| tab-list| array  |	 | 渲染的tab列表必须和内部的sc-tab对应 是一个对象数组每个对象包含 label,id,以及data|
+| tab-change| handler| | tab更换时触发的事件 在e.detail 里返回当前的tabIndex以及data
+|tabIndex|Number|0|初始化的tab位置从0开始|

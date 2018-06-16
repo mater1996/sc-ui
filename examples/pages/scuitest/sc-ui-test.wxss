@@ -1,5 +1,5 @@
 /**testui.wxss**/
-
+@import "../../assets/lib/scui/dist/sc-ui.wxss";
 .userinfo {
     display: flex;
     flex-direction: column;

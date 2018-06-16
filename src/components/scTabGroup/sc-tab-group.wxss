@@ -1,0 +1,48 @@
+@import "../../sc-ui.wxss";
+
+.tab-bar{
+    /*width: fit-content;*/
+}
+
+.tab-bar-list {
+    background: #fff;
+    font-size: 30rpx;
+    overflow-x: scroll;
+}
+
+.tab-bar-list .tab-bar-item {
+    position: relative;
+    flex-grow: 1;
+    text-align: center;
+    line-height: 80rpx;
+}
+
+.tab-bar-list .tab-bar-item.active {
+    color: #FFCC00;
+}
+
+.tab-bar-driver{
+    height:4rpx;
+    background-color: #0088CC;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.tab-container{
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    flex-wrap: nowrap;
+    overflow: visible;
+}
+
+.tab-container sc-tab{
+    flex: 0 0 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    word-break: break-all;
+}
