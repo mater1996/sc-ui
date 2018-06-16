@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.0.2",
 	"appid": "touristappid",
-	"projectname": "scui%20-%20example",
+	"projectname": "scui-example",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

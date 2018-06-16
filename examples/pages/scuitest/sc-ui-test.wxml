@@ -152,27 +152,4 @@
             <sc-checkbox sc-class="sc-checkbox" label="书籍" checked="{{false}}" value="book"></sc-checkbox>
         </sc-checkbox-group>
     </sc-form>
-
-    <view class="layout-row" style="flex-wrap: nowrap">
-        <sc-button sc-class="sc-btn box-shadow-9 new-color" style="display: inline-block;margin-right: 16px"
-                   open-type="getUserInfo" bind:getuserinfo="getUserInfo">
-            普通
-        </sc-button>
-        <sc-button sc-class="sc-btn sc-btn-icon box-shadow-9" style="display: inline-block;margin-right: 16px">
-            <text class="sc-icon iconfont icon-phone"></text>
-        </sc-button>
-        <!--<sc-button sc-class="sc-btn box-shadow-9" style="display: inline-block;margin-right: 16px" disabled="true">-->
-            <!--禁用-->
-        <!--</sc-button>-->
-        <!--<sc-button sc-class="sc-btn box-shadow-9 new-color" style="display: inline-block;margin-right: 16px"-->
-                   <!--open-type="getUserInfo" bind:getuserinfo="getUserInfo">-->
-            <!--普通-->
-        <!--</sc-button>-->
-        <!--<sc-button sc-class="sc-btn sc-btn-icon box-shadow-9" style="display: inline-block;margin-right: 16px">-->
-            <!--<text class="sc-icon iconfont icon-phone"></text>-->
-        <!--</sc-button>-->
-        <!--<sc-button sc-class="sc-btn box-shadow-9" style="display: inline-block;margin-right: 16px" disabled="true">-->
-            <!--禁用-->
-        <!--</sc-button>-->
-    </view>
 </view>

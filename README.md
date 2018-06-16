@@ -32,6 +32,8 @@ https://v.qq.com/x/page/m0682e7bjon.html
 图标库
 http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512&cid=33
 
+#### 小程序代码片段 wechatide://minicode/bGhfWdm77WGd
+
 ### 2. 使用
 
 ##### 示例 button 使用

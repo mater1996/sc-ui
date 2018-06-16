@@ -1,7 +1,6 @@
 {
   "pages":[
-    "pages/scuitest/sc-ui-test",
-    "pages/index/index"
+    "pages/scuitest/sc-ui-test"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -9,22 +8,6 @@
     "navigationBarTitleText": "partTimeJob",
     "navigationBarTextStyle":"black",
     "enablePullDownRefresh":true
-  },
-  "tabBar": {
-    "selectedColor":"black",
-    "backgroundColor":"#ECEFF1",
-    "borderStyle":"#EDE7F6",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath":"assets/img/icon/homeUnSelected.png",
-      "selectedIconPath":"assets/img/icon/homeSelected.png"
-    }, {
-      "pagePath": "pages/scuitest/sc-ui-test",
-      "text": "ui测试",
-      "iconPath":"assets/img/icon/testUnSelected.png",
-      "selectedIconPath":"assets/img/icon/testSelected.png"
-    }]
   },
   "networkTimeout": {
     "request": 10000,
