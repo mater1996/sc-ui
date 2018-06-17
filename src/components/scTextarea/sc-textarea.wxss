@@ -5,7 +5,7 @@
     box-sizing: border-box;
     -webkit-appearance: none;
     overflow: hidden;
-    font-size: 16px;
+    font-size: 32rpx;
     line-height: 20px;
     resize: none;
     background: 0 0;
@@ -54,8 +54,8 @@
 }
 
 .sc-textfield-floating-label .sc-textarea-label-focus{
-    -webkit-transform: scale(.75) translateY(0);
-    transform: scale(.75) translateY(0);
+    -webkit-transform: scale(.8) translateY(0);
+    transform: scale(.8) translateY(0);
     color: currentColor;
 }
 

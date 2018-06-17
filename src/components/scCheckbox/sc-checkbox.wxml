@@ -9,5 +9,5 @@
 
         </view>
     </view>
-    <label class="text-6">{{label}}</label>
+    <label class="text-5">{{label}}</label>
 </view>

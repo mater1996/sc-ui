@@ -19,7 +19,7 @@ input{
     box-sizing: border-box;
     -webkit-appearance: none;
     overflow: hidden;
-    font-size: 16px;
+    font-size: 32rpx;
     line-height: 20px;
     resize: none;
     border: none;

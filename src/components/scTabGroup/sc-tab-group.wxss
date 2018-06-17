@@ -1,4 +1,12 @@
-@import "../../sc-ui.wxss";
+.layout-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.layout-start-center {
+    justify-content: start;
+    align-items: center;
+}
 
 .tab-bar{
     /*width: fit-content;*/
@@ -17,8 +25,23 @@
     line-height: 80rpx;
 }
 
+.sc-btn {
+    background-color: inherit;
+    line-height: 66px;
+    min-width: 88px;
+    height: 36px;
+    padding: 0 16px;
+    margin: 0;
+    font-size: 32rpx;
+    border-radius: 2px;
+}
+
+.text-6 {
+    font-size: 26rpx;
+}
+
 .tab-bar-list .tab-bar-item.active {
-    color: #FFCC00;
+    color: #0088CC;
 }
 
 .tab-bar-driver{
