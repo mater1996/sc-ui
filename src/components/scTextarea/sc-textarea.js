@@ -127,16 +127,6 @@ Component({
                 this.triggerEvent('blur', e, {})
             }
         },
-        _queryMultipleNodes: function(e) {
-            return new Promise((resolve, reject) => {
-                const query = this.createSelectorQuery();
-                query.select(e).boundingClientRect();
-                query.selectViewport().scrollOffset();
-                query.exec(function(res){
-                    resolve(res);
-                });
-            })
-        },
         _input(e){
             if(!this.properties.disabled){
                 this.setData({

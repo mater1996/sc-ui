@@ -52,7 +52,7 @@ Component({
                         clicked: false,
                     });
                     let value = this.data.value = i.data.value;
-                    this.triggerEvent(`change`, {value: value}, {bubbles: true, composed: true})
+                    this.triggerEvent(`change`, {value: value})
                 }
             }
         }

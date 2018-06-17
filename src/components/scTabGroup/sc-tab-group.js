@@ -11,9 +11,9 @@ Component({
         tabList: {
             type: Array
         },
-        tabIndex:{
+        tabIndex: {
             type: Number,
-            value:0
+            value: 0
         }
     },
     data: {
@@ -28,7 +28,7 @@ Component({
     },
     relations: {
         '../scTab/sc-tab': {
-            type: 'child', // 关联的目标节点应为父节点
+            type: 'child',
         }
     },
     ready() {
@@ -56,41 +56,35 @@ Component({
                 this._setTab(idx);
             }
         },
-        _setTab(index){
+        _setTab(index) {
+            const {scrollViewWidth, btnMinWidth} = this.data;
             this.setData({
                 currentTab: index
             });
-            if (!(this.data.scrollViewWidth >= (this.data.tabList.length * this.data.btnMinWidth))) {
+            if (!(scrollViewWidth >= (this.data.tabList.length * btnMinWidth))) {
                 this._setScroll(index);
             }
             this._setHeight(index);
             this.triggerEvent('tabchange', {
-                value:index,
-                data:this.data.tabList[index].data || {}
+                value: index,
+                data: this.data.tabList[index].data || {}
             })
         },
         _setScroll(idx) {
-            const btnStartPosition = idx * this.data.btnMinWidth;
-            const btnEndPosition = (idx + 1) * this.data.btnMinWidth;
-            const scrollLeft = this.data.scrollLeft;
-            const scrollViewWidth = this.data.scrollViewWidth;
-            if (btnStartPosition >= scrollLeft && btnEndPosition <= Math.ceil(scrollLeft + scrollViewWidth)) {
+            const {scrollLeft, scrollViewWidth, btnMinWidth} = this.data;
+            const btnStartPosition = idx * btnMinWidth;
+            const btnEndPosition = (idx + 1) * btnMinWidth;
 
+            if (btnStartPosition >= scrollLeft && btnEndPosition <= Math.ceil(scrollLeft + scrollViewWidth)) {
+                // btn在窗口内
             } else {
                 if (btnStartPosition <= scrollLeft) {
-                    if (idx === 0) {
-                        this.setData({
-                            scrollLeft: 0
-                        });
-                    } else {
-                        this.setData({
-                            scrollLeft: btnStartPosition - (idx > 0 ? 44 : 0)
-                        });
-                    }
-
+                    this.setData({
+                        scrollLeft: idx === 0 ? 0 : (btnStartPosition - (idx > 0 ? btnMinWidth / 2 : 0))
+                    });
                 } else {
                     this.setData({
-                        scrollLeft: scrollLeft + btnEndPosition - (scrollLeft + scrollViewWidth) + ((idx + 1) < this.data.tabList.length ? 44 : 0)
+                        scrollLeft: scrollLeft + btnEndPosition - (scrollLeft + scrollViewWidth) + ((idx + 1) < this.data.tabList.length ? btnMinWidth / 2 : 0)
                     });
                 }
             }
@@ -112,38 +106,44 @@ Component({
             }, 150);
         },
         _touchmove(e) {
-            if (this.data.touchMoveStartX) {
-                this.data.touchMoveEndX = e.touches[0].clientX;
+            let {touchMoveStartX} = this.data;
+            if (touchMoveStartX) {
+                this.setData({
+                    touchMoveEndX: e.touches[0].clientX
+                });
             } else {
-                this.data.touchMoveStartX = e.touches[0].clientX;
+                this.setData({
+                    touchMoveStartX: e.touches[0].clientX
+                })
             }
         },
         _touchend(e) {
-            const touchMoveX = this.data.touchMoveEndX - this.data.touchMoveStartX;
-            const currentTab = this.data.currentTab;
-            const moveLength = this.data.moveLength;
+            const {touchMoveStartX, touchMoveEndX, currentTab, moveLength, scrollViewWidth, btnMinWidth} = this.data;
+            const tabLength = this.properties.tabList.length;
+            const touchMoveX = touchMoveEndX - touchMoveStartX;
             this.setData({
-                touchMoveEndX: null,
-                touchMoveStartX: null
+                touchMoveEndX: 0,
+                touchMoveStartX: 0
             });
             if (Math.abs(touchMoveX) > moveLength) {
-                if(touchMoveX >= 0){
+                if (touchMoveX >= 0) {
                     this.setData({
                         currentTab: currentTab - 1 >= 0 ? currentTab - 1 : 0
                     });
-                }else{
+                } else {
                     this.setData({
-                        currentTab: currentTab + 1 < this.properties.tabList.length ? currentTab + 1 : currentTab
+                        currentTab: currentTab + 1 < tabLength ? currentTab + 1 : currentTab
                     });
                 }
-                if(currentTab !== this.data.currentTab){
-                    if (!(this.data.scrollViewWidth >= (this.data.tabList.length * this.data.btnMinWidth))) {
-                        this._setScroll(this.data.currentTab);
+                let ct = this.data.currentTab;
+                if (currentTab !== ct) {
+                    if (!(scrollViewWidth >= (tabLength * btnMinWidth))) {
+                        this._setScroll(ct);
                     }
-                    this._setHeight(this.data.currentTab);
+                    this._setHeight(ct);
                     this.triggerEvent('tabchange', {
-                        value:this.data.currentTab,
-                        data:this.data.tabList[this.data.currentTab].data || {}
+                        value: ct,
+                        data: this.data.tabList[ct].data || {}
                     })
                 }
             }
@@ -152,7 +152,6 @@ Component({
             this.data.scrollLeft = e.detail.scrollLeft
         },
         _getAllTab: function () {
-            // 使用getRelationNodes可以获得nodes数组，包含所有已关联的custom-li，且是有序的
             return this.getRelationNodes('../scTab/sc-tab')
         }
     }
