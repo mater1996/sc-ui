@@ -105,46 +105,40 @@ Component({
                 }
             }, 150);
         },
-        _touchmove(e) {
-            let {touchMoveStartX} = this.data;
-            if (touchMoveStartX) {
-                this.setData({
-                    touchMoveEndX: e.touches[0].clientX
-                });
-            } else {
-                this.setData({
-                    touchMoveStartX: e.touches[0].clientX
-                })
-            }
-        },
-        _touchend(e) {
-            const {touchMoveStartX, touchMoveEndX, currentTab, moveLength, scrollViewWidth, btnMinWidth} = this.data;
-            const tabLength = this.properties.tabList.length;
-            const touchMoveX = touchMoveEndX - touchMoveStartX;
+        _touchStart(e){
             this.setData({
-                touchMoveEndX: 0,
-                touchMoveStartX: 0
+                touchMoveStartX: e.touches[0].clientX
             });
-            if (Math.abs(touchMoveX) > moveLength) {
-                if (touchMoveX >= 0) {
-                    this.setData({
-                        currentTab: currentTab - 1 >= 0 ? currentTab - 1 : 0
-                    });
-                } else {
-                    this.setData({
-                        currentTab: currentTab + 1 < tabLength ? currentTab + 1 : currentTab
-                    });
-                }
-                let ct = this.data.currentTab;
-                if (currentTab !== ct) {
-                    if (!(scrollViewWidth >= (tabLength * btnMinWidth))) {
-                        this._setScroll(ct);
+        },
+        _touchEnd(e) {
+            if (e.changedTouches.length === 1) {
+                const {currentTab, moveLength, scrollViewWidth, btnMinWidth} = this.data;
+                const tabLength = this.properties.tabList.length;
+                const touchMoveX = e.changedTouches[0].clientX - this.data.touchMoveStartX;
+                this.setData({
+                    touchMoveEndX: 0
+                });
+                if (Math.abs(touchMoveX) > moveLength) {
+                    if (touchMoveX >= 0) {
+                        this.setData({
+                            currentTab: currentTab - 1 >= 0 ? currentTab - 1 : 0
+                        });
+                    } else {
+                        this.setData({
+                            currentTab: currentTab + 1 < tabLength ? currentTab + 1 : currentTab
+                        });
                     }
-                    this._setHeight(ct);
-                    this.triggerEvent('tabchange', {
-                        value: ct,
-                        data: this.data.tabList[ct].data || {}
-                    })
+                    let ct = this.data.currentTab;
+                    if (currentTab !== ct) {
+                        if (!(scrollViewWidth >= (tabLength * btnMinWidth))) {
+                            this._setScroll(ct);
+                        }
+                        this._setHeight(ct);
+                        this.triggerEvent('tabchange', {
+                            value: ct,
+                            data: this.data.tabList[ct].data || {}
+                        })
+                    }
                 }
             }
         },
