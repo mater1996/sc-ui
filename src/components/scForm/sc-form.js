@@ -39,7 +39,7 @@ Component({
         }
     },
     data: {
-
+        btnClass:'submit-btn-class'
     },
     externalClasses: ['sc-class','submit-btn-class'],
     ready() {

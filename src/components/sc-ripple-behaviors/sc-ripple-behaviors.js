@@ -5,9 +5,9 @@
 module.exports = Behavior({
     behaviors: [],
     properties: {
-        ripple:{
-            type:Boolean,
-            value:true
+        ripple: {
+            type: Boolean,
+            value: true
         }
     },
     data: {
@@ -16,13 +16,15 @@ module.exports = Behavior({
         rippleDeleteCount: 0,
         rippleDeleteTimer: null,
         rippleColor: '#ffffff',
+        btnClass: 'sc-class'
     },
-    attached: function(){},
+    attached: function () {
+    },
     methods: {
         _addRipple(e, holdAnimate) {
-            if(!this.properties.disabled){
-                this._queryMultipleNodes('.sc-class').then(res => {
-                    const button = res[0] , viewPort = res[1];
+            if (!this.properties.disabled) {
+                this._queryMultipleNodes('.' + this.data.btnClass).then(res => {
+                    const button = res[0], viewPort = res[1];
                     const boxWidth = parseInt(button.width);
                     const boxHeight = parseInt(button.height);
                     const wH = boxWidth > boxHeight ? boxWidth : boxHeight;
@@ -44,12 +46,12 @@ module.exports = Behavior({
                 });
             }
         },
-        _queryMultipleNodes: function(e) {
+        _queryMultipleNodes: function (e) {
             return new Promise((resolve, reject) => {
                 const query = this.createSelectorQuery();
                 query.select(e).boundingClientRect();
                 query.selectViewport().scrollOffset();
-                query.exec(function(res){
+                query.exec(function (res) {
                     resolve(res);
                 });
             })
@@ -79,7 +81,7 @@ module.exports = Behavior({
         },
         _touchend(e) {
             let lastRipple = this.data.rippleList.slice(-1)[0];
-            if(lastRipple && lastRipple.holdAnimate){
+            if (lastRipple && lastRipple.holdAnimate) {
                 this.data.rippleList.pop();
                 this.setData({
                     rippleList: this.data.rippleList
