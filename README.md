@@ -218,7 +218,11 @@ input组件
 
 #### 3.8 st-form
 
-实验中
+###### 注意 如果声明report-submit sc-form会自带一个提交按钮（可以设置文本）
+
+当点击提交按钮触发submit时会把内部的input/check/radio/textarea/swich 分别以name:value的形式以对象的形式返回
+
+所以sc-form内请务必将每个表单控件的name声明，否则name将会默认为控件名称+id
 
 ```
  <sc-form bind:submit="submit" report-submit>
@@ -241,10 +245,11 @@ input组件
 | report-submit| Boolean  |	false |与上面的事件配合使用|
 |sc-class|String||form表的内部样式|
 |submit-btn-class|String||form表中的提交btn的样式|
+|submit-text|String|提交|提交按钮的文本|
 
 #### 3.9 sc-textarea
 ##### 实验中
-可以使用 但会有bug
+属性与sc-input 一致
 
 #### 3.10 sc-tab
 
