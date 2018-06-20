@@ -48,8 +48,8 @@
 }
 
 .sc-textfield-floating-label .sc-textarea-label{
-    -webkit-transform: scale(1) translateY(27px);
-    transform: scale(1) translateY(27px);
+    -webkit-transform: scale(1) translateY(100%);
+    transform: scale(1) translateY(100%);
     color: rgba(0,0,0,.54);
 }
 
