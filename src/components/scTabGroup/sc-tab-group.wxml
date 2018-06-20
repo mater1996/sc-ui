@@ -1,15 +1,15 @@
 <scroll-view scroll-x scroll-with-animation scroll-left="{{scrollLeft}}" bindscroll="_scroll">
-    <view class="layout-row layout-start-center">
+    <view id="sc-tab" class="layout-row layout-start-center">
         <view class="tab-bar">
             <view class="tab-bar-list layout-row layout-start-center">
-                <sc-button style="flex: 1;min-width: 88px" sc-class="sc-tab-btn" wx:for="{{tabList}}" wx:key="id" data-idx="{{index}}" ripple="{{ripple}}"
+                <sc-button style="min-width: 88px" sc-class="sc-tab-btn" wx:for="{{tabList}}" wx:key="id" data-idx="{{index}}" id="{{index}}" ripple="{{ripple}}"
                            class="tab-bar-item {{currentTab === index ? 'active' : ''}}"
                            bindtap="_tabBarTap">
                     <text class="text-6 text-secondary">{{item.label}}</text>
                 </sc-button>
             </view>
             <view class="tab-bar-driver"
-                  style="width:{{100/tabList.length}}%;transform: translateX({{100*currentTab}}%)">
+                  style="width:{{tabDriverWidth}}px;transform: translateX({{tabDriverLeft}}px)">
             </view>
         </view>
     </view>

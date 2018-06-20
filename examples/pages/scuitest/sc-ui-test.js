@@ -12,7 +12,7 @@ Page({
                 id:'waiting',
                 name: 'waiting'
             }, {
-                label: '已通过',
+                label: '已通过1111111111111111',
                 id:'passed',
                 name: 'passed'
             }, {
