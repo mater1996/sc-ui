@@ -25,7 +25,10 @@ Component({
         scroll: 0,
         scrollViewWidth: 0,
         moveLength: 64,
-        allTabItem: []
+        allTabItem: [],
+        tabDriverWidth:0,
+        tabDriverLeft:0,
+        isUnEqualNextWidth:false
     },
     relations: {
         '../scTab/sc-tab': {
@@ -69,14 +72,17 @@ Component({
         _tabBarTap: function (e) {
             let idx = e.target.dataset.idx;
             if (this.data.currentTab !== idx) {
+                const {width:currentTabWidth} = this.data.allTabItem[this.data.currentTab];
+                const {width} = this.data.allTabItem[idx];
+                this.setData({
+                    isUnEqualNextWidth:currentTabWidth !==width,
+                    currentTab: idx
+                });
                 this._setTab(idx);
             }
         },
         _setTab(index) {
             const {scrollViewWidth} = this.data;
-            this.setData({
-                currentTab: index
-            });
             if (scrollViewWidth < this.data.tabListWinth) {
                 this._setScroll(index);
             }else{
@@ -101,7 +107,6 @@ Component({
                 tabDriverWidth: width,
                 tabDriverLeft: btnStartPosition - tabStartPosition
             });
-            console.log(this.data);
             if (btnStartPosition >= scrollLeft && btnEndPosition <= Math.ceil(scrollLeft + scrollViewWidth + tabStartPosition)) {
 
             } else {
@@ -111,7 +116,7 @@ Component({
                     });
                 } else {
                     this.setData({
-                        scrollLeft: btnEndPosition - scrollViewWidth - tabStartPosition + ((idx + 1) < this.data.tabList.length - 1 ? (this.data.allTabItem[idx + 1].width / 2) : 0),
+                        scrollLeft: btnEndPosition - scrollViewWidth - tabStartPosition + ((idx + 1) < this.data.tabList.length ? (this.data.allTabItem[idx + 1].width / 2) : 0),
                     });
                 }
             }
@@ -157,11 +162,15 @@ Component({
                     }
                     let ct = this.data.currentTab;
                     if (currentTab !== ct) {
+                        const {width:currentTabWidth} = this.data.allTabItem[currentTab];
+                        const nextTab = this.data.allTabItem[ct];
+                        const {left: btnStartPosition, width} = nextTab;
+                        this.setData({
+                            isUnEqualNextWidth:currentTabWidth !==width,
+                        });
                         if (!(scrollViewWidth >= (tabLength * btnMinWidth))) {
                             this._setScroll(ct);
                         }else{
-                            const nextTab = this.data.allTabItem[ct];
-                            const {left: btnStartPosition, width} = nextTab;
                             this.setData({
                                 tabDriverWidth: width,
                                 tabDriverLeft: btnStartPosition - this.data.tabStartPosition

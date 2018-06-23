@@ -8,7 +8,7 @@
                     <text class="text-6 text-secondary">{{item.label}}</text>
                 </sc-button>
             </view>
-            <view class="tab-bar-driver"
+            <view class="tab-bar-driver {{isUnEqualNextWidth? 'tab-bar-driver-trans' :''}}"
                   style="width:{{tabDriverWidth}}px;transform: translateX({{tabDriverLeft}}px)">
             </view>
         </view>
