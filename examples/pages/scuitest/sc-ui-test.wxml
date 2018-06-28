@@ -37,7 +37,7 @@
     </view>
 
     <view style="margin: 16px">
-        <view style="text-align: center;margin-bottom: 16px">check组件</view>
+        <view style="text-align: center;margin-bottom: 16px">check测试</view>
         <view>
             <sc-checkbox-group sc-class="sc-checkbox-group-row" bindchange="checkboxChange">
                 <sc-checkbox sc-class="sc-checkbox" label="初始选中" checked="{{true}}" value="check1"></sc-checkbox>
