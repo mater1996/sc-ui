@@ -1,13 +1,14 @@
 .sc-textfield-main{
     display: flex;
-    justify-content: start;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    position: relative;
     width: 100%;
 }
 
 .sc-textfield{
+    position: relative;
+    padding: 16rpx;
     width: 100%;
 }
 
@@ -55,12 +56,7 @@ input::before {
 }
 
 .sc-textfield-disabled .sc-label{
-    color: rgba(0,0,0,.42);
-}
-
-.sc-textfield{
-    position: relative;
-    padding: 8px;
+    color: rgba(0,0,0,.38);
 }
 
 .sc-textfield .sc-label{
@@ -102,11 +98,9 @@ input::before {
     font-size: 24rpx;
 }
 
-.icon{
-    font-size: 58rpx;
-}
-
-.icon-err{
-    align-self: flex-end;
-    padding-bottom: 10px;
+.sc-icon{
+    font-size: 32rpx;
+    position: absolute;
+    bottom: 56rpx;
+    left: -24rpx;
 }

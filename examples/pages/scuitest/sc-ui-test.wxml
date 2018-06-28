@@ -26,19 +26,22 @@
     <view style="margin: 16px">
         <view style="text-align: center;margin-bottom: 16px">input组件测试</view>
         <view style="">
-            <sc-input sc-class="sc-input" label="测试" bindinput="input"></sc-input>
-            <sc-input sc-class="sc-input" label="测试" bindinput="input"></sc-input>
+            <sc-input sc-class="sc-input" label="普通" bindinput="input"></sc-input>
+            <sc-input input-type="phone" sc-class="sc-input" label="带图标" bindinput="input" err-text="错误提示"
+                      icon="iconfont icon-weibiaoti-"></sc-input>
+            <sc-input input-type="phone" sc-class="sc-input" label="身份证" bindinput="input" err-text="身份证号不对"
+                      regex="(^\\d{15}$)|(^\\d{18}$)|(^\\d{17}(\\d|X|x)$)"></sc-input>
             <sc-input sc-class="sc-input" label="禁用" bindinput="input" disabled="{{true}}"></sc-input>
-            <sc-textarea sc-class="sc-textarea" style="width: 80%" label="hahaha"></sc-textarea><!-- 高度控制问题 -->
+            <sc-textarea sc-class="sc-textarea" style="width: 80%" label="多行文本框"></sc-textarea><!-- 高度控制问题 -->
         </view>
     </view>
 
-    <view style="margin: 16px" >
+    <view style="margin: 16px">
         <view style="text-align: center;margin-bottom: 16px">check组件</view>
         <view>
             <sc-checkbox-group sc-class="sc-checkbox-group-row" bindchange="checkboxChange">
                 <sc-checkbox sc-class="sc-checkbox" label="初始选中" checked="{{true}}" value="check1"></sc-checkbox>
-                <sc-checkbox sc-class="sc-checkbox" label="初始未选中" checked="{{false}}"  value="check2"></sc-checkbox>
+                <sc-checkbox sc-class="sc-checkbox" label="初始未选中" checked="{{false}}" value="check2"></sc-checkbox>
                 <sc-checkbox disabled="{{true}}" sc-class="sc-checkbox" label="禁用" checked="{{false}}"></sc-checkbox>
             </sc-checkbox-group>
         </view>
@@ -48,8 +51,8 @@
         <view style="text-align: center;margin-bottom: 16px">switch组件</view>
         <view>
             <sc-switch style="height: 36px" sc-class="sc-switch" bind:change="switchChange"></sc-switch>
-            <sc-switch style="margin-left: 16px" sc-class="sc-switch" disabled="{{true}}" bind:change="switchChange"></sc-switch>
-            <sc-checkbox sc-class="sc-checkbox" label="初始选中" value="value" checked="{{true}}" bind:checkChange="checkChange"></sc-checkbox>
+            <sc-switch style="margin-left: 16px" sc-class="sc-switch" disabled="{{true}}"
+                       bind:change="switchChange"></sc-switch>
         </view>
     </view>
 
@@ -57,7 +60,8 @@
         <view style="text-align: center;margin-bottom: 16px">radio组件</view>
         <view>
             <sc-radio-group bind:change="radioChange">
-                <sc-radio style="margin-right: 8px" label="测试" sc-class="sc-radio" checked="{{true}}" value="radio1"></sc-radio>
+                <sc-radio style="margin-right: 8px" label="测试" sc-class="sc-radio" checked="{{true}}"
+                          value="radio1"></sc-radio>
                 <sc-radio style="margin-right: 8px" label="测试" sc-class="sc-radio" value="radio2"></sc-radio>
                 <sc-radio style="margin-right: 8px" label="测试" sc-class="sc-radio" checked disabled></sc-radio>
             </sc-radio-group>
@@ -68,7 +72,8 @@
         <view style="text-align: center;margin-bottom: 16px">进度条组件</view>
         <view style="width: 100%;text-align: center">
             <sc-progress sc-class="sc-progress"></sc-progress>
-            <sc-progress sc-class="sc-progress" sc-determinate-class="sc-progress-determinate" type="determinate"  width="{{80}}"></sc-progress>
+            <sc-progress sc-class="sc-progress" sc-determinate-class="sc-progress-determinate" type="determinate"
+                         width="{{80}}"></sc-progress>
         </view>
     </view>
 
@@ -79,7 +84,9 @@
                 <sc-cell sub-header="subheader" ripple="{{false}}">header</sc-cell>
                 <sc-cell left-icon="iconfont icon-phone">header</sc-cell>
                 <sc-cell right-icon="iconfont icon-right" right-text="右侧">header</sc-cell>
-                <sc-cell switch ripple="{{false}}" value="cellSwitch" checked bind:cellSwitchChange="cellChange">header</sc-cell>
+                <sc-cell switch ripple="{{false}}" value="cellSwitch" checked bind:cellSwitchChange="cellChange">
+                    header
+                </sc-cell>
             </sc-cell-group>
         </view>
     </view>
@@ -87,35 +94,39 @@
     <view style="margin: 16px;width: 80%;">
         <view style="text-align: center;margin-bottom: 16px">navBar</view>
         <view style="">
-            <sc-tab-group tab-list="{{tabList}}">
-                <sc-tab style="max-height: 80px">111</sc-tab>
-                <sc-tab  style="max-height: 80px">222
-                <view style="width: 50px;height: 50px;background-color: #00aa00">
-
-                </view>
-                    <sc-input label="hhhh"></sc-input>
+            <sc-tab-group tab-list="{{tabList}}" style="max-height: 180px">
+                <sc-tab>页面1</sc-tab>
+                <sc-tab>
+                    页面2
+                    <image style="width: 180px;height: 180px;" src="/assets/image/haimianbaobao.jpg"></image>
                 </sc-tab>
-                <sc-tab  style="max-height: 80px">
-                    333
-                    <view>55464545456454654564645545664444444444444444444444444</view>
+                <sc-tab style="max-height: 80px">
+                    页面3
+                    <view>
+                        <sc-input sc-class="sc-input" label="普通" bindinput="input"></sc-input>
+                        <sc-button sc-class="sc-btn box-shadow-9 new-color" style="display: inline-block;margin-right: 16px"
+                                   open-type="getUserInfo" bind:getuserinfo="getUserInfo">
+                            普通
+                        </sc-button>
+                    </view>
                 </sc-tab>
-                <sc-tab  style="max-height: 80px">
+                <sc-tab style="max-height: 80px">
                     44
                     <view>55464545456454654564645545664444444444444444444444444</view>
                 </sc-tab>
-                <sc-tab  style="max-height: 80px">
+                <sc-tab style="max-height: 80px">
                     55
                     <view>55464545456454654564645545664444444444444444444444444</view>
                 </sc-tab>
-                <sc-tab  style="max-height: 80px">
+                <sc-tab style="max-height: 80px">
                     66
                     <view>55464545456454654564645545664444444444444444444444444</view>
                 </sc-tab>
-                <sc-tab  style="max-height: 80px">
+                <sc-tab style="max-height: 80px">
                     77
                     <view>55464545456454654564645545664444444444444444444444444</view>
                 </sc-tab>
-                <sc-tab  style="max-height: 80px">
+                <sc-tab style="max-height: 80px">
                     88
                     <view>55464545456454654564645545664444444444444444444444444</view>
                 </sc-tab>
@@ -140,8 +151,10 @@
         </view>
     </view>
     <text>form表单</text>
-    <sc-form bind:submit="submit" report-submit submit-text="submit" submit-btn-class="sc-btn submit-btn" style="width: 100%;text-align: center">
-        <sc-input sc-class="sc-input" label="姓名" name="name" bindinput="input" selection-start="{{-1}}" cursor="0"></sc-input>
+    <sc-form bind:submit="submit" report-submit submit-text="submit" submit-btn-class="sc-btn submit-btn"
+             style="width: 100%;text-align: center">
+        <sc-input sc-class="sc-input" label="姓名" name="name" bindinput="input" selection-start="{{-1}}"
+                  cursor="0"></sc-input>
         <sc-radio-group sc-class="sc-radio-group" name="sex">
             <sc-radio style="margin-right: 8px" label="男" sc-class="sc-radio" checked="{{true}}" value="man"></sc-radio>
             <sc-radio style="margin-right: 8px" label="女" sc-class="sc-radio" value="women"></sc-radio>

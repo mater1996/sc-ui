@@ -43,6 +43,10 @@
     box-sizing: border-box;
 }
 
+.sc-textfield-disabled .sc-label{
+    color: rgba(0,0,0,.38);
+}
+
 .sc-textfield-floating-label{
     position: relative;
 }

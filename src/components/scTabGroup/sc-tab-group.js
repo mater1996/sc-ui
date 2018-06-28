@@ -107,10 +107,11 @@ Component({
                 tabDriverWidth: width,
                 tabDriverLeft: btnStartPosition - tabStartPosition
             });
-            if (btnStartPosition >= scrollLeft && btnEndPosition <= Math.ceil(scrollLeft + scrollViewWidth + tabStartPosition)) {
+
+            if (btnStartPosition >= scrollLeft+tabStartPosition && btnEndPosition <= Math.ceil(scrollLeft + scrollViewWidth + tabStartPosition)) {
 
             } else {
-                if (btnStartPosition <= scrollLeft) {
+                if (btnStartPosition-tabStartPosition <= scrollLeft) {
                     this.setData({
                         scrollLeft: idx === 0 ? 0 : (btnStartPosition - tabStartPosition - (idx > 0 ? (this.data.allTabItem[idx - 1].width / 2) : 0)),
                     });

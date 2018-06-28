@@ -108,3 +108,91 @@ gulp.task('pro', [
 gulp.task('build', ['clean'], () => {
     runSequence('pro');
 });
+
+const testPath = './examples/assets/lib/scui/dist';
+
+gulp.task('cleantest', () => {
+    return del(['testPath'+'/**'])
+});
+
+gulp.task('watch', () => {
+    gulp.watch('./src/**/*.json', ['json'],function () {
+        console.log('json文件改动');
+    });
+    gulp.watch('./src/assets/**', ['assetstest']);
+    gulp.watch('./src/**/*.wxml', ['templatesProtest']);
+    gulp.watch('./src/**/*.wxss', ['wxssProtest']);
+    gulp.watch('./src/**/*.sass', ['wxssProtest']);
+    gulp.watch('./src/**/*.js', ['scriptsProtest']);
+});
+
+gulp.task('jsonLint', () => {
+    var combined = combiner.obj([
+        gulp.src(['./src/**/*.json']),
+        jsonlint(),
+        jsonlint.reporter(),
+        jsonlint.failAfterError()
+    ]);
+
+    combined.on('error', handleError);
+});
+
+gulp.task('jsonProtest', ['jsonLint'], () => {
+    return gulp.src('./src/**/*.json')
+        .pipe(jsonminify())
+        .pipe(gulp.dest(testPath))
+});
+
+gulp.task('assetstest', () => {
+    return gulp.src('./src/assets/**')
+        .pipe(gulp.dest(testPath+'/assets'))
+});
+
+gulp.task('templatesProtest', () => {
+    return gulp.src('./src/**/*.wxml')
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            removeComments: true,
+            keepClosingSlash: true
+        }))
+        .pipe(gulp.dest(testPath))
+});
+
+gulp.task('wxssProtest', () => {
+    var combined = combiner.obj([
+        gulp.src(['./src/**/*.{wxss,sass}', '!./src/styles/**']),
+        sass().on('error', sass.logError),
+        autoprefixer([
+            'iOS >= 8',
+            'Android >= 4.1'
+        ]),
+        cleanCSS(),
+        rename((path) => path.extname = '.wxss'),
+        gulp.dest(testPath)
+    ]);
+
+    combined.on('error', handleError);
+});
+
+gulp.task('scriptsProtest', () => {
+    return gulp.src('./src/**/*.js')
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(uglify({
+            compress: true,
+        }))
+        .pipe(gulp.dest(testPath))
+});
+
+gulp.task('protest', [
+    'jsonProtest',
+    'assetstest',
+    'templatesProtest',
+    'wxssProtest',
+    'scriptsProtest'
+]);
+
+gulp.task('test', ['cleantest','watch'], () => {
+    runSequence('protest');
+});

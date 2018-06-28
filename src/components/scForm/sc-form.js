@@ -65,7 +65,7 @@ Component({
                 if (formControllers.hasOwnProperty(key)) {
                     formControllers[key].length > 0 ? formControllers[key].map(v => {
                         Object.defineProperty(value, v.data.name, {
-                            writable: false,
+                            writable: true,
                             value: v.data.value
                         })
                     }) : null;
