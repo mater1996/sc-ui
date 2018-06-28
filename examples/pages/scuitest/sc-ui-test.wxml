@@ -92,15 +92,15 @@
     </view>
 
     <view style="margin: 16px;width: 80%;">
-        <view style="text-align: center;margin-bottom: 16px">navBar</view>
+        <view style="text-align: center;margin-bottom: 16px">tab</view>
         <view style="">
-            <sc-tab-group tab-list="{{tabList}}" style="max-height: 180px">
+            <sc-tab-group tab-list="{{tabList}}" style="min-height: 180px">
                 <sc-tab>页面1</sc-tab>
                 <sc-tab>
                     页面2
                     <image style="width: 180px;height: 180px;" src="/assets/image/haimianbaobao.jpg"></image>
                 </sc-tab>
-                <sc-tab style="max-height: 80px">
+                <sc-tab>
                     页面3
                     <view>
                         <sc-input sc-class="sc-input" label="普通" bindinput="input"></sc-input>
@@ -110,25 +110,8 @@
                         </sc-button>
                     </view>
                 </sc-tab>
-                <sc-tab style="max-height: 80px">
-                    44
-                    <view>55464545456454654564645545664444444444444444444444444</view>
-                </sc-tab>
-                <sc-tab style="max-height: 80px">
-                    55
-                    <view>55464545456454654564645545664444444444444444444444444</view>
-                </sc-tab>
-                <sc-tab style="max-height: 80px">
-                    66
-                    <view>55464545456454654564645545664444444444444444444444444</view>
-                </sc-tab>
-                <sc-tab style="max-height: 80px">
-                    77
-                    <view>55464545456454654564645545664444444444444444444444444</view>
-                </sc-tab>
-                <sc-tab style="max-height: 80px">
-                    88
-                    <view>55464545456454654564645545664444444444444444444444444</view>
+                <sc-tab >
+                    页面4
                 </sc-tab>
             </sc-tab-group>
         </view>

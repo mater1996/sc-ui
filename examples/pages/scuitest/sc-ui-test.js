@@ -24,22 +24,6 @@ Page({
                 label: '已取消',
                 id:'cancel',
                 name: 'cancel'
-            },{
-                label: '已取jj',
-                id:'jj',
-                name: 'jj'
-            },{
-                label: '已取kk',
-                id:'kk',
-                name: 'kk'
-            },{
-                label: '已取ll',
-                id:'ll',
-                name: 'll'
-            },{
-                label: 'mm',
-                id:'mm',
-                name: 'mm'
             }],
     },
     onLoad: function () {
