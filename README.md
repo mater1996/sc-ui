@@ -143,9 +143,10 @@ input组件
 |bindconfirm |   EventHandle | | 		点击完成按钮时触发，event.detail = {value: value} ||
 |name|Stirng||配合sc-form使用时提交获得的key|
 |sc-class|Stirng||对input标签使用的class类 推荐使用 sc-input|
-|required|Boolean||是否required请配置err-text使用required提示|
+|regex|Boolean||一个正则表达式 会覆盖inputType|
+|inputType|String||ui内置的正则验证 目前只有phone验证|
 |err-status|Boolean||是否进行错误提示|
-|err-text|Stirng||错误提示文本|
+|err-text|Stirng||错误提示文本（当输入的值不符合正则表达式或inputType时的提示文本）|
 ##### 类型等请到 https://developers.weixin.qq.com/miniprogram/dev/component/input.html 比对
 
 #### 3.4 sc-progress
