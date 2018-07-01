@@ -2,7 +2,7 @@
  Created by bai on 2018/5/2
  -->
 <view class="sc-textfield-main" style="position: relative">
-    <text class="icon sc-icon"></text>
+    <text class="icon {{errText?'sc-err-icon':'sc-icon'}}"></text>
     <view class="sc-textfield {{float ? 'sc-textfield-floating-label' : ''}} {{disabled ? 'sc-textfield-disabled' : ''}}">
         <label wx:if="{{label ? true : false}}"
                class="sc-label {{focus || value ? 'sc-label-focus' :''}}">{{label}}</label>

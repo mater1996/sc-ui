@@ -1,0 +1,1 @@
+"use strict";Component({properties:{id:{type:String}},data:{show:!0},ready:function(){console.log(this),this.triggerEvent("init",this,{})},relations:{},externalClasses:["sc-class"],methods:{_catchtouchmove:function(){return!0},showModel:function(){this.setData({show:!this.data.show})}}});

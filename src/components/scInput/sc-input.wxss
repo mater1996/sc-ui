@@ -98,9 +98,16 @@ input::before {
     font-size: 24rpx;
 }
 
-.sc-icon{
+.sc-err-icon{
     font-size: 32rpx;
     position: absolute;
     bottom: 56rpx;
+    left: -24rpx;
+}
+
+.sc-icon{
+    font-size: 32rpx;
+    position: absolute;
+    bottom: 24rpx;
     left: -24rpx;
 }

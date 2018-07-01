@@ -254,15 +254,99 @@ input组件
 
 #### 3.10 sc-tab
 
-```
+```html
 <sc-tab-group tab-list="{{tabList}}">
    <sc-tab>111</sc-tab>
    <sc-tab>222</sc-tab>
    <sc-tab>333</sc-tab>
 </sc-tab-group>
 ```
+
+```json
+Page({
+  data: {
+          motto: 'scui test',
+          width: 100,
+          tabList: [
+              {
+                  label: '已申请',
+                  id: 'waiting',
+                  name: 'waiting'
+              }, {
+                  label: '已通过1111111111111111',
+                  id: 'passed',
+                  name: 'passed'
+              }, {
+                  label: '已失败',
+                  id: 'fail',
+                  name: 'fail'
+              },
+              {
+                  label: '已取消',
+                  id: 'cancel',
+                  name: 'cancel'
+              }],
+      }
+ })
+```
 | 属性名  | 类型  |	默认值 |	说明 |
 | ------------ | ------------ | ------------ | ------------ |
 | tab-list| array  |	 | 渲染的tab列表必须和内部的sc-tab对应 是一个对象数组每个对象包含 label,id,以及data|
 | tab-change| handler| | tab更换时触发的事件 在e.detail 里返回当前的tabIndex以及data
 |tabIndex|Number|0|初始化的tab位置从0开始|
+
+#### 3.10 sc-dialog
+```html
+<view>
+   <sc-button sc-class="sc-btn" bind:tap="openDialog">打开/关闭</sc-button>
+   <sc-dialog id="dialog" sc-class="box-shadow-8"
+        bind:open="dialogOpen"
+        bind:opened="dialogOpened"
+        bind:close="dialogClose"
+        bind:closed="dialogClosed">
+      <sc-button sc-class="sc-btn" bind:tap="closeDialog">打开/关闭</sc-button>
+   </sc-dialog>
+ </view>
+```
+
+```json
+const scui = require('path/to/dist/sc-ui');
+Page({
+  onReady(){
+    this.data.dialog = scui.Dialog("#dialog");
+  },
+  openDialog(){
+    this.data.dialog.toggle();
+    //this.data.dialog.open();
+  },
+  closeDialog(){
+    this.data.dialog.toggle();
+    //this.data.dialog.close();
+  },
+  dialogOpen(){
+    // 请务必在这里将您的页面的根元素的overflow设置为hidden
+    console.log("模态框打开中");
+  },
+  dialogClose(){
+    // 请务必在这里将您的页面的根元素的overflow设置为auto
+    console.log("模态框关闭中");
+  },
+  dialogOpened(){
+    console.log("模态框已打开");
+  },
+  dialogClosed(){
+    console.log("模态框已关闭");
+  }
+ })
+```
+
+| 属性名  | 类型  |	默认值 |	说明 |
+| ------------ | ------------ | ------------ | ------------ |
+| id| String  |	 | 每个dialog必须提供一个id切不能重复|
+| sc-class| String| | dialog内容的样式
+|overlay|Bollean|true|是否显示遮罩|
+|overlay-close|Bollean|true|点击遮罩是否关闭模态框|
+|open|handler|true|模态框打开且处于动画状态的事件|
+|opened|handler|true|模态框打开事件|
+|close|handler|true|模态框关闭且处于动画状态的事件|
+|closed|handler|true|模态框关闭事件|

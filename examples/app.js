@@ -1,9 +1,11 @@
-
+const scui = require('./assets/lib/scui/dist/sc-ui')
 
 App({
     // 注册全局函数/属性
     // 初始化函数
     onLaunch: function (options) {
+
+        console.log(scui);
         // 登录
     },
     // 显示函数

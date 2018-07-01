@@ -5,7 +5,6 @@ const scRippleBehaviors = require('../sc-ripple-behaviors/sc-ripple-behaviors');
 Component({
     behaviors: [scRippleBehaviors],
     properties: {
-        // 绑定未冒泡的事件手动触发到上一层
         reportSubmit: {
             type: Boolean,
             value: false
@@ -20,22 +19,22 @@ Component({
     },
     relations: {
         '../scButton/sc-button': {
-            type: 'child', // 关联的目标节点应为父节点
+            type: 'child',
         },
         '../scCheckboxGroup/sc-checkbox-group': {
-            type: 'child', // 关联的目标节点应为父节点
+            type: 'child',
         },
         '../scInput/sc-input': {
-            type: 'child', // 关联的目标节点应为父节点
+            type: 'child',
         },
         '../scTextarea/sc-textarea': {
-            type: 'child', // 关联的目标节点应为父节点
+            type: 'child',
         },
         '../scSwitch/sc-switch': {
-            type: 'child', // 关联的目标节点应为父节点
+            type: 'child',
         },
         '../scRadioGroup/sc-radio-group': {
-            type: 'child', // 关联的目标节点应为父节点
+            type: 'child',
         }
     },
     data: {
@@ -47,7 +46,6 @@ Component({
     },
     methods: {
         _getAllControl: function () {
-            // 使用getRelationNodes可以获得nodes数组，包含所有已关联的custom-li，且是有序的
             return {
                 checkboxGroups: this.getRelationNodes('../scCheckboxGroup/sc-checkbox-group'),
                 inputs: this.getRelationNodes('../scInput/sc-input'),
@@ -61,7 +59,7 @@ Component({
             let value = {
                 formId: e.detail.formId
             };
-            for (let key in this.formControllers) {
+            for (let key in formControllers) {
                 if (formControllers.hasOwnProperty(key)) {
                     formControllers[key].length > 0 ? formControllers[key].map(v => {
                         Object.defineProperty(value, v.data.name, {

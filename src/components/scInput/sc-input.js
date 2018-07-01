@@ -95,7 +95,7 @@ Component({
         inputTypeList: {
             phone: {
                 regex: '^[1][3,4,5,7,8][0-9]{9}$',
-                errorText: '请输入正确的手机号'
+                errText: '请输入正确的手机号'
             }
         },
         requireVerify: false,
@@ -118,14 +118,15 @@ Component({
             placeholder: placeholder,
             name: name || 'input' + inputCount++
         });
-        if (this.properties.inputType && !this.data.inputTypeList[this.properties.inputType]) {
+        const inputTypeItem = inputTypeList[inputType];
+        if (inputType && !inputTypeItem) {
             this.data.requireVerify = false;
             throw new Error('no this inputType');
         } else {
-            if (regex || (inputType && inputTypeList[inputType])) {
+            if (regex || (inputType && inputTypeItem)) {
                 this.data.requireVerify = true;
-                this.data.verify.errText = errText || inputTypeList[inputType].errText || null;
-                this.data.verify.regex = new RegExp(regex || inputTypeList[inputType].regex || null);
+                this.data.verify.errText = errText || inputTypeItem.errText || null;
+                this.data.verify.regex = new RegExp(regex || inputTypeItem.regex || null);
             }
         }
     },
@@ -174,6 +175,7 @@ Component({
                         value: value
                     });
                 }
+                console.log(this.data.requireVerify,this.data.value);
                 this.triggerEvent('input', e.detail, {})
             }
         },
