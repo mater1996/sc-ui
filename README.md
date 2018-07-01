@@ -8,7 +8,7 @@
 
 小程序代码片段：wechatide://minicode/bGhfWdm77WGd (请复制到自己的开发工具打开)
 
-![img](https://cdn.rawgit.com/xbup/sc-ui/0f6803c1/test.gif)
+![img](https://cdn.rawgit.com/xbup/sc-ui/50442ecb/test.gif)
 
 ## get start
 ##### 下载：目前不支持npm install 请直接clone或下载
