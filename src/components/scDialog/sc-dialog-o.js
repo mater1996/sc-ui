@@ -8,13 +8,6 @@ const Dialog = (function () {
         if (this.id) {
             const pages = getCurrentPages();
             const pageCtx = pages[pages.length - 1];
-            console.log(pageCtx);
-            // pageCtx.onPageScroll = function (e) {
-            //     console.log(e);
-            // }
-            // pageCtx.__proto__.onPageScroll = function (e) {
-            //     console.log(e);
-            // }
             this.dialog = pageCtx.selectComponent(this.id);
             if (this.dialog) {
                 return this;
