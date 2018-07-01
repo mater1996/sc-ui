@@ -346,7 +346,7 @@ Page({
 | sc-class| String| | dialog内容的样式
 |overlay|Bollean|true|是否显示遮罩|
 |overlay-close|Bollean|true|点击遮罩是否关闭模态框|
-|open|handler|true|模态框打开且处于动画状态的事件|
-|opened|handler|true|模态框打开事件|
-|close|handler|true|模态框关闭且处于动画状态的事件|
-|closed|handler|true|模态框关闭事件|
+|open|handler||模态框打开且处于动画状态的事件|
+|opened|handler||模态框打开事件|
+|close|handler||模态框关闭且处于动画状态的事件|
+|closed|handler||模态框关闭事件|
