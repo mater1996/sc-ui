@@ -101,13 +101,13 @@ input::before {
 .sc-err-icon{
     font-size: 32rpx;
     position: absolute;
-    bottom: 56rpx;
+    bottom: 58rpx;
     left: -24rpx;
 }
 
 .sc-icon{
     font-size: 32rpx;
     position: absolute;
-    bottom: 24rpx;
+    bottom: 30rpx;
     left: -24rpx;
 }
