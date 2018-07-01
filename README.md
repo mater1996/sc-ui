@@ -262,7 +262,7 @@ input组件
 </sc-tab-group>
 ```
 
-```json
+```js
 Page({
   data: {
           motto: 'scui test',
@@ -309,7 +309,7 @@ Page({
  </view>
 ```
 
-```json
+```js
 const scui = require('path/to/dist/sc-ui');
 Page({
   onReady(){
