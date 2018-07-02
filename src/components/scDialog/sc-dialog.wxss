@@ -12,7 +12,7 @@
 .sc-dialog {
     position: fixed;
     box-sizing: border-box;
-    border-radius: 8rpx;
+    border-radius: 8 rpx;
     z-index: 10001;
     background-color: white;
     margin: auto;
@@ -20,11 +20,11 @@
     width: 80vw;
     left: 0;
     right: 0;
-    top: 35%;
-    -webkit-transform: translate3d(0,-35%,0);
-    -moz-transform: translate3d(0,-35%,0);
-    -o-transform: translate3d(0,-35%,0);
-    transform: translate3d(0,-35%,0);
+    top: 50%;
+    -webkit-transform: scale(1) translate3d(0, -50%, 0);
+    -moz-transform: scale(1) translate3d(0, -50%, 0);
+    -o-transform: scale(1) translate3d(0, -50%, 0);
+    transform: scale(1) translate3d(0, -50%, 0);
     transform-origin: center;
     overflow-y: scroll;
 }
@@ -32,14 +32,6 @@
 .sc-mask-fadeIn {
     will-change: transform;
     -webkit-animation-name: maskFadeIn;
-    -webkit-animation-duration: 0.3s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-fill-mode: forwards;
-}
-
-.sc-dialog-fadeIn {
-    will-change: transform;
-    -webkit-animation-name: dialogFadeIn;
     -webkit-animation-duration: 0.3s;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-fill-mode: forwards;
@@ -53,6 +45,14 @@
     -webkit-animation-fill-mode: forwards;
 }
 
+.sc-dialog-fadeIn {
+    will-change: transform;
+    -webkit-animation-name: dialogFadeIn;
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+}
+
 .sc-dialog-fadeOut {
     will-change: transform;
     -webkit-animation-name: dialogFadeOut;
@@ -61,8 +61,23 @@
     -webkit-animation-fill-mode: forwards;
 }
 
-@keyframes maskFadeIn {
+.sc-dialog-slideTopIn {
+    will-change: transform;
+    -webkit-animation-name: dialogSlideTopIn;
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+}
 
+.sc-dialog-slideTopOut {
+    will-change: transform;
+    -webkit-animation-name: dialogSlideTopOut;
+    -webkit-animation-duration: .3s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes maskFadeIn {
     from {
         opacity: 0;
         visibility: hidden;
@@ -70,23 +85,6 @@
     to {
         opacity: 1;
         visibility: visible;
-    }
-}
-
-@keyframes dialogFadeIn {
-    from {
-        opacity: 0;
-        -webkit-transform: scale(0.95) translate3d(0, -35%,0);
-        -moz-transform: scale(0.95) translate3d(0, -35%,0);
-        -o-transform: scale(0.95) translate3d(0, -35%,0);
-        transform: scale(0.95) translate3d(0, -35%,0);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: scale(1) translate3d(0, -35%,0);
-        -moz-transform: scale(1) translate3d(0, -35%,0);
-        -o-transform: scale(1) translate3d(0, -35%,0);
-        transform: scale(1) translate3d(0, -35%,0);
     }
 }
 
@@ -101,19 +99,58 @@
     }
 }
 
+@keyframes dialogFadeIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0.95) translate3d(0, -50%, 0);
+        -moz-transform: scale(0.95) translate3d(0, -50%, 0);
+        -o-transform: scale(0.95) translate3d(0, -50%, 0);
+        transform: scale(0.95) translate3d(0, -50%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1) translate3d(0, -50%, 0);
+        -moz-transform: scale(1) translate3d(0, -50%, 0);
+        -o-transform: scale(1) translate3d(0, -50%, 0);
+        transform: scale(1) translate3d(0, -50%, 0);
+    }
+}
+
 @keyframes dialogFadeOut {
     from {
         opacity: 1;
-        -webkit-transform: scale(1) translate3d(0, -35%,0);
-        -moz-transform: scale(1) translate3d(0, -35%,0);
-        -o-transform: scale(1) translate3d(0, -35%,0);
-        transform: scale(1) translate3d(0, -35%,0);
+        -webkit-transform: scale(1) translate3d(0, -50%, 0);
+        -moz-transform: scale(1) translate3d(0, -50%, 0);
+        -o-transform: scale(1) translate3d(0, -50%, 0);
+        transform: scale(1) translate3d(0, -50%, 0);
     }
     to {
         opacity: 0;
-        -webkit-transform: scale(0.95) translate3d(0, -35%,0);
-        -moz-transform: scale(0.95) translate3d(0, -35%,0);
-        -o-transform: scale(0.95) translate3d(0, -35%,0);
-        transform: scale(0.95) translate3d(0, -35%,0);
+        -webkit-transform: scale(0.95) translate3d(0, -50%, 0);
+        -moz-transform: scale(0.95) translate3d(0, -50%, 0);
+        -o-transform: scale(0.95) translate3d(0, -50%, 0);
+        transform: scale(0.95) translate3d(0, -50%, 0);
+    }
+}
+
+@keyframes dialogSlideTopIn {
+    from {
+        top: 40%;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes dialogSlideTopOut {
+    from {
+        top: 50%;
+        opacity: 1;
+    }
+    to {
+        top: 40%;
+        opacity: 0;
     }
 }

@@ -3,7 +3,7 @@
  -->
 <view class="dialog">
     <view wx:if="{{show}}"
-          class="sc-dialog sc-class {{opening?'sc-dialog-fadeIn':''}}  {{closing?'sc-dialog-fadeOut':''}}"
+          class="sc-dialog sc-class {{opening?tin:''}}  {{closing?tout:''}}"
           bind:animationend="{{!overlayClose ? '_animationend' : ''}}"
           >
         <slot></slot>

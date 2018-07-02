@@ -10,19 +10,42 @@ Component({
         overlayClose: {
             type: Boolean,
             value: true
+        },
+        transition: {
+            type: String,
+            value: 'fadeIn fadeOut'
         }
     },
     data: {
-        show:false,
+        show: false,
         opened: false,
         opening: false,
         closed: true,
         closing: false,
-        allowScroll:true,
-        scrollHeight:'auto'
+        allowScroll: true,
+        scrollHeight: 'auto',
+        transitionO: {
+            'fadeIn': 'sc-mask-fadeIn',
+            'fadeOut': 'sc-mask-fadeOut',
+            'slideTopIn': 'sc-dialog-slideTopIn',
+            'slideTopOut': 'sc-dialog-slideTopOut',
+            'slideBottomIn': 'sc-dialog-slideBottomIn',
+            'slideBottomOut': 'sc-dialog-slideBottomOut',
+            'slideLeftIn': 'sc-dialog-slideLeftIn',
+            'slideLeftOut': 'sc-dialog-slideLeftOut',
+            'slideRightIn': 'sc-dialog-slideRightIn',
+            'slideRightOut': 'sc-dialog-slideRightOut'
+        },
+        tin: null,
+        tout: null
     },
     ready() {
-
+        const [tin, tout] = this.properties.transition.split(' ');
+        const transitionO = this.data.transitionO;
+        this.setData({
+            tin: transitionO[tin],
+            tout: transitionO[tout]
+        })
     },
     relations: {},
     externalClasses: ['sc-class'],
@@ -41,7 +64,7 @@ Component({
             if (animationName === 'dialogFadeIn' || animationName === 'maskFadeIn') {
                 this._queryMultipleNodes('.dialog > .sc-dialog').then(res => {
                     this.setData({
-                        scrollHeight:res[0].height+'px',
+                        scrollHeight: res[0].height + 'px',
                         opening: false,
                         opened: true,
                         closed: false
@@ -49,12 +72,12 @@ Component({
                     this.triggerEvent('opened', {});
                 });
             }
-            if (animationName === 'dialogFadeOut'  || animationName === 'maskFadeOut') {
+            if (animationName === 'dialogFadeOut' || animationName === 'maskFadeOut') {
                 this.setData({
                     closing: false,
                     closed: true,
                     opened: false,
-                    show:false
+                    show: false
                 });
                 this.triggerEvent('closed', {});
             }
