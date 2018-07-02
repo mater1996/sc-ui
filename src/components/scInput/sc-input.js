@@ -88,6 +88,10 @@ Component({
         },
         regex: {
             type: String
+        },
+        withIcon:{
+            type:Boolean,
+            value:false
         }
     },
     data: {
@@ -127,6 +131,9 @@ Component({
                 this.data.requireVerify = true;
                 this.data.verify.errText = errText || inputTypeItem.errText || null;
                 this.data.verify.regex = new RegExp(regex || inputTypeItem.regex || null);
+                this.setData({
+                    errText:this.data.verify.errText
+                })
             }
         }
     },
@@ -175,7 +182,6 @@ Component({
                         value: value
                     });
                 }
-                console.log(this.data.requireVerify,this.data.value);
                 this.triggerEvent('input', e.detail, {})
             }
         },

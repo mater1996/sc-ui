@@ -147,6 +147,8 @@ input组件
 |inputType|String||ui内置的正则验证 目前只有phone验证|
 |err-status|Boolean||是否进行错误提示|
 |err-text|Stirng||错误提示文本（当输入的值不符合正则表达式或inputType时的提示文本）|
+|with-icon|Boolean||是由创建带有图标的输入框|
+|icon|String||图标的类例如 iconfont icon-phone(这里是图标库的字体图标)|
 ##### 类型等请到 https://developers.weixin.qq.com/miniprogram/dev/component/input.html 比对
 
 #### 3.4 sc-progress

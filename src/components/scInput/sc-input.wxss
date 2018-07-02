@@ -1,8 +1,8 @@
 .sc-textfield-main{
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    position: relative;
     width: 100%;
 }
 
@@ -10,6 +10,10 @@
     position: relative;
     padding: 16rpx;
     width: 100%;
+}
+
+.sc-textfield-icon{
+    padding-left:36rpx;
 }
 
 input{
@@ -60,8 +64,8 @@ input::before {
 }
 
 .sc-textfield .sc-label{
-    -webkit-transform: scale(.75) translateY(0);
-    transform: scale(.75) translateY(0);
+    -webkit-transform: scale(.75) translateY(8rpx);
+    transform: scale(.75) translateY(8rpx);
 }
 
 .sc-textfield-floating-label .sc-label{
@@ -71,8 +75,8 @@ input::before {
 
 .sc-textfield-floating-label .sc-label-focus{
     color: currentColor;
-    -webkit-transform: scale(.8) translateY(0);
-    transform: scale(.8) translateY(0);
+    -webkit-transform: scale(.8) translateY(8rpx);
+    transform: scale(.8) translateY(8rpx);
 }
 
 .sc-textfield .sc-input-focus{
@@ -102,12 +106,12 @@ input::before {
     font-size: 32rpx;
     position: absolute;
     bottom: 58rpx;
-    left: -24rpx;
+    left: -4rpx;
 }
 
 .sc-icon{
     font-size: 32rpx;
     position: absolute;
     bottom: 30rpx;
-    left: -24rpx;
+    left: -4rpx;
 }

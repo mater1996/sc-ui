@@ -22,8 +22,8 @@
             <view style="">
                 <sc-input sc-class="sc-input" label="普通" bindinput="input"></sc-input>
                 <sc-input input-type="phone" sc-class="sc-input" label="带图标" bindinput="input"
-                          icon="iconfont icon-weibiaoti-"></sc-input>
-                <sc-input input-type="phone" sc-class="sc-input" label="身份证" bindinput="input" err-text="身份证号不对"
+                          with-icon icon="iconfont icon-weibiaoti-"></sc-input>
+                <sc-input sc-class="sc-input" label="身份证" bindinput="input" err-text="身份证号不对"
                           regex="(^\\d{15}$)|(^\\d{18}$)|(^\\d{17}(\\d|X|x)$)"></sc-input>
                 <sc-input sc-class="sc-input" label="禁用" bindinput="input" disabled="{{true}}"></sc-input>
                 <sc-textarea sc-class="sc-textarea" style="width: 80%" label="多行文本框"></sc-textarea><!-- 高度控制问题 -->
@@ -93,10 +93,6 @@
                            bind:closed="dialogClosed">
                     <view style="padding: 16px">
                         <text class="text-4">我是海绵宝宝</text>
-                        <image style="width: 180px;height: 120px;" src="/assets/image/haimianbaobao.jpg"></image>
-                        <image style="width: 180px;height: 120px;" src="/assets/image/haimianbaobao.jpg"></image>
-                        <image style="width: 180px;height: 120px;" src="/assets/image/haimianbaobao.jpg"></image>
-                        <image style="width: 180px;height: 120px;" src="/assets/image/haimianbaobao.jpg"></image>
                         <image style="width: 180px;height: 120px;" src="/assets/image/haimianbaobao.jpg"></image>
                     </view>
                 </sc-dialog>
