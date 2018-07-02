@@ -94,6 +94,10 @@
                     <view style="padding: 16px">
                         <text class="text-4">我是海绵宝宝</text>
                         <image style="width: 180px;height: 120px;" src="/assets/image/haimianbaobao.jpg"></image>
+                        <image style="width: 180px;height: 120px;" src="/assets/image/haimianbaobao.jpg"></image>
+                        <image style="width: 180px;height: 120px;" src="/assets/image/haimianbaobao.jpg"></image>
+                        <image style="width: 180px;height: 120px;" src="/assets/image/haimianbaobao.jpg"></image>
+                        <image style="width: 180px;height: 120px;" src="/assets/image/haimianbaobao.jpg"></image>
                     </view>
                 </sc-dialog>
             </view>

@@ -5,10 +5,8 @@
     <view wx:if="{{show}}"
           class="sc-dialog sc-class {{opening?'sc-dialog-fadeIn':''}}  {{closing?'sc-dialog-fadeOut':''}}"
           bind:animationend="{{!overlayClose ? '_animationend' : ''}}"
-          catchtouchmove="_catchtouchmove">
-            <scroll-view scroll-y="{{allowScroll}}" style="height: {{scrollHeight}}">
-                <slot></slot>
-            </scroll-view>
+          >
+        <slot></slot>
     </view>
     <view wx:if="{{overlay && show }}"
           class="sc-dialog-mask {{opening?'sc-mask-fadeIn':''}} {{closing?'sc-mask-fadeOut':''}}"

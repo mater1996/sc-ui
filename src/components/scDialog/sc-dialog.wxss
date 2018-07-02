@@ -26,6 +26,7 @@
     -o-transform: translate3d(0,-35%,0);
     transform: translate3d(0,-35%,0);
     transform-origin: center;
+    overflow-y: scroll;
 }
 
 .sc-mask-fadeIn {

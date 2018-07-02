@@ -41,15 +41,13 @@ Component({
             if (animationName === 'dialogFadeIn' || animationName === 'maskFadeIn') {
                 this._queryMultipleNodes('.dialog > .sc-dialog').then(res => {
                     this.setData({
-                        scrollHeight:res[0].height+'px'
-                    })
+                        scrollHeight:res[0].height+'px',
+                        opening: false,
+                        opened: true,
+                        closed: false
+                    });
+                    this.triggerEvent('opened', {});
                 });
-                this.setData({
-                    opening: false,
-                    opened: true,
-                    closed: false
-                });
-                this.triggerEvent('opened', {});
             }
             if (animationName === 'dialogFadeOut'  || animationName === 'maskFadeOut') {
                 this.setData({
