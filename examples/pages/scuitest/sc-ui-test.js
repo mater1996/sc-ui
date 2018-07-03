@@ -34,7 +34,7 @@ Page({
     },
     onReady(){
         this.data.dialog = scui.Dialog("#dialog");
-        this.data.snackBar = scui.SnackBar("#a");
+        this.data.snackBar = scui.SnackBar("#snackbar");
     },
     openDialog(){
         this.data.dialog.toggle();

@@ -21,18 +21,18 @@
 
 在要使用的页面中注册组件
 ```
-  "usingComponents":{
-    "sc-button":"scui/dist/components/scButton/sc-button",
-    "sc-input":"scui/dist/components/scInput/sc-input",
-    "sc-progress":"scui/dist/components/scProgress/sc-progress",
-    "sc-textarea":"scui/dist/components/scTextarea/sc-textarea",
-    "sc-checkbox":"scui/dist/components/scCheckbox/sc-checkbox",
-    "sc-checkbox-group":"lib/scui/dist/components/scCheckboxGroup/sc-checkbox-group",
-    "sc-form":"scui/dist/components/scForm/sc-form",
-    "sc-switch":"scui/dist/components/scSwitch/sc-switch",
-    "sc-radio":"scui/dist/components/scRadio/sc-radio",
-    "sc-radio-group":"scui/dist/components/scRadioGroup/sc-radio-group"
-  }
+"usingComponents":{
+  "sc-button":"scui/dist/components/scButton/sc-button",
+  "sc-input":"scui/dist/components/scInput/sc-input",
+  "sc-progress":"scui/dist/components/scProgress/sc-progress",
+  "sc-textarea":"scui/dist/components/scTextarea/sc-textarea",
+  "sc-checkbox":"scui/dist/components/scCheckbox/sc-checkbox",
+  "sc-checkbox-group":"lib/scui/dist/components/scCheckboxGroup/sc-checkbox-group",
+  "sc-form":"scui/dist/components/scForm/sc-form",
+  "sc-switch":"scui/dist/components/scSwitch/sc-switch",
+  "sc-radio":"scui/dist/components/scRadio/sc-radio",
+  "sc-radio-group":"scui/dist/components/scRadioGroup/sc-radio-group"
+}
 ```
 
 图标库
@@ -54,6 +54,13 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 ### 3. 组件
 
 #### 3.1. sc-button
+
+```json
+"usingComponents":{
+  "sc-button":"path/to/dist/components/scButton/sc-button"
+}
+```
+
 ```
 <sc-button sc-class="sc-btn box-shadow-9 new-color" style="display: inline-block;margin-right: 16px"
                        open-type="getUserInfo" bind:getuserinfo="getUserInfo">
@@ -93,6 +100,14 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 
 #### 3.2 sc-check-box
 ##### 注意 请结合 sc-check-box-group 使用
+
+```json
+"usingComponents":{
+  "sc-check-box":"path/to/dist/components/scCheckBox/sc-check-box",
+  "sc-check-box-group":"path/to/dist/components/scCheckBoxGroup/sc-check-box-group"
+}
+```
+
 ```
 <sc-checkbox-group sc-class="sc-checkbox-group-row" bindchange="checkboxChange">
     <sc-checkbox sc-class="sc-checkbox" label="初始选中" checked="{{true}}" value="check1"></sc-checkbox>
@@ -110,7 +125,12 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 |group上的sc-class|||sc-checkbox-group-row横向的radio组、sc-check-group-column纵向的radio组|
 
 #### 3.3 sc-input
-input组件
+
+```json
+"usingComponents":{
+  "sc-input":"path/to/dist/components/scInput/sc-input"
+}
+```
 
 ```
 <sc-input sc-class="sc-input" label="测试" bindinput="input"></sc-input>
@@ -152,6 +172,13 @@ input组件
 ##### 类型等请到 https://developers.weixin.qq.com/miniprogram/dev/component/input.html 比对
 
 #### 3.4 sc-progress
+
+```json
+"usingComponents":{
+  "sc-progress":"path/to/dist/components/scProgress/sc-progress"
+}
+```
+
 ```
  <sc-progress sc-class="sc-progress sc-progress-indeterminate" style="width: 100%" width="{{width}}"></sc-progress>
  <sc-progress sc-class="sc-progress" style="width: 100%" type="determinate" width="{{width}}"></sc-progress>
@@ -164,6 +191,13 @@ input组件
 
 #### 3.5 sc-radio
 ##### 注意 请结合 sc-radio-group 使用
+
+```json
+"usingComponents":{
+  "sc-radio":"path/to/dist/components/scRadio/sc-radio"
+}
+```
+
 ```
  <sc-radio-group bind:change="radioChange">
       <sc-radio style="margin-right: 8px" label="测试" sc-class="sc-radio" checked="{{true}}" value="radio1"></sc-radio>
@@ -182,6 +216,11 @@ input组件
 |disabled|Boolean|false|禁用|
 
 #### 3.6 sc-switch
+```json
+"usingComponents":{
+  "sc-switch":"path/to/dist/components/scSwitch/sc-switch"
+}
+```
 
 ```
  <sc-switch style="height: 36px" sc-class="sc-switch" bind:change="checkChange"></sc-switch>
@@ -197,6 +236,12 @@ input组件
 
 #### 3.7 sc-cell
 可以不和sc-cell-group联合使用
+
+```json
+"usingComponents":{
+  "sc-cell":"path/to/dist/components/scCell/sc-cell"
+}
+```
 
 ```
 <sc-cell-group>
@@ -220,14 +265,18 @@ input组件
 |right-text|String||右侧文字,在图标左侧|
 
 #### 3.8 st-form
-
+```json
+"usingComponents":{
+  "sc-form":"path/to/dist/components/scForm/sc-form"
+}
+```
 ###### 注意 如果声明report-submit sc-form会自带一个提交按钮（可以设置文本）
 
 当点击提交按钮触发submit时会把内部的input/check/radio/textarea/swich 分别以name:value的形式以对象的形式返回
 
 所以sc-form内请务必将每个表单控件的name声明，否则name将会默认为控件名称+id
 
-```
+```html
  <sc-form bind:submit="submit" report-submit>
         <sc-input sc-class="sc-input" label="姓名" name="name" bindinput="input"></sc-input>
         <sc-radio-group name="sex">
@@ -251,10 +300,24 @@ input组件
 |submit-text|String|提交|提交按钮的文本|
 
 #### 3.9 sc-textarea
-##### 实验中
+```json
+"usingComponents":{
+  "sc-textarea":"path/to/dist/components/scTextarea/sc-textarea"
+}
+```
+
+```html
+<sc-textarea></sc-textarea>
+```
 属性与sc-input 一致
 
 #### 3.10 sc-tab
+```json
+"usingComponents":{
+  "sc-tab-group":"path/to/dist/components/scTabGroup/sc-tab-group",
+  "sc-tab":"path/to/dist/components/scTab/sc-tab"
+}
+```
 
 ```html
 <sc-tab-group tab-list="{{tabList}}">
@@ -291,13 +354,20 @@ Page({
       }
  })
 ```
+
 | 属性名  | 类型  |	默认值 |	说明 |
 | ------------ | ------------ | ------------ | ------------ |
 | tab-list| array  |	 | 渲染的tab列表必须和内部的sc-tab对应 是一个对象数组每个对象包含 label,id,以及data|
 | tab-change| handler| | tab更换时触发的事件 在e.detail 里返回当前的tabIndex以及data
 |tabIndex|Number|0|初始化的tab位置从0开始|
 
-#### 3.10 sc-dialog
+#### 3.11 sc-dialog
+```json
+"usingComponents":{
+  "sc-dialog":"path/to/dist/components/scDialog/sc-dialog"
+}
+```
+
 ```html
 <view>
    <sc-button sc-class="sc-btn" bind:tap="openDialog">打开/关闭</sc-button>
@@ -339,12 +409,12 @@ Page({
   dialogClosed(){
     console.log("模态框已关闭");
   }
- })
+})
 ```
 
 | 属性名  | 类型  |	默认值 |	说明 |
 | ------------ | ------------ | ------------ | ------------ |
-| id| String  |	 | 每个dialog必须提供一个id切不能重复|
+| id| String  |	 | 每个dialog必须提供一个id且不能重复|
 | sc-class| String| | dialog内容的样式
 |overlay|Bollean|true|是否显示遮罩|
 |overlay-close|Bollean|true|点击遮罩是否关闭模态框|
@@ -352,3 +422,54 @@ Page({
 |opened|handler||模态框打开事件|
 |close|handler||模态框关闭且处于动画状态的事件|
 |closed|handler||模态框关闭事件|
+
+#### 3.12 sc-snackbar
+
+```json
+"usingComponents":{
+  "sc-snackbar":"path/to/dist/components/scSnackbar/sc-snackbar"
+}
+```
+
+```html
+<sc-snackbar id="snackbar">这是一个snackbar</sc-snackbar>
+```
+
+```js
+Page({
+  onReady(){
+    this.data.snackBar = scui.SnackBar("#snackbar");
+  }
+  openSnackBar(){
+    this.data.snackBar.open({
+      message:'snackbar',         // snackbar上的文字
+      buttonText:'点我',          //按钮上的文字
+      buttonTextColor:'red',      //按钮文字的颜色
+      closeOnButtonClick:true,    //是否点击按钮关闭snackbar
+      onClick:() => {             //点击snackbar时触发的事件
+        console.log('点击button');
+      },
+      onButtonClick:() => {       //点击snacbar上的按钮上触发的事件
+        console.log('点击button');
+      },
+      onOpen:() => {              //snackbar开启处于动画时触发的事件
+        console.log('snackBar打开中');
+      },
+      onOpened(){                 // snackbar已开启时触发的事件
+        console.log('snackBar已打开');
+      },
+      onClose(){                  // snackbar关闭处于动画时触发的事件
+        console.log('snackBar关闭中');
+      },
+      onClosed(){                 // snackbar已关闭触发的事件
+        console.log('snackBar已关闭');
+      }
+    });
+  }
+})
+```
+
+| 属性名  | 类型  |	默认值 |	说明 |
+| ------------ | ------------ | ------------ | ------------ |
+| id| String  |	 | 一个页面最好只使用一个snackbar 必须提供一个id|
+| sc-class| String| | snackbar的样式
