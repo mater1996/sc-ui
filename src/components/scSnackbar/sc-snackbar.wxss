@@ -8,7 +8,7 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    background-color: black;
+    background-color: #323232;
     color: white;
     border-radius: 2rpx;
     min-height: 96rpx;
@@ -42,7 +42,7 @@
     box-sizing: border-box;
     font-size: 28rpx;
     min-width: 176rpx;
-    padding: 32rpx 48rpx 24rpx;
+    padding: 28rpx 24rpx 28rpx 48rpx;
 }
 
 .sc-btn {

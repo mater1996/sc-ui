@@ -56,7 +56,7 @@ Page({
     },
     openSnackBar(){
         this.data.snackBar.open({
-            message:'哈哈哈哈哈'+this.data.snackBarLength++,
+            message:'哈哈哈哈哈很长的提醒哈哈哈哈哈哈哈哈哈'+this.data.snackBarLength++,
             buttonText:'点我',
             buttonTextColor:'red',
             closeOnButtonClick:true,

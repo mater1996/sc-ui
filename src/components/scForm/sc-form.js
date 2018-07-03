@@ -69,7 +69,7 @@ Component({
                     }) : null;
                 }
             }
-            this.triggerEvent(`submit`, {value: value}, {bubbles: true, composed: true})
+            this.triggerEvent(`submit`, {value: value})
         }
     }
 });
