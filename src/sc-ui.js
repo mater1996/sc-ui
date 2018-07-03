@@ -4,6 +4,7 @@
 
 const config = require('./config/config');
 const Dialog = require('./components/scDialog/sc-dialog-o');
+const SnackBar = require('./components/scSnackbar/sc-snackbar-o');
 const scui = {};
 
 Object.defineProperty(scui, 'version', {
@@ -16,5 +17,6 @@ Object.defineProperty(scui, 'version', {
 module.exports = (function (scui) {
     scui = scui || {};
     scui.Dialog = Dialog;
+    scui.SnackBar = SnackBar;
     return scui;
 })(scui);

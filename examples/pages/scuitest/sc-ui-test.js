@@ -27,12 +27,14 @@ Page({
                 id: 'cancel',
                 name: 'cancel'
             }],
+        snackBarLength:0
     },
     onLoad: function () {
 
     },
     onReady(){
         this.data.dialog = scui.Dialog("#dialog");
+        this.data.snackBar = scui.SnackBar("#a");
     },
     openDialog(){
         this.data.dialog.toggle();
@@ -51,6 +53,29 @@ Page({
     },
     dialogClosed(){
         console.log("模态框关闭");
+    },
+    openSnackBar(){
+        this.data.snackBar.open({
+            message:'哈哈哈哈哈'+this.data.snackBarLength++,
+            buttonText:'点我',
+            buttonTextColor:'red',
+            closeOnButtonClick:true,
+            onButtonClick:() => {
+                console.log('点击button');
+            },
+            onOpen:() => {
+                console.log('snackBar打开中');
+            },
+            onOpened(){
+                console.log('snackBar已打开');
+            },
+            onClose(){
+                console.log('snackBar关闭中');
+            },
+            onClosed(){
+                console.log('snackBar已关闭');
+            }
+        });
     },
     checkboxChange(e) {
 

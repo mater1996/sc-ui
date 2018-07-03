@@ -13,7 +13,6 @@
           capture-bind:tap="{{overlayClose ? '_closeDialog' : ''}}"
           bind:animationend="{{overlayClose ? '_animationend' : ''}}"
           catchtouchmove="_catchtouchmove">
-
     </view>
 </view>
 

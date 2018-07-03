@@ -1,0 +1,58 @@
+.sc-snackBar{
+    position: fixed;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex: 1 0 100%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background-color: black;
+    color: white;
+    border-radius: 2rpx;
+    min-height: 96rpx;
+    max-height: 160rpx;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10002;
+    -moz-transition: transform .3s ease-in-out;
+    -o-transition: transform .3s ease-in-out;
+    -webkit-transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    -moz-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    -webkit-transform:translateY(100%);
+    transform: translateY(100%);
+}
+
+.sc-snackBar.sc-snackBarShow{
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -webkit-transform:translateY(0);
+    transform: translateY(0);
+}
+
+.sc-snackBar .snackBar-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    box-sizing: border-box;
+    font-size: 28rpx;
+    min-width: 176rpx;
+    padding: 32rpx 48rpx 24rpx;
+}
+
+.sc-btn {
+    background-color: inherit;
+    line-height: 132rpx;
+    min-width: 176rpx;
+    height: 72rpx;
+    padding: 0 48rpx;
+    margin: 0;
+    font-size: 32rpx;
+    border-radius: 4rpx;
+    font-weight: bold;
+}

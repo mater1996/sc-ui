@@ -86,7 +86,7 @@
         </view>
 
         <view style="margin: 16px">
-            <view style="text-align: center;margin-bottom: 16px">check测试</view>
+            <view style="text-align: center;margin-bottom: 16px">dialog测试</view>
             <view>
                 <sc-button sc-class="sc-btn" bind:tap="openDialog">打开/关闭</sc-button>
                 <sc-dialog id="dialog" sc-class="box-shadow-8" bind:open="dialogOpen" bind:close="dialogClose" bind:opened="dialogOpened"
@@ -96,6 +96,14 @@
                         <image style="width: 180px;height: 120px;" src="/assets/image/haimianbaobao.jpg"></image>
                     </view>
                 </sc-dialog>
+            </view>
+        </view>
+
+        <view style="margin: 16px">
+            <view style="text-align: center;margin-bottom: 16px">snackbar测试</view>
+            <view>
+                <sc-button sc-class="sc-btn" bind:tap="openSnackBar">打开/关闭</sc-button>
+                <sc-snackbar id="a">123哈哈哈哈哈哈你好啊  我是白肖爱华那 啊啊</sc-snackbar>
             </view>
         </view>
 
