@@ -20,7 +20,7 @@
 ```
 
 在要使用的页面中注册组件
-```
+```json
 "usingComponents":{
   "sc-button":"scui/dist/components/scButton/sc-button",
   "sc-input":"scui/dist/components/scInput/sc-input",
@@ -41,7 +41,7 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 ### 2. 使用
 
 ##### 示例 button 使用
-```
+```html
 <sc-button sc-class="sc-btn box-shadow-9 new-color" style="display: inline-block;margin-right: 16px"
                        open-type="getUserInfo" bind:getuserinfo="getUserInfo">
                 普通
@@ -61,7 +61,7 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 }
 ```
 
-```
+```html
 <sc-button sc-class="sc-btn box-shadow-9 new-color" style="display: inline-block;margin-right: 16px"
                        open-type="getUserInfo" bind:getuserinfo="getUserInfo">
                 普通
@@ -108,7 +108,7 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 }
 ```
 
-```
+```html
 <sc-checkbox-group sc-class="sc-checkbox-group-row" bindchange="checkboxChange">
     <sc-checkbox sc-class="sc-checkbox" label="初始选中" checked="{{true}}" value="check1"></sc-checkbox>
     <sc-checkbox sc-class="sc-checkbox" label="初始未选中" checked="{{false}}"  value="check2"></sc-checkbox>
@@ -132,7 +132,7 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 }
 ```
 
-```
+```html
 <sc-input sc-class="sc-input" label="测试" bindinput="input"></sc-input>
 ```
 
@@ -179,7 +179,7 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 }
 ```
 
-```
+```html
  <sc-progress sc-class="sc-progress sc-progress-indeterminate" style="width: 100%" width="{{width}}"></sc-progress>
  <sc-progress sc-class="sc-progress" style="width: 100%" type="determinate" width="{{width}}"></sc-progress>
 ```
@@ -198,7 +198,7 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 }
 ```
 
-```
+```html
  <sc-radio-group bind:change="radioChange">
       <sc-radio style="margin-right: 8px" label="测试" sc-class="sc-radio" checked="{{true}}" value="radio1"></sc-radio>
       <sc-radio style="margin-right: 8px" label="测试" sc-class="sc-radio" value="radio2"></sc-radio>
@@ -222,7 +222,7 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 }
 ```
 
-```
+```html
  <sc-switch style="height: 36px" sc-class="sc-switch" bind:change="checkChange"></sc-switch>
 ```
 
@@ -243,7 +243,7 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 }
 ```
 
-```
+```html
 <sc-cell-group>
     <sc-cell sub-header="subheader" ripple="{{false}}">header</sc-cell>
     <sc-cell left-icon="iconfont icon-phone">header</sc-cell>
