@@ -443,6 +443,7 @@ Page({
   openSnackBar(){
     this.data.snackBar.open({
       message:'snackbar',         // snackbar上的文字
+      timeout: 4000,              // snackbar关闭时间
       buttonText:'点我',          //按钮上的文字
       buttonTextColor:'red',      //按钮文字的颜色
       closeOnButtonClick:true,    //是否点击按钮关闭snackbar
