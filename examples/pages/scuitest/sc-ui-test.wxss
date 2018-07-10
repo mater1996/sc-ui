@@ -15,6 +15,24 @@
     /*overflow-x:hidden;*/
 }
 
+.ui-test-container{
+    padding: 16px;
+    width: 100%;
+}
+
+.ui-test-item{
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid lightgrey;
+    padding: 16px;
+}
+
+.ui-test-item-header{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
 .redText{
     color:white;
     background-color: #0b93d5;

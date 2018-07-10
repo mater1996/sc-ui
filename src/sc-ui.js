@@ -5,6 +5,7 @@
 const config = require('./config/config');
 const Dialog = require('./components/scDialog/sc-dialog-o');
 const SnackBar = require('./components/scSnackbar/sc-snackbar-o');
+const DatePicker = require('./components/scDatePicker/sc-date-picker-o');
 const scui = {};
 
 Object.defineProperty(scui, 'version', {
@@ -18,5 +19,6 @@ module.exports = (function (scui) {
     scui = scui || {};
     scui.Dialog = Dialog;
     scui.SnackBar = SnackBar;
+    scui.DatePicker = DatePicker;
     return scui;
 })(scui);

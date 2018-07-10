@@ -18,19 +18,12 @@ const Dialog = (function () {
     };
     Dialog.prototype.open = function () {
         const dialog = this.dialog;
-        dialog.setData({
-            show: true,
-            opening: true
-        });
-        dialog.triggerEvent('open', {});
+        dialog._open();
         return this;
     };
     Dialog.prototype.close = function () {
         const dialog = this.dialog;
-        dialog.setData({
-            closing: true,
-        });
-        dialog.triggerEvent('close', {});
+        dialog._close();
         return this;
     };
     Dialog.prototype.toggle = function () {

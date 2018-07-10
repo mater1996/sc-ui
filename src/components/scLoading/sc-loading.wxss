@@ -23,7 +23,7 @@
 }
 
 @keyframes loading-circle-animate {
-    form{
+    from{
         transform: rotate(0);
     }
     to{

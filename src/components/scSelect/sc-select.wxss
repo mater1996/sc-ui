@@ -6,6 +6,17 @@
     max-height: 36px;
     cursor:pointer;
     vertical-align: middle;
+    background-color: white;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .15s linear ;
+    transform-origin:left top;
+    overflow-y:auto;
+}
+
+.sc-select.active{
+    opacity: 1;
+    transform: scale(1);
 }
 
 .icon-triangledownfill{
@@ -16,14 +27,5 @@
 
 .sc-options{
     margin-top: -14px;
-    opacity: 0;
-    transform: scale(0);
-    transition: all .3s linear ;
-    transform-origin:top;
-    overflow-y:scroll;
 }
 
-.sc-options-active{
-    opacity: 1;
-    transform: scale(1);
-}

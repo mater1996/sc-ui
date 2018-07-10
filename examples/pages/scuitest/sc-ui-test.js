@@ -10,20 +10,20 @@ Page({
         isHidden:false,
         tabList: [
             {
-                label: '已申请',
+                label: 'tab1',
                 id: 'waiting',
                 name: 'waiting'
             }, {
-                label: '已通过1111111111111111',
+                label: '很长的标题。。。。。。。。',
                 id: 'passed',
                 name: 'passed'
             }, {
-                label: '已失败',
+                label: 'tab2',
                 id: 'fail',
                 name: 'fail'
             },
             {
-                label: '已取消',
+                label: 'tab3',
                 id: 'cancel',
                 name: 'cancel'
             }],
@@ -35,6 +35,7 @@ Page({
     onReady(){
         this.data.dialog = scui.Dialog("#dialog");
         this.data.snackBar = scui.SnackBar("#snackbar");
+        this.data.datePicker = scui.DatePicker("#datepicker");
     },
     openDialog(){
         this.data.dialog.toggle();
@@ -54,9 +55,20 @@ Page({
     dialogClosed(){
         console.log("模态框关闭");
     },
+    openDatePicker(){
+        this.data.datePicker.open();
+    },
+    datePickerSubmit(e){
+        this.data.snackBar.open({
+            message:'您选择的时间是 : '+e.detail.value,
+            buttonText:'点我',
+            buttonTextColor:'gold',
+            closeOnButtonClick:true
+        });
+    },
     openSnackBar(){
         this.data.snackBar.open({
-            message:'哈哈哈哈哈很长的提醒哈哈哈哈哈哈哈哈哈'+this.data.snackBarLength++,
+            message:'snackBar打开了'+this.data.snackBarLength++,
             buttonText:'点我',
             buttonTextColor:'red',
             closeOnButtonClick:true,

@@ -6,7 +6,7 @@ Component({
     data: {
         show: false,
         timer: null,
-        default: {
+        defaultOption: {
             timeout: 4000,
             position: 'bottom',
             buttonText: '',
@@ -28,7 +28,7 @@ Component({
     externalClasses: ['sc-class'],
     methods: {
         _open(o) {
-            let d = JSON.parse(JSON.stringify(this.data.default));
+            let d = JSON.parse(JSON.stringify(this.data.defaultOption));
             let options = Object.assign(d, o);
             const snackBarStack = this.data.snackBarStack;
             snackBarStack.push(options);

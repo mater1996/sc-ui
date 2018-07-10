@@ -1,5 +1,7 @@
 {
-  "navigationBarTitleText": "首页",
+  "navigationBarTitleText": "ui测试",
+  "navigationBarBackgroundColor":"#FFFFFF",
+  "navigationBarTextStyle":"black",
   "usingComponents":{
     "sc-button":"../../assets/lib/scui/dist/components/scButton/sc-button",
     "sc-input":"../../assets/lib/scui/dist/components/scInput/sc-input",
@@ -19,6 +21,7 @@
     "sc-tab-group":"../../assets/lib/scui/dist/components/scTabGroup/sc-tab-group",
     "sc-tab":"../../assets/lib/scui/dist/components/scTab/sc-tab",
     "sc-dialog":"../../assets/lib/scui/dist/components/scDialog/sc-dialog",
-    "sc-snackbar":"../../assets/lib/scui/dist/components/scSnackbar/sc-snackbar"
+    "sc-snackbar":"../../assets/lib/scui/dist/components/scSnackbar/sc-snackbar",
+    "sc-date-picker":"../../assets/lib/scui/dist/components/scDatePicker/sc-date-picker"
   }
 }

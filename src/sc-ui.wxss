@@ -83,8 +83,8 @@ button::after {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 54 rpx !important;
-    line-height: 54 rpx;
+    width: 54rpx !important;
+    line-height: 54rpx;
     -webkit-transform: translate(-27rpx, -27rpx);
     transform: translate(-27rpx, -27rpx);
 }

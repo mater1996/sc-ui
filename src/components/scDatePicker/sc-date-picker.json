@@ -1,0 +1,7 @@
+{
+  "component":true,
+  "usingComponents": {
+    "sc-button": "../scButton/sc-button",
+    "sc-dialog": "../scDialog/sc-dialog"
+  }
+}

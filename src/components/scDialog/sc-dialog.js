@@ -47,13 +47,17 @@ Component({
             tout: transitionO[tout]
         })
     },
-    relations: {},
+    relations: {
+        '../scDatePicker/sc-date-picker': {
+            type: 'parent', // 关联的目标节点应为子节点
+        }
+    },
     externalClasses: ['sc-class'],
     methods: {
         _catchtouchmove() {
             return true;
         },
-        _closeDialog() {
+        _close() {
             this.setData({
                 closing: true,
             });
@@ -91,5 +95,12 @@ Component({
                 });
             })
         },
+        _open(){
+            this.setData({
+                show: true,
+                opening: true
+            });
+            this.triggerEvent('open', {});
+        }
     }
 });

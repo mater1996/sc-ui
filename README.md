@@ -474,3 +474,35 @@ Page({
 | ------------ | ------------ | ------------ | ------------ |
 | id| String  |	 | 一个页面最好只使用一个snackbar 必须提供一个id|
 | sc-class| String| | snackbar的样式
+
+#### 3.13 sc-date-picker
+
+```json
+"usingComponents":{
+  "sc-date-picker":"path/to/dist/components/scDatePicker/sc-date-picker"
+}
+```
+
+```html
+<sc-date-picker id="datepicker"></sc-date-picker>
+```
+
+```js
+Page({
+  onReady(){
+    this.data.datePicker = scui.SnackBar("#datepicker");
+  }
+  openSnackBar(){
+    this.data.snackBar.open({
+      date:"2018-7-05"       //初始化时间否则为当前时间
+    });
+  }
+})
+```
+
+| 属性名  | 类型  |	默认值 |	说明 |
+| ------------ | ------------ | ------------ | ------------ |
+| id| String  |	 | 一个页面最好只使用一个datepicker 必须提供一个id|
+| open| handler  |	 |日期选择器打开事件|
+| close| String  |	 | 日期选择器关闭事件|
+| submit| String  |	 | 日期选择器提交事件, 请从event.detail.value中获取|
