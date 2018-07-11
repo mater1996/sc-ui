@@ -22,6 +22,7 @@
     "sc-tab":"../../assets/lib/scui/dist/components/scTab/sc-tab",
     "sc-dialog":"../../assets/lib/scui/dist/components/scDialog/sc-dialog",
     "sc-snackbar":"../../assets/lib/scui/dist/components/scSnackbar/sc-snackbar",
-    "sc-date-picker":"../../assets/lib/scui/dist/components/scDatePicker/sc-date-picker"
+    "sc-date-picker":"../../assets/lib/scui/dist/components/scDatePicker/sc-date-picker",
+    "sc-time-picker":"../../assets/lib/scui/dist/components/scTimePicker/sc-time-picker"
   }
 }

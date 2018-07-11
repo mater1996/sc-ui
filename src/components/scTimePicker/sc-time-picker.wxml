@@ -1,0 +1,85 @@
+<!-- 
+ Created by bai on 2018/5/2
+ -->
+<!--<sc-dialog id="{{'time-picker-dialog-'+dialogCount}}">-->
+<view class="sc-time-picker sc-class">
+    <view class="time-show">
+        <view class="time">
+            14:22
+        </view>
+    </view>
+    <view style="position: fixed; width: 5px;height: 5px;z-index:10000;border-radius: 50%;top: {{top}}px;left: {{left}}px;background-color: red"></view>
+    <view class="time-container">
+        <view class="time-circle"></view>
+        <view class="time-hour">
+            <view class="time-hour-item-select" style="transform: translateY(-50%) rotate({{-selectTimeRotate}}deg);">
+                <view class="time-hour-item-number" catch:touchmove="hourtouchmove">
+
+                </view>
+            </view>
+            <view class="time-hour-item time-hour-10">
+                <view class="time-hour-item-number">
+                    10
+                </view>
+            </view>
+            <view class="time-hour-item time-hour-11">
+                <view class="time-hour-item-number">
+                    11
+                </view>
+            </view>
+            <view class="time-hour-item time-hour-12">
+                <view class="time-hour-item-number">
+                    12
+                </view>
+            </view>
+            <view class="time-hour-item time-hour-1">
+                <view class="time-hour-item-number">
+                    1
+                </view>
+            </view>
+            <view class="time-hour-item time-hour-2">
+                <view class="time-hour-item-number">
+                    2
+                </view>
+            </view>
+            <view class="time-hour-item time-hour-3">
+                <view class="time-hour-item-number" id="333">
+                    3
+                </view>
+            </view>
+            <view class="time-hour-item time-hour-4">
+                <view class="time-hour-item-number">
+                    4
+                </view>
+            </view>
+            <view class="time-hour-item time-hour-5">
+                <view class="time-hour-item-number">
+                    5
+                </view>
+            </view>
+            <view class="time-hour-item time-hour-6">
+                <view class="time-hour-item-number">
+                    6
+                </view>
+            </view>
+            <view class="time-hour-item time-hour-7">
+                <view class="time-hour-item-number">
+                    7
+                </view>
+            </view>
+            <view class="time-hour-item time-hour-8">
+                <view class="time-hour-item-number">
+                    8
+                </view>
+            </view>
+            <view class="time-hour-item time-hour-9">
+                <view class="time-hour-item-number">
+                    9
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<!--</sc-dialog>-->
+
+

@@ -2,13 +2,10 @@
  * Created by bai on 2018/5/2
  */
 
-const moment = require('../../assets/lib/moment/moment.min');
+const dayjs = require('../../assets/lib/day/day');
 let dialogCount = 0;
 
 // 允许输入初始化日期  形式为 2018-07-12
-
-// 因为swiper性能问题   swiperitem固定为三个 每次滑动会更换三个
-
 Component({
     properties: {},
     data: {
@@ -16,7 +13,7 @@ Component({
         dayList: [],              //所有的日历列表
         alreadyMonth: {},         //已经缓存过的日历列表
         yearList: [],             //所有的年份列表
-        yearRange:50,             // 年份上下限
+        yearRange: 50,             // 年份上下限
         selectYear: 0,            // 选中的年份
         selectDateObject: null,   // 选中的日期的object形式
         showDate: null,           // 显示的日期
@@ -34,7 +31,7 @@ Component({
             5: '五',
             6: '六'
         },
-        defaultOption:{
+        defaultOption: {
             date: new Date()
         }
     },
@@ -68,23 +65,26 @@ Component({
         },
         _monthDay(d) {
             // 接受一个日期 返回该日期的所有日期按照数组形式，没有日期的为空
-            const date = moment(d);
+            const date = dayjs(d);
             let res = [];
             let alreadyMonthName = date.format('YYYY-MM');
             if (!this.data.alreadyMonth[alreadyMonthName]) {
                 const year = date.year();
                 const month = date.month();
-                const firstDay = date.clone().set({'year': year, 'month': month, 'date': 1});
-                let weekday = firstDay.day();
+                let dateCopy = date.clone();
+                dateCopy = dateCopy.set('date', 1);
+                let weekday = dateCopy.day();
                 let days = date.daysInMonth();
                 for (let i = 0; i < weekday; i++) {
                     res.push(null);
                 }
                 for (let j = 1; j <= days; j++) {
-                    res.push(moment().set({'year': year, 'month': month, 'date': j}).toObject());
+                    let dateTem = dayjs();
+                    dateTem = dateTem.set('year', year).set('month', month).set('date', j);
+                    res.push(dateTem.toObject());
                 }
                 this.data.alreadyMonth[alreadyMonthName] = res;
-            }else{
+            } else {
                 res = this.data.alreadyMonth[alreadyMonthName];
             }
             return res;
@@ -96,7 +96,7 @@ Component({
             this.setData({
                 showDate: showDate,
                 showDateObject: showDate.toObject(),
-                currentSwiperItemDateIndex:current
+                currentSwiperItemDateIndex: current
             });
             // 判定是否是最后一个 或者 第一个日期
             if (current === this.data.dayList.length - 1) {
@@ -109,7 +109,7 @@ Component({
                     dayList.push(this._nextMonthDay());
                     this.setData({
                         lockedTap: false,
-                        dayList:dayList,
+                        dayList: dayList,
                         currentSwiperItemDateIndex: current
                     });
                 }, this.data.duration);
@@ -123,7 +123,7 @@ Component({
                     dayList.unshift(this._lastMonthDay());
                     this.setData({
                         lockedTap: false,
-                        dayList:dayList,
+                        dayList: dayList,
                         currentSwiperItemDateIndex: 1
                     });
                 }, this.data.duration);
@@ -131,23 +131,25 @@ Component({
         },
         _next() {
             // tap点击的时候   应该在一段时间内不让点击  并且显示的日期加一
-            this.data.showDate.add(1, 'months');
+            this.data.showDate = this.data.showDate.add(1, 'months');
             this.setData({
                 currentSwiperItemDateIndex: ++this.data.currentSwiperItemDateIndex
             })
         },
         _last() {
-            this.data.showDate.add(-1, 'months');
+            this.data.showDate = this.data.showDate.add(-1, 'months');
             this.setData({
                 currentSwiperItemDateIndex: --this.data.currentSwiperItemDateIndex
             })
         },
         _selectDate(e) {
             let date = e.currentTarget.dataset.date;
+            let dateTem = dayjs();
+            dateTem = dateTem = dateTem.set('year', date.years).set('month',date.months).set('date', date.date);
             if (date) {
                 this.setData({
                     selectDateObject: date,
-                    selectWeek: moment(date).weekday()
+                    selectWeek: dateTem.day()
                 });
             }
         },
@@ -160,19 +162,17 @@ Component({
             let year = e.currentTarget.dataset.year;
             if (year !== this.data.selectYear) {
                 let date = this.data.showDate.clone();
-                date.set('year', year);
-                date.set('month', date.month());
-                date.set('date', date.date());
+                date = date.set('year', year).set('month', date.month()).set('date', date.date());
                 this.setData({
                     selectYear: year,
                     selectDateObject: date.toObject(),
-                    selectWeek: date.weekday(),
+                    selectWeek: date.day(),
                     showDate: date,
-                    currentSwiperItemDateIndex:1,
+                    currentSwiperItemDateIndex: 1,
                     showDateObject: date.toObject()
                 });
                 this.setData({
-                    dayList: [this._lastMonthDay(),this._monthDay(date.clone()),this._nextMonthDay()]
+                    dayList: [this._lastMonthDay(), this._monthDay(date.clone()), this._nextMonthDay()]
                 });
             }
             this.setData({
@@ -182,7 +182,7 @@ Component({
         _open(o) {
             let d = JSON.parse(JSON.stringify(this.data.defaultOption));
             let options = Object.assign(d, o);
-            const date = moment(options.date);
+            const date = dayjs(options.date);
             const year = date.year();
             const {yearRange} = this.data;
             let yearList = [];
@@ -194,24 +194,24 @@ Component({
                 selectDateObject: date.toObject(),
                 showDate: date,
                 showDateObject: date.toObject(),
-                selectWeek: date.weekday(),
-                currentSwiperItemDateIndex:1,
-                currentSwiperItemYearIndex: yearRange-2,
+                selectWeek: date.day(),
+                currentSwiperItemDateIndex: 1,
+                currentSwiperItemYearIndex: yearRange - 2,
                 yearList: yearList,
                 selectYear: year
             });
             this.setData({
-                dayList: [this._lastMonthDay(),this._monthDay(date.clone()),this._nextMonthDay()],
+                dayList: [this._lastMonthDay(), this._monthDay(date.clone()), this._nextMonthDay()],
             });
             this.data.dialog._open();
             this.triggerEvent('open', {});
         },
-        _close(){
+        _close() {
             this.data.dialog._close();
             this.triggerEvent('close', {});
         },
-        _submit(){
-            this.triggerEvent('submit', {value:moment(this.data.selectDateObject).toDate()});
+        _submit() {
+            this.triggerEvent('submit', {value: dayjs(this.data.selectDateObject).toDate()});
             this._close();
         }
     }

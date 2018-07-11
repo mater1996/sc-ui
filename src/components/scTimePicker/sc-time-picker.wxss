@@ -1,0 +1,186 @@
+.sc-time-picker{
+    padding: 16prx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-show .time{
+    font-size: 64rpx;
+}
+
+.time-container{
+    position: relative;
+    min-width: 280px;
+    min-height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-container .time-circle{
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: lightgrey;
+    border-radius: 50%;
+}
+
+.time-container .time-hour{
+    position: relative;
+    width: 260px;
+    height: 260px;
+}
+
+.time-hour .time-hour-item{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform-origin: left;
+    transform: translateY(-50%);
+    background-color: black;
+    z-index: 98
+}
+
+.time-hour-item .time-hour-item-number{
+    width: 64rpx;
+    height: 64rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.time-hour-item.time-hour-10{
+    transform: rotate(-150deg) translateY(-50%);
+}
+
+.time-hour-10 .time-hour-item-number{
+    transform: rotate(150deg);
+}
+
+.time-hour-item.time-hour-11{
+    transform: rotate(-120deg) translateY(-50%);
+}
+
+.time-hour-11 .time-hour-item-number{
+    transform: rotate(120deg);
+}
+
+.time-hour-item.time-hour-12{
+    background-color: rgba(255,255,255,.3);
+    transform: rotate(-90deg) translateY(-50%);
+}
+
+.time-hour-12 .time-hour-item-number{
+    transform: rotate(90deg);
+}
+
+.time-hour-item.time-hour-1{
+    transform: rotate(-30deg) translateY(-50%);
+}
+
+.time-hour-1 .time-hour-item-number{
+    transform: rotate(30deg);
+}
+
+
+.time-hour-item.time-hour-2{
+    transform: rotate(-60deg) translateY(-50%);
+}
+
+.time-hour-2 .time-hour-item-number{
+    transform: rotate(60deg);
+}
+
+.time-hour-item.time-hour-3{
+    transform: rotate(-0deg) translateY(-50%);
+}
+
+.time-hour-3 .time-hour-item-number{
+    transform: rotate(0deg);
+}
+
+.time-hour-item.time-hour-4{
+    transform: rotate(30deg) translateY(-50%);
+}
+
+.time-hour-4 .time-hour-item-number{
+    transform: rotate(-30deg);
+}
+
+.time-hour-item.time-hour-5{
+     transform: rotate(60deg) translateY(-50%);
+ }
+
+.time-hour-5 .time-hour-item-number{
+    transform: rotate(-60deg);
+}
+
+.time-hour-item.time-hour-6{
+    transform: rotate(90deg) translateY(-50%);
+}
+
+.time-hour-6 .time-hour-item-number{
+    transform: rotate(-90deg);
+}
+
+.time-hour-item.time-hour-7{
+    transform: rotate(120deg) translateY(-50%);
+}
+
+.time-hour-7 .time-hour-item-number{
+    transform: rotate(-120deg);
+}
+
+.time-hour-item.time-hour-8{
+    transform: rotate(150deg) translateY(-50%);
+}
+
+.time-hour-8 .time-hour-item-number{
+    transform: rotate(-150deg);
+}
+
+.time-hour-item.time-hour-9{
+    transform: rotate(180deg) translateY(-50%);
+}
+
+.time-hour-9 .time-hour-item-number{
+    transform: rotate(-180deg);
+}
+
+.time-hour-item-select{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    height: 2px;
+    background-color: #0b93d5;
+    top: 50%;
+    left: 50%;
+    transform-origin: left;
+    transform: translateY(-50%);
+    z-index: 99
+}
+
+.time-hour-item-select .time-hour-item-number{
+    width: 64rpx;
+    height: 64rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    background-color: #0b93d5;
+    border-radius: 50%;
+}
+
