@@ -2,7 +2,7 @@
  * Created by bai on 2018/5/2
  */
 
-const moment = require('../../assets/lib/moment/moment.min');
+// const moment = require('../../assets/lib/moment/moment.min');
 let dialogCount = 0;
 
 // 允许输入初始化日期  形式为 2018-07-12

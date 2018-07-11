@@ -1,1 +1,0 @@
-.sc-model-mask{position:fixed;z-index:9999;top:0;bottom:0;left:0;right:0;background-color:rgba(0,0,0,.3);overflow:hidden}.sc-model{position:fixed;z-index:10001;background-color:#fff;margin:auto;height:100px;width:92%;left:0;right:0;top:50%;-webkit-transform:translate(0,-50%);transform:translate(0,-50%)}

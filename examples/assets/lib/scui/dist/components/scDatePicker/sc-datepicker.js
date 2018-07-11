@@ -1,1 +1,0 @@
-"use strict";var moment=require("../../assets/lib/moment/moment.min");Component({properties:{},data:{value:[]},relations:{},externalClasses:["sc-class"],ready:function(){console.log(moment)},methods:{}});

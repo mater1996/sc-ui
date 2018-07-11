@@ -1,1 +1,0 @@
-<view wx:if="{{show}}" class="sc-model sc-class">hhhhhhh</view><view class="sc-model-mask" catchtouchmove="_catchtouchmove"></view>
