@@ -32,7 +32,7 @@ Component({
             6: '六'
         },
         defaultOption: {
-            date: new Date()
+            date: null
         }
     },
     relations: {
@@ -182,7 +182,8 @@ Component({
         _open(o) {
             let d = JSON.parse(JSON.stringify(this.data.defaultOption));
             let options = Object.assign(d, o);
-            const date = dayjs(options.date);
+            options.date = options.date || new Date();
+            const date = dayjs(options.date || new Date());
             const year = date.year();
             const {yearRange} = this.data;
             let yearList = [];
