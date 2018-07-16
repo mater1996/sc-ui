@@ -436,6 +436,7 @@ Page({
 ```
 
 ```js
+const scui = require("path/to/dist/scui");
 Page({
   onReady(){
     this.data.snackBar = scui.SnackBar("#snackbar");
@@ -488,12 +489,13 @@ Page({
 ```
 
 ```js
+const scui = require("path/to/dist/scui");
 Page({
   onReady(){
-    this.data.datePicker = scui.SnackBar("#datepicker");
+    this.data.datePicker = scui.DatePicker("#datepicker");
   }
   openSnackBar(){
-    this.data.snackBar.open({
+    this.data.datePicker.open({
       date:"2018-7-05"       //初始化时间否则为当前时间
     });
   }
