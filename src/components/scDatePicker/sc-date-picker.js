@@ -145,7 +145,7 @@ Component({
         _selectDate(e) {
             let date = e.currentTarget.dataset.date;
             let dateTem = dayjs();
-            dateTem = dateTem = dateTem.set('year', date.years).set('month',date.months).set('date', date.date);
+            dateTem = dateTem.set('year', date.years).set('month', date.months).set('date', date.date);
             if (date) {
                 this.setData({
                     selectDateObject: date,
@@ -212,7 +212,10 @@ Component({
             this.triggerEvent('close', {});
         },
         _submit() {
-            this.triggerEvent('submit', {value: dayjs(this.data.selectDateObject).toDate()});
+            const {years, months, date, hours, minutes, seconds, milliseconds} = this.data.selectDateObject;
+            let dateTem = dayjs();
+            dateTem = dateTem.set('year', years).set('month', months).set('date', date).set('hour', hours).set('minute', minutes).set('second', seconds).set('millisecond', milliseconds);
+            this.triggerEvent('submit', {value: dateTem.toDate()});
             this._close();
         }
     }
