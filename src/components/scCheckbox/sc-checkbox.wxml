@@ -6,7 +6,6 @@
         <icon class="{{checked ? 'icon-checked' :''}}" type="success_no_circle" size="14" color="{{!disabled ? color :'white'}}"/>
         <view class="sc-ripple " bind:animationend="_animationend">
             <view class="{{clicked ? 'sc-ripple-animate' : ''}}" bind:animationend="_animationend"></view>
-
         </view>
     </view>
     <label class="text-5">{{label}}</label>

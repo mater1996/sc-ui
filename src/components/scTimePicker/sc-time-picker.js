@@ -35,9 +35,9 @@ Component({
                 let {clientX, clientY} = touch;
                 clientX -= e.target.offsetLeft -this.data.timePx ;
                 clientY -= e.target.offsetTop-this.data.timePy;
-                console.log('hhhhhh', e);
+                // console.log('hhhhhh', e);
                 let angle = parseInt(this.getAngle(this.data.px, this.data.py, clientX, clientY));
-                console.log(angle);
+                // console.log(angle);
                 if ((angle - 15) % 30 === 0) {
                     angle = angle - 15;
                     this.setData({
@@ -48,7 +48,7 @@ Component({
                 this._queryMultipleNodes('.time-hour').then(res => {
                     this.data.timePx = res[0].left + 130;
                     this.data.timePy = res[0].top + 130;
-                    console.log(res);
+                    // console.log(res);
                     this.setData({
                         top: this.data.timePy,
                         left: this.data.timePx
@@ -58,9 +58,10 @@ Component({
                         this.data.py = res[0].top + 16 -this.data.timePy;
                         let touch = e.touches[0];
                         let {clientX, clientY} = touch;
+                        // console.log(touch);
                         // console.log('hhhhhh',e);
                         let angle = this.getAngle(this.data.px, this.data.py, clientX, clientY);
-                        console.log(angle);
+                        // console.log(angle);
                         this.setData({
                             selectTimeRotate: angle
                         })
@@ -79,7 +80,9 @@ Component({
                 });
             })
         },
-        getAngle(px, py, mx, my) {//获得人物中心和鼠标坐标连线，与y轴正半轴之间的夹角
+        getAngle(px, py, mx, my) {    // 起始点  结束点
+            console.log('起始点',px,py);
+            console.log('结束点',mx,my);
             return Math.atan2(my - py, mx - px) / Math.PI * 180
         }
     }

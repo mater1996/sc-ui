@@ -37,7 +37,7 @@ Component({
     },
     relations: {
         '../scDialog/sc-dialog': {
-            type: 'child', // 关联的目标节点应为子节点
+            type: 'child',
         }
     },
     externalClasses: ['sc-class'],
@@ -45,7 +45,6 @@ Component({
         this.setData({
             dialogCount: dialogCount++
         });
-        // 获取dialog对象
         this.data.dialog = this.selectComponent('#picker-dialog-' + this.data.dialogCount);
     },
     methods: {
@@ -64,7 +63,6 @@ Component({
             }
         },
         _monthDay(d) {
-            // 接受一个日期 返回该日期的所有日期按照数组形式，没有日期的为空
             const date = dayjs(d);
             let res = [];
             let alreadyMonthName = date.format('YYYY-MM');
@@ -92,13 +90,11 @@ Component({
         _change(e) {
             const current = e.detail.current;
             let showDate = this.data.showDate.add(current - this.data.currentSwiperItemDateIndex, 'months');
-            // 下一个或上一个日历视图  设置新的显示日期，显示日期object形式以及当前的显示item index
             this.setData({
                 showDate: showDate,
                 showDateObject: showDate.toObject(),
                 currentSwiperItemDateIndex: current
             });
-            // 判定是否是最后一个 或者 第一个日期
             if (current === this.data.dayList.length - 1) {
                 // 锁定btn
                 this.setData({
@@ -130,7 +126,6 @@ Component({
             }
         },
         _next() {
-            // tap点击的时候   应该在一段时间内不让点击  并且显示的日期加一
             this.data.showDate = this.data.showDate.add(1, 'months');
             this.setData({
                 currentSwiperItemDateIndex: ++this.data.currentSwiperItemDateIndex
@@ -145,7 +140,7 @@ Component({
         _selectDate(e) {
             let date = e.currentTarget.dataset.date;
             let dateTem = dayjs();
-            dateTem = dateTem.set('year', date.years).set('month', date.months).set('date', date.date);
+            dateTem = dateTem = dateTem.set('year', date.years).set('month',date.months).set('date', date.date);
             if (date) {
                 this.setData({
                     selectDateObject: date,
@@ -212,9 +207,9 @@ Component({
             this.triggerEvent('close', {});
         },
         _submit() {
-            const {years, months, date, hours, minutes, seconds, milliseconds} = this.data.selectDateObject;
+            let {years,months,date,hours,minutes,seconds,milliseconds} = this.data.selectDateObject;
             let dateTem = dayjs();
-            dateTem = dateTem.set('year', years).set('month', months).set('date', date).set('hour', hours).set('minute', minutes).set('second', seconds).set('millisecond', milliseconds);
+            dateTem = dateTem.set('year', years).set('month',months).set('date', date).set('hour',hours).set('minute',minutes).set('second',seconds).set('millisecond',milliseconds);
             this.triggerEvent('submit', {value: dateTem.toDate()});
             this._close();
         }

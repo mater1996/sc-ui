@@ -19,6 +19,10 @@ Component({
         },
         value:{
             type:null
+        },
+        color:{
+            type:String,
+            value:'#ff4081'
         }
     },
     data: {
@@ -27,10 +31,11 @@ Component({
         value:null
     },
     ready(){
+        const {checked,value,name = 'switch'+swicthCount++,color} = this.properties;
         this.setData({
-            checked:this.properties.checked,
-            value:this.properties.value,
-            name:this.properties.name || 'switch'+swicthCount++
+            checked,
+            value,
+            name
         })
     },
     relations: {
@@ -41,11 +46,12 @@ Component({
     externalClasses: ['sc-class'],
     methods: {
         _changeSwitch(){
+            const {checked,value} = this.data;
             this.setData({
-                checked:!this.data.checked,
+                checked:!checked,
                 clicked:true
             });
-            this.triggerEvent(`change`, {value:this.data.value,checked:this.data.checked}, { bubbles: true });
+            this.triggerEvent(`change`, {value,checked}, { bubbles: true });
         },
         _animationend(){
             this.setData({

@@ -10,9 +10,14 @@
     user-select: none;
 }
 
-.sc-switch-icon{
+.sc-switch .sc-switch-container{
     position: relative;
-    display: inline-block;
+    height: 14px;
+    width: 36px
+}
+
+.sc-switch-bar{
+    position: relative;
     width: 36px;
     height: 14px;
     vertical-align: middle;
@@ -22,38 +27,38 @@
     transition: background-color .3s cubic-bezier(.4,0,.2,1);
 }
 
-.sc-switch-icon:before{
+.sc-switch-bar-icon{
     position: absolute;
     top: -3px;
     left: -3px;
-    display: inline-block;
     width: 20px;
     height: 20px;
-    content: ' ';
     background-color: #fafafa;
     border-radius: 20px;
     -webkit-box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
     box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
-    -webkit-transition: background-color .3s cubic-bezier(.4,0,.2,1),left .3s cubic-bezier(.4,0,.2,1),-webkit-box-shadow .14s cubic-bezier(.4,0,.2,1);
-    transition: background-color .3s cubic-bezier(.4,0,.2,1),left .3s cubic-bezier(.4,0,.2,1),-webkit-box-shadow .14s cubic-bezier(.4,0,.2,1);
-    transition: box-shadow .14s cubic-bezier(.4,0,.2,1),background-color .3s cubic-bezier(.4,0,.2,1),left .3s cubic-bezier(.4,0,.2,1);
+    /*-webkit-transition: background-color .3s cubic-bezier(.4,0,.2,1),left .3s cubic-bezier(.4,0,.2,1),-webkit-box-shadow .14s cubic-bezier(.4,0,.2,1);*/
+    /*transition: background-color .3s cubic-bezier(.4,0,.2,1),left .3s cubic-bezier(.4,0,.2,1),-webkit-box-shadow .14s cubic-bezier(.4,0,.2,1);*/
+    /*transition: box-shadow .14s cubic-bezier(.4,0,.2,1),background-color .3s cubic-bezier(.4,0,.2,1),left .3s cubic-bezier(.4,0,.2,1);*/
     transition: box-shadow .14s cubic-bezier(.4,0,.2,1),background-color .3s cubic-bezier(.4,0,.2,1),left .3s cubic-bezier(.4,0,.2,1),-webkit-box-shadow .14s cubic-bezier(.4,0,.2,1);
 }
 
-.sc-switch-checked .sc-switch-icon:before{
+.sc-switch-checked .sc-switch-bar-icon{
     left: 20px;
-    background-color: #ff4081;
+    background-color: currentColor;
+    opacity: 1;
 }
 
-.sc-switch-checked .sc-switch-icon{
-    background-color:rgba(255,64,129,0.5);
+.sc-switch-checked .sc-switch-bar{
+    background-color:currentColor;
+    opacity: .5;
 }
 
-.sc-switch-disabled .sc-switch-icon{
+.sc-switch-disabled .sc-switch-bar{
     background-color: #bdbdbd!important;
 }
 
-.sc-switch-disabled .sc-switch-icon:before{
+.sc-switch-disabled .sc-switch-bar-icon{
     background-color: #bdbdbd!important;
 }
 

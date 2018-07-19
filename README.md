@@ -12,6 +12,7 @@
 
 ## get start
 ##### 下载：目前不支持npm install 请直接clone或下载
+
 ### 1. 引入文件
 在app.wxss下引用
 ```
@@ -97,6 +98,7 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 | sc-class| String | | 对sc-button 内的button元素修改样式 注意:sc-btn 为推荐样式||
 |ripple | Boolean| true|点击是否有涟漪的效果|
 
+##### 颜色：可以设置.sc-btn的background-color 来改变按钮的颜色
 
 #### 3.2 sc-check-box
 ##### 注意 请结合 sc-check-box-group 使用
@@ -121,6 +123,7 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 | disabled  | Boolean  |	false |	是否禁用 |
 | checked  | Boolean  |	false |	当前是否选中，可用来设置默认选中 |
 |bindcheckchange|Handle||状态更改时的触发事件|
+|color|String||内部icon的颜色|
 |sc-class|||建议使用 sc-checkbox样式|
 |group上的sc-class|||sc-checkbox-group-row横向的radio组、sc-check-group-column纵向的radio组|
 
@@ -171,6 +174,8 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 |icon|String||图标的类例如 iconfont icon-phone(这里是图标库的字体图标)|
 ##### 类型等请到 https://developers.weixin.qq.com/miniprogram/dev/component/input.html 比对
 
+##### 颜色：可以设置.sc-input::before 的background-color 来改变边框的颜色 或者border 来改变宽度等其他属性（不建议修改）
+
 #### 3.4 sc-progress
 
 ```json
@@ -188,6 +193,7 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 | sc-class  |   | |	对内部元素应用的class名称 使用 sc-progress sc-progress sc-progress-indeterminate 为随机进度条|
 |type|determinate||将这个进度条声明为固定进度条 请不要加入 sc-progress-indeterminate类|
 |width|number||固定进度条的长度|
+##### 颜色：可以设置sc-progress 或 sc-progress-indeterminate 的 background-color 来改变进度条的颜色
 
 #### 3.5 sc-radio
 ##### 注意 请结合 sc-radio-group 使用
@@ -213,6 +219,7 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 |label|String||radio的标签|
 |checked|Boolean|false|radio的选中(请不要设置多个，如果有多个则只会设置第一个)|
 |value|||chenge事件携带的value|
+|color|String|HEX或rgb|#ff4081|radio的颜色|
 |disabled|Boolean|false|禁用|
 
 #### 3.6 sc-switch
@@ -231,6 +238,7 @@ http://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512
 | bind:change |   |	 | switch change事件|
 |sc-class|String || 推荐sc-switch|
 |value|||chenge事件携带的value|
+|color|String|颜色|#ff4081|switch的颜色|
 |disabled|Boolean|false|禁用|
 
 

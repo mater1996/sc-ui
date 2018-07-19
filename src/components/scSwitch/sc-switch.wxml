@@ -1,10 +1,14 @@
 <!--
  Created by bai on 2018/5/2
  -->
-<view class="sc-class sc-switch {{checked ? 'sc-switch-checked': ''}} {{disabled ? 'sc-switch-disabled': ''}}" capture-bind:tap="{{!disabled ? '_changeSwitch': ''}}">
-    <view class="sc-switch-icon">
-        <view class="sc-switch-ripple  {{checked ? 'sc-switch-ripple-right-animate': 'sc-switch-ripple-left-animate'}}"
-              bind:animationend="_animationend">
+<view class="sc-class sc-switch {{checked ? 'sc-switch-checked': ''}} {{disabled ? 'sc-switch-disabled': ''}}"
+      capture-bind:tap="{{!disabled ? '_changeSwitch': ''}}">
+    <view class="sc-switch-container" style="color: {{color}}">
+        <view class="sc-switch-bar">
+            <view class="sc-switch-ripple  {{checked ? 'sc-switch-ripple-right-animate': 'sc-switch-ripple-left-animate'}}"
+                  bind:animationend="_animationend">
+            </view>
         </view>
+        <view class="sc-switch-bar-icon"></view>
     </view>
 </view>
