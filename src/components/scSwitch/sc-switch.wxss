@@ -1,12 +1,7 @@
 
 .sc-switch{
     position: relative;
-    display: inline-block;
-    height: 36px;
     line-height: 36px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -37,9 +32,6 @@
     border-radius: 20px;
     -webkit-box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
     box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
-    /*-webkit-transition: background-color .3s cubic-bezier(.4,0,.2,1),left .3s cubic-bezier(.4,0,.2,1),-webkit-box-shadow .14s cubic-bezier(.4,0,.2,1);*/
-    /*transition: background-color .3s cubic-bezier(.4,0,.2,1),left .3s cubic-bezier(.4,0,.2,1),-webkit-box-shadow .14s cubic-bezier(.4,0,.2,1);*/
-    /*transition: box-shadow .14s cubic-bezier(.4,0,.2,1),background-color .3s cubic-bezier(.4,0,.2,1),left .3s cubic-bezier(.4,0,.2,1);*/
     transition: box-shadow .14s cubic-bezier(.4,0,.2,1),background-color .3s cubic-bezier(.4,0,.2,1),left .3s cubic-bezier(.4,0,.2,1),-webkit-box-shadow .14s cubic-bezier(.4,0,.2,1);
 }
 
