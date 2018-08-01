@@ -12,7 +12,7 @@ const SnackBar = (function () {
             if (this.snackBar) {
                 return this;
             } else {
-                throw new Error('no this id of sc-dialog');
+                throw new Error('no this id of sc-snackbar');
             }
         }
     };

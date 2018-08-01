@@ -12,7 +12,7 @@ const DatePicker = (function () {
             if (this.datePicker) {
                 return this;
             } else {
-                throw new Error('no this id of sc-dialog');
+                throw new Error('no this id of sc-date-picker');
             }
         }
     };
