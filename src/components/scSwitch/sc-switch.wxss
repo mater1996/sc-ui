@@ -90,19 +90,19 @@
     }
 
     25%{
-        transform: scale(3);
+        transform: scale(2.4);
         opacity: 0.1;
         left: 5px;
     }
 
     50%{
-        transform: scale(3);
+        transform: scale(2.4);
         opacity: 0.1;
         left: 10px;
     }
 
     75%{
-        transform: scale(3);
+        transform: scale(2.4);
         opacity: 0.1;
         left: 15px;
     }
@@ -122,19 +122,19 @@
     }
 
     25%{
-        transform: scale(3);
+        transform: scale(2.4);
         opacity: 0.1;
         left: 15px;
     }
 
     50%{
-        transform: scale(3);
+        transform: scale(2.4);
         opacity: 0.1;
         left: 10px;
     }
 
     75%{
-        transform: scale(3);
+        transform: scale(2.4);
         opacity: 0.1;
         left: 5px;
     }

@@ -42,6 +42,7 @@ Component({
         if(!this.data.disabled){
             this.setData({
                 borderColor:transHexOtTgb.colorRgb(this.properties.color.toString(),.54),
+                backgroundColor:transHexOtTgb.colorRgb(this.properties.color.toString(),1),
                 iconColor:transHexOtTgb.colorHex(this.properties.color.toString(),0),
             });
         }
