@@ -5,7 +5,7 @@
       capture-bind:tap="{{!disabled ? '_changeRadio' :''}}">
     <view class="sc-radio-icon" style="color:{{iconColor}};border-color:{{borderColor}};">
         <view class="sc-ripple">
-            <view class="{{showRipple ? 'sc-ripple-animate' : ''}}" style="background-color: {{borderColor}};" bind:animationend="_animationend"></view>
+            <view class="{{showRipple ? 'sc-ripple-animate' : ''}}" style="background-color: {{backgroundColor}};" bind:animationend="_animationend"></view>
         </view>
     </view>
     <text class="text-5">{{label}}</text>
