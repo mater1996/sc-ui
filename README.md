@@ -1,7 +1,7 @@
 # sc-ui
 =======
 微信小程序material ui
-此ui为参加高校小程序设计，请勿做商用
+此ui为参加高校小程序设计
 利用此ui设计的小程序已完成 欢迎大家前往观看
 
 [鲸猫兼职小程序](https://v.qq.com/x/page/m0682e7bjon.html)
