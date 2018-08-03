@@ -139,11 +139,11 @@
            <sc-date-picker id="datepicker" bind:submit="datePickerSubmit"></sc-date-picker>
         </view>
 
-       <!-- <view  class="ui-test-item">
+       <view  class="ui-test-item">
             <view class="ui-test-item-header">timepicker组件</view>
             <sc-button sc-class="sc-btn" bind:tap="openDatePicker">打开/关闭</sc-button>
             <sc-time-picker id="datepicker" bind:submit="datePickerSubmit"></sc-time-picker>
-        </view>-->
+        </view>
 
         <view class="ui-test-item">
             <view class="ui-test-item-header">loading组件</view>

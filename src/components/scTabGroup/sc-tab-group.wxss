@@ -48,24 +48,15 @@
 .tab-bar-driver{
     height:4rpx;
     background-color: #0088CC;
-    -moz-transition: -moz-transform .3s linear;
-    -o-transition: -o-transform .3s linear;
-    -webkit-transition: -webkit-transform .3s linear;
     transition: transform .3s linear;
 }
 
 .tab-bar-driver-trans{
-    -moz-transition: width .3s linear , -moz-transform .3s linear;
-    -o-transition: width .3s linear , -o-transform .3s linear;
-    -webkit-transition: width .3s linear , -webkit-transform .3s linear;
     transition: width .3s linear , transform .3s linear;
     will-change: width;
 }
 
 .tab-container{
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     flex-wrap: nowrap;
     overflow: visible;

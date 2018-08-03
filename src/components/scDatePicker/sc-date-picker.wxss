@@ -49,7 +49,6 @@
     left: 50%;
     width: 54rpx !important;
     line-height: 54rpx;
-    -webkit-transform: translate(-27rpx, -27rpx);
     transform: translate(-27rpx, -27rpx);
 }
 
@@ -167,7 +166,6 @@
     width: 76rpx;
     height: 76rpx;
     border-radius: 50%;
-    /*background-color: #666666;*/
     color: #000000;
 }
 

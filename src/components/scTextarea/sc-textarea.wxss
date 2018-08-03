@@ -22,19 +22,15 @@
     width: 0;
     background-color: currentColor;
     transition: width 10s;
-    -moz-transition: width .2s; /* Firefox 4 */
-    -webkit-transition: width .2s; /* Safari 和 Chrome */
-    -o-transition: width .2s; /* Opera */
 }
 
 .sc-textarea-label{
     display: block;
     width: 100%;
     font-size: 32rpx;
-    pointer-events:none; /* 该元素不会成为鼠标事件的target*/
-    transform-origin: left;  /* transition旋转或移动的基点*/
-    -webkit-transition: all .2s;
-    -webkit-transform-origin: left;
+    pointer-events:none;
+    transform-origin: left;
+    transition: all .2s;
     text-align: left;
 }
 
@@ -52,13 +48,11 @@
 }
 
 .sc-textfield-floating-label .sc-textarea-label{
-    -webkit-transform: scale(1) translateY(100%);
     transform: scale(1) translateY(100%);
     color: rgba(0,0,0,.54);
 }
 
 .sc-textfield-floating-label .sc-textarea-label-focus{
-    -webkit-transform: scale(.8) translateY(0);
     transform: scale(.8) translateY(0);
     color: currentColor;
 }

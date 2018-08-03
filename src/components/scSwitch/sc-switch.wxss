@@ -1,4 +1,3 @@
-
 .sc-switch{
     position: relative;
     line-height: 36px;
@@ -18,7 +17,6 @@
     vertical-align: middle;
     background-color: rgba(0,0,0,.38);
     border-radius: 14px;
-    -webkit-transition: background-color .3s cubic-bezier(.4,0,.2,1);
     transition: background-color .3s cubic-bezier(.4,0,.2,1);
 }
 
@@ -30,7 +28,6 @@
     height: 20px;
     background-color: #fafafa;
     border-radius: 20px;
-    -webkit-box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
     box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
     transition: box-shadow .14s cubic-bezier(.4,0,.2,1),background-color .3s cubic-bezier(.4,0,.2,1),left .3s cubic-bezier(.4,0,.2,1),-webkit-box-shadow .14s cubic-bezier(.4,0,.2,1);
 }
@@ -68,17 +65,11 @@
 
 .sc-switch-ripple-right-animate{
     animation: sc-switch-ripple-right .3s ease-out;
-    -webkit-animation:sc-switch-ripple-right .3s ease-out;
-    -moz-animation: sc-switch-ripple-right .3s ease-out;
-    -o-animation: sc-switch-ripple-right .3s ease-out;
     animation-fill-mode: forwards;
 }
 
 .sc-switch-ripple-left-animate{
     animation: sc-switch-ripple-left .3s ease-out;
-    -webkit-animation:sc-switch-ripple-left .3s ease-out;
-    -moz-animation: sc-switch-ripple-left .3s ease-out;
-    -o-animation: sc-switch-ripple-left .3s ease-out;
     animation-fill-mode: forwards;
 }
 

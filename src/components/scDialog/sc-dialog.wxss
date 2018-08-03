@@ -22,9 +22,6 @@
     right: 0;
     top: 50%;
     background-color: white;
-    -webkit-transform: scale(1) translate3d(0, -50%, 0);
-    -moz-transform: scale(1) translate3d(0, -50%, 0);
-    -o-transform: scale(1) translate3d(0, -50%, 0);
     transform: scale(1) translate3d(0, -50%, 0);
     transform-origin: center;
 
@@ -32,50 +29,50 @@
 
 .sc-mask-fadeIn {
     will-change: transform;
-    -webkit-animation-name: maskFadeIn;
-    -webkit-animation-duration: 0.3s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-fill-mode: forwards;
+    animation-name: maskFadeIn;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .sc-mask-fadeOut {
     will-change: transform;
-    -webkit-animation-name: maskFadeOut;
-    -webkit-animation-duration: 0.3s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-fill-mode: forwards;
+    animation-name: maskFadeOut;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .sc-dialog-fadeIn {
     will-change: transform;
-    -webkit-animation-name: dialogFadeIn;
-    -webkit-animation-duration: 0.3s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-fill-mode: forwards;
+    animation-name: dialogFadeIn;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .sc-dialog-fadeOut {
     will-change: transform;
-    -webkit-animation-name: dialogFadeOut;
-    -webkit-animation-duration: .3s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-fill-mode: forwards;
+    animation-name: dialogFadeOut;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .sc-dialog-slideTopIn {
     will-change: transform;
-    -webkit-animation-name: dialogSlideTopIn;
-    -webkit-animation-duration: 0.3s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-fill-mode: forwards;
+    animation-name: dialogSlideTopIn;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .sc-dialog-slideTopOut {
     will-change: transform;
-    -webkit-animation-name: dialogSlideTopOut;
-    -webkit-animation-duration: .3s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-fill-mode: forwards;
+    animation-name: dialogSlideTopOut;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 @keyframes maskFadeIn {
@@ -103,16 +100,10 @@
 @keyframes dialogFadeIn {
     from {
         opacity: 0;
-        -webkit-transform: scale(0.95) translate3d(0, -50%, 0);
-        -moz-transform: scale(0.95) translate3d(0, -50%, 0);
-        -o-transform: scale(0.95) translate3d(0, -50%, 0);
         transform: scale(0.95) translate3d(0, -50%, 0);
     }
     to {
         opacity: 1;
-        -webkit-transform: scale(1) translate3d(0, -50%, 0);
-        -moz-transform: scale(1) translate3d(0, -50%, 0);
-        -o-transform: scale(1) translate3d(0, -50%, 0);
         transform: scale(1) translate3d(0, -50%, 0);
     }
 }
@@ -120,16 +111,10 @@
 @keyframes dialogFadeOut {
     from {
         opacity: 1;
-        -webkit-transform: scale(1) translate3d(0, -50%, 0);
-        -moz-transform: scale(1) translate3d(0, -50%, 0);
-        -o-transform: scale(1) translate3d(0, -50%, 0);
         transform: scale(1) translate3d(0, -50%, 0);
     }
     to {
         opacity: 0;
-        -webkit-transform: scale(0.95) translate3d(0, -50%, 0);
-        -moz-transform: scale(0.95) translate3d(0, -50%, 0);
-        -o-transform: scale(0.95) translate3d(0, -50%, 0);
         transform: scale(0.95) translate3d(0, -50%, 0);
     }
 }

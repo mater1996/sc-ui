@@ -42,19 +42,15 @@ input::before {
     width: 0;
     background-color: currentColor;
     transition: width 10s;
-    -moz-transition: width .2s;	/* Firefox 4 */
-    -webkit-transition: width .2s;	/* Safari 和 Chrome */
-    -o-transition: width .2s;	/* Opera */
 }
 
 .sc-label{
     display: block;
     width: 100%;
     font-size: 32rpx;
-    pointer-events:none; /* 该元素不会成为鼠标事件的target*/
-    transform-origin: left;  /* transition旋转或移动的基点*/
-    -webkit-transition: all .2s;
-    -webkit-transform-origin: left;
+    pointer-events:none;
+    transform-origin: left;
+    transition: all .2s;
     text-align: left;
     color: rgba(0,0,0,.54);
 }
@@ -64,18 +60,15 @@ input::before {
 }
 
 .sc-textfield .sc-label{
-    -webkit-transform: scale(.75) translateY(8rpx);
     transform: scale(.75) translateY(8rpx);
 }
 
 .sc-textfield-floating-label .sc-label{
-    -webkit-transform: scale(1) translateY(54rpx);
     transform: scale(1) translateY(54rpx);
 }
 
 .sc-textfield-floating-label .sc-label-focus{
     color: currentColor;
-    -webkit-transform: scale(.8) translateY(8rpx);
     transform: scale(.8) translateY(8rpx);
 }
 
@@ -92,9 +85,6 @@ input::before {
     text-align: left;
     color: red;
     transition: opacity .3s ease-in;
-    -moz-transition: opacity .3s ease-in; /* Firefox 4 */
-    -webkit-transition: opacity .3s ease-in; /* Safari 和 Chrome */
-    -o-transition: opacity .3s ease-in; /* Opera */
     opacity: 0;
 }
 

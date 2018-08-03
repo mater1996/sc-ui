@@ -9,6 +9,8 @@
         </view>
     </view>
     <view style="position: fixed; width: 5px;height: 5px;z-index:10000;border-radius: 50%;top: {{top}}px;left: {{left}}px;background-color: red"></view>
+    <view style="position: fixed; width: 5px;height: 5px;z-index:10000;border-radius: 50%;top: {{ptop}}px;left: {{pleft}}px;background-color: purple"></view>
+    <view style="position: fixed; width: 5px;height: 5px;z-index:10000;border-radius: 50%;top: {{ctop}}px;left: {{cleft}}px;background-color: black"></view>
     <view class="time-container">
         <view class="time-circle"></view>
         <view class="time-hour">

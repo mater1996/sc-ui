@@ -17,20 +17,11 @@
     left: 0;
     right: 0;
     z-index: 10002;
-    -moz-transition: transform .3s ease-in-out;
-    -o-transition: transform .3s ease-in-out;
-    -webkit-transition: transform .3s ease-in-out;
     transition: transform .3s ease-in-out;
-    -moz-transform: translateY(100%);
-    -o-transform: translateY(100%);
-    -webkit-transform:translateY(100%);
     transform: translateY(100%);
 }
 
 .sc-snackBar.sc-snackBarShow{
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    -webkit-transform:translateY(0);
     transform: translateY(0);
 }
 

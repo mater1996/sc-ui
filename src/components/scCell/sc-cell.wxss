@@ -11,7 +11,6 @@
     min-height: 96rpx;
     font-size: 32rpx;
     overflow: hidden;
-    /*border-top: 1px solid lightgrey;*/
     border-bottom: 1px solid lightgrey;
     padding: 0 32rpx;
     box-sizing: border-box;
@@ -70,18 +69,11 @@
 
 .sc-ripple-animation-slow {
     animation: sc-ripple 0.6s ease-out;
-    -moz-animation: sc-ripple 0.6s ease-out;
-    -webkit-animation: sc-ripple 0.6s ease-out;
-    -o-animation: sc-ripple 0.6s ease-out;
     animation-fill-mode: forwards;
 }
 
 .sc-ripple-animation-slow-hold {
     animation: sc-ripple-hold 1s ease-out;
-    /*兼容各大浏览器*/
-    -moz-animation: sc-ripple-hold 1s ease-out;
-    -webkit-animation: sc-ripple-hold 1s ease-out;
-    -o-animation: sc-ripple-hold 1s ease-out;
     animation-fill-mode: forwards;
 }
 

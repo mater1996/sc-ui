@@ -17,9 +17,6 @@
 
 .loading-circle-active{
     animation: loading-circle-animate 1s linear infinite;
-    -webkit-animation:loading-circle-animate 1s linear infinite;
-    -moz-animation: loading-circle-animate 1s linear infinite;
-    -o-animation: loading-circle-animate 1s linear infinite;
 }
 
 @keyframes loading-circle-animate {
