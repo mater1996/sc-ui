@@ -41,7 +41,7 @@ input::before {
     height: 2px;
     width: 0;
     background-color: currentColor;
-    transition: width 10s;
+    transition: width .3s;
 }
 
 .sc-label{
