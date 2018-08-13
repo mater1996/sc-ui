@@ -1,5 +1,16 @@
+/**其他样式**/
+.sc-btn {
+    line-height: 72rpx;
+    min-width: 128rpx;
+    height: 72rpx;
+    padding: 0 32rpx;
+    font-size: 28rpx;
+    border-radius: 2px;
+    background-color: rgb(255,255,255);
+}
+
+/**主要样式**/
 .sc-time-picker{
-    padding: 16prx;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -7,41 +18,84 @@
     align-items: center;
 }
 
+.time-show{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 32rpx 56rpx;
+    background: #009688;
+    color: #ffffff;
+}
+
 .time-show .time{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     font-size: 64rpx;
+}
+
+.time .hour-minute{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.time .hour-minute view{
+    font-size: 116rpx;
+    color: white;
+    opacity: .6;
+}
+
+.time .hour-minute .active{
+    opacity: 1;
+}
+
+.time .am-pm view{
+    font-size: 42rpx;
+    color: white;
+    opacity: .6;
+}
+
+.time .am-pm .active{
+    opacity: 1;
 }
 
 .time-container{
     position: relative;
-    min-width: 280px;
-    min-height: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    align-self: center;
+    width: 220px;
+    height: 220px;
+    margin: 16px;
 }
 
 .time-container .time-circle{
-    width: 260px;
-    height: 260px;
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: lightgrey;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #ededed;
     border-radius: 50%;
 }
 
-.time-container .time-hour{
+.time-container .time-hour,.time-minute{
     position: relative;
-    width: 260px;
-    height: 260px;
+    width: 78%;
+    height: 78%;
 }
 
-.time-hour .time-hour-item{
+.time-item{
     position: absolute;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 50%;
+    width: 60%;
     height: 0;
     top: 50%;
     left: 50%;
@@ -51,114 +105,17 @@
     z-index: 98
 }
 
-.time-hour-item .time-hour-item-number{
-    width: 64rpx;
-    height: 64rpx;
+.time-item .time-item-number{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.1em;
+    width: 64rpx;
+    height: 64rpx;
+    font-size: 30rpx;
+    border-radius: 50%;
 }
 
-.time-hour-item.time-hour-10{
-    transform: rotate(-150deg) translateY(-50%);
-}
-
-.time-hour-10 .time-hour-item-number{
-    transform: rotate(150deg);
-}
-
-.time-hour-item.time-hour-11{
-    transform: rotate(-120deg) translateY(-50%);
-}
-
-.time-hour-11 .time-hour-item-number{
-    transform: rotate(120deg);
-}
-
-.time-hour-item.time-hour-12{
-    background-color: rgba(255,255,255,.3);
-    transform: rotate(-90deg) translateY(-50%);
-}
-
-.time-hour-12 .time-hour-item-number{
-    transform: rotate(90deg);
-}
-
-.time-hour-item.time-hour-1{
-    transform: rotate(-30deg) translateY(-50%);
-}
-
-.time-hour-1 .time-hour-item-number{
-    transform: rotate(30deg);
-}
-
-
-.time-hour-item.time-hour-2{
-    transform: rotate(-60deg) translateY(-50%);
-}
-
-.time-hour-2 .time-hour-item-number{
-    transform: rotate(60deg);
-}
-
-.time-hour-item.time-hour-3{
-    transform: rotate(-0deg) translateY(-50%);
-}
-
-.time-hour-3 .time-hour-item-number{
-    transform: rotate(0deg);
-}
-
-.time-hour-item.time-hour-4{
-    transform: rotate(30deg) translateY(-50%);
-}
-
-.time-hour-4 .time-hour-item-number{
-    transform: rotate(-30deg);
-}
-
-.time-hour-item.time-hour-5{
-     transform: rotate(60deg) translateY(-50%);
- }
-
-.time-hour-5 .time-hour-item-number{
-    transform: rotate(-60deg);
-}
-
-.time-hour-item.time-hour-6{
-    transform: rotate(90deg) translateY(-50%);
-}
-
-.time-hour-6 .time-hour-item-number{
-    transform: rotate(-90deg);
-}
-
-.time-hour-item.time-hour-7{
-    transform: rotate(120deg) translateY(-50%);
-}
-
-.time-hour-7 .time-hour-item-number{
-    transform: rotate(-120deg);
-}
-
-.time-hour-item.time-hour-8{
-    transform: rotate(150deg) translateY(-50%);
-}
-
-.time-hour-8 .time-hour-item-number{
-    transform: rotate(-150deg);
-}
-
-.time-hour-item.time-hour-9{
-    transform: rotate(180deg) translateY(-50%);
-}
-
-.time-hour-9 .time-hour-item-number{
-    transform: rotate(-180deg);
-}
-
-.time-hour-item-select{
+.time-item-select{
     position: absolute;
     display: flex;
     justify-content: flex-end;
@@ -170,17 +127,126 @@
     left: 50%;
     transform-origin: left;
     transform: translateY(-50%);
-    z-index: 99
+    z-index: 97
 }
 
-.time-hour-item-select .time-hour-item-number{
-    width: 64rpx;
-    height: 64rpx;
+.time-item-select .time-item-number{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.1em;
+    width: 16rpx;
+    height: 16rpx;
     background-color: #0b93d5;
     border-radius: 50%;
+}
+
+.time-item-number.active{
+    background-color: #0b93d5;
+    color: white;
+}
+
+.sc-time-picker .sc-time-picker-action{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: flex-end;
+    margin: 16rpx 8rpx;
+}
+
+.time-item.time-10{
+    transform: rotate(-150deg) translateY(-50%);
+}
+
+.time-10 .time-item-number{
+    transform: rotate(150deg);
+}
+
+.time-item.time-11{
+    transform: rotate(-120deg) translateY(-50%);
+}
+
+.time-11 .time-item-number{
+    transform: rotate(120deg);
+}
+
+.time-item.time-12{
+    transform: rotate(-90deg) translateY(-50%);
+}
+
+.time-12 .time-item-number{
+    transform: rotate(90deg);
+}
+
+.time-item.time-1{
+    transform: rotate(-60deg) translateY(-50%);
+}
+
+.time-1 .time-item-number{
+    transform: rotate(60deg);
+}
+
+.time-item.time-2{
+    transform: rotate(-30deg) translateY(-50%);
+}
+
+.time-2 .time-item-number{
+    transform: rotate(30deg);
+}
+
+.time-item.time-3{
+    transform: rotate(-0deg) translateY(-50%);
+}
+
+.time-3 .time-item-number{
+    transform: rotate(0deg);
+}
+
+.time-item.time-4{
+    transform: rotate(30deg) translateY(-50%);
+}
+
+.time-4 .time-item-number{
+    transform: rotate(-30deg);
+}
+
+.time-item.time-5{
+     transform: rotate(60deg) translateY(-50%);
+ }
+
+.time-5 .time-item-number{
+    transform: rotate(-60deg);
+}
+
+.time-item.time-6{
+    transform: rotate(90deg) translateY(-50%);
+}
+
+.time-6 .time-item-number{
+    transform: rotate(-90deg);
+}
+
+.time-item.time-7{
+    transform: rotate(120deg) translateY(-50%);
+}
+
+.time-7 .time-item-number{
+    transform: rotate(-120deg);
+}
+
+.time-item.time-8{
+    transform: rotate(150deg) translateY(-50%);
+}
+
+.time-8 .time-item-number{
+    transform: rotate(-150deg);
+}
+
+.time-item.time-9{
+    transform: rotate(180deg) translateY(-50%);
+}
+
+.time-9 .time-item-number{
+    transform: rotate(-180deg);
 }
 

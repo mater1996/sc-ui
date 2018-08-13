@@ -18,32 +18,17 @@
 
 .icon-right:before { content: "\e6a8"; }
 
-.sc-btn-icon {
-    width: 76rpx !important;
-    min-width: 76rpx !important;
-    height: 76rpx !important;
-    padding: 0;
-    margin-right: 0;
-    margin-left: 0;
-    overflow: hidden;
-    font-size: 38rpx;
-    line-height: normal;
-    border-radius: 50% !important;
-    border-style: none;
-}
-
 .sc-btn {
-    background-color: inherit;
-    line-height: 66px;
-    min-width: 88px;
-    height: 36px;
-    padding: 0 16px;
-    margin: 0;
-    font-size: 32rpx;
+    line-height: 72rpx;
+    min-width: 128rpx;
+    height: 72rpx;
+    padding: 0 32rpx;
+    font-size: 28rpx;
     border-radius: 2px;
+    background-color: rgb(255,255,255);
 }
 
-.sc-icon {
+.date-switch-icon {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -95,7 +80,6 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 16rpx 32rpx;
 }
 
 .sc-date-picker-container .sc-date-picker-datetime-show{

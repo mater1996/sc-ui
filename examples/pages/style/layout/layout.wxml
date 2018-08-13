@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view class="ui-test-container">
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">
+            布局 layout
+        </text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <text class="code">{{usage}}</text>
+            </view>
+            <view class="text-overline">提示：{{tips}}</view>
+        </view>
+        <view class="ui-test-item-content">
+            <view class="text-body2" style="background-color: white;padding: 8px 0">{{layout1}} {{layout2}}</view>
+            <view class="{{layout1}} {{layout2}}" style="height: 156px;">
+                <view class="item text-body2">one</view>
+                <view class="item text-body2">two</view>
+                <view class="item text-body2">three</view>
+            </view>
+        </view>
+        <view class="layout-row layout-start" style="margin-top: 16px;overflow-x: scroll">
+            <view class="layout-column layout-center-start">
+                <text class="text-body2">Direction</text>
+                <sc-radio-group direction="column" bind:change="flexDirectionChange">
+                    <sc-radio label="row" checked value="row"></sc-radio>
+                    <sc-radio label="column" value="column"></sc-radio>
+                </sc-radio-group>
+            </view>
+            <view class="layout-column layout-center-start">
+                <text class="text-body2">Horizontal</text>
+                <sc-radio-group direction="column" bind:change="flexJustifyContentChange">
+                    <sc-radio label="start(default)" checked value="start"></sc-radio>
+                    <sc-radio label="center" value="center"></sc-radio>
+                    <sc-radio label="end" value="end"></sc-radio>
+                    <sc-radio label="space-around" value="space-around"></sc-radio>
+                    <sc-radio label="space-between" value="space-between"></sc-radio>
+                </sc-radio-group>
+            </view>
+            <view class="layout-column layout-center-start">
+                <text class="text-body2">Vertical</text>
+                <sc-radio-group direction="column" bind:change="flexAlignItemsContentChange">
+                    <sc-radio label="start(default)" checked value="start"></sc-radio>
+                    <sc-radio label="center" value="center"></sc-radio>
+                    <sc-radio label="end" value="end"></sc-radio>
+                </sc-radio-group>
+            </view>
+        </view>
+    </view>
+</view>

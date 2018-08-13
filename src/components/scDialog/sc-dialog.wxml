@@ -1,11 +1,11 @@
 <!-- 
  Created by bai on 2018/6/29
  -->
-<view class="dialog">
+<view class="sc-class sc-dialog">
     <view wx:if="{{show}}"
-          class="sc-dialog sc-class {{opening?tin:''}}  {{closing?tout:''}}"
+          class="sc-dialog-content {{opening?tin:''}}  {{closing?tout:''}}"
           bind:animationend="{{!overlayClose ? '_animationend' : ''}}"
-          >
+    >
         <slot></slot>
     </view>
     <view wx:if="{{overlay && show }}"

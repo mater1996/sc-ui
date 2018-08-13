@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="ui-test-container">
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">DatePicker</text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view>js</view>
+                <view class="code">
+                    <text>{{jsUsage}}</text>
+                </view>
+                <view>html</view>
+                <view class="code">
+                    <text>{{htmlUsage}}</text>
+                </view>
+                <view>valie</view>
+                <view class="text-caption">
+                    <text>选择的时间:{{value}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-button sc-class="sc-btn" bind:tap="openDatePicker">打开/关闭</sc-button>
+            <sc-date-picker id="datepicker"
+                            bind:open="pickerOpen"
+                            bind:close="pickerClose"
+                            bind:opened="pickerOpened"
+                            bind:closed="pickerClosed"
+                            bind:submit="datePickerSubmit"
+            ></sc-date-picker>
+        </view>
+    </view>
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">TimePicker</text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view>js</view>
+                <view class="code">
+                    <text>{{jsUsage}}</text>
+                </view>
+                <view>html</view>
+                <view class="code">
+                    <text>{{htmlUsage}}</text>
+                </view>
+                <view>valie</view>
+                <view class="text-caption">
+                    <text>选择的时间:{{value}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-button sc-class="sc-btn" bind:tap="openTimePicker">打开/关闭</sc-button>
+            <sc-time-picker id="timepicker"
+                            bind:open="pickerOpen"
+                            bind:close="pickerClose"
+                            bind:opened="pickerOpened"
+                            bind:closed="pickerClosed"
+                            bind:submit="datePickerSubmit"
+            ></sc-time-picker>
+        </view>
+    </view>
+</view>

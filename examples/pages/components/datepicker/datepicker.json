@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "ui测试",
+  "navigationBarBackgroundColor":"#FFFFFF",
+  "navigationBarTextStyle":"black",
+  "usingComponents":{
+    "sc-button":"/assets/lib/scui/dist/components/scButton/sc-button",
+    "sc-date-picker":"/assets/lib/scui/dist/components/scDatePicker/sc-date-picker",
+    "sc-time-picker":"/assets/lib/scui/dist/components/scTimePicker/sc-time-picker"
+  }
+}

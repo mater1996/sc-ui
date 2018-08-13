@@ -2,31 +2,31 @@
  * Created by bai on 2018/6/30
  */
 
-const DatePicker = (function () {
-    let DatePicker = function (id) {
+const TimePicker = (function () {
+    let TimePicker = function (id) {
         this.id = id || null;
         if (this.id) {
             const pages = getCurrentPages();
             const pageCtx = pages[pages.length - 1];
-            this.datePicker = pageCtx.selectComponent(this.id);
-            if (this.datePicker) {
+            this.timePicker = pageCtx.selectComponent(this.id);
+            if (this.timePicker) {
                 return this;
             } else {
-                throw new Error('no this id of sc-dialog');
+                throw new Error('no this id of sc-time-picker');
             }
         }
     };
-    DatePicker.prototype.open = function (options) {
-        this.datePicker._open(options);
+    TimePicker.prototype.open = function (options) {
+        this.timePicker._open(options);
         return this;
     };
-    DatePicker.prototype.close = function () {
-        this.datePicker._close();
+    TimePicker.prototype.close = function () {
+        this.timePicker._close();
         return this;
     };
     return function (id) {
-        return new DatePicker(id);
+        return new TimePicker(id);
     }
 }());
 
-module.exports = DatePicker;
+module.exports = TimePicker;

@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="ui-test-container">
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">Dialog</text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view>js</view>
+                <view class="code">
+                    <text>{{jsUsage}}</text>
+                </view>
+                <view>html</view>
+                <view class="code">
+                    <text>{{htmlUsage}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-button sc-class="sc-btn" bind:tap="openDialog">打开/关闭</sc-button>
+            <sc-dialog id="dialog" sc-class="box-shadow-8"
+                       bind:open="dialogOpen"
+                       bind:close="dialogClose"
+                       bind:opened="dialogOpened"
+                       bind:closed="dialogClosed">
+                <view style="padding: 16px" class="text-body2">
+                    <text>凌晨两点多入睡，五点左右，天色未亮，被猫咪惊醒。它也许刚睡醒，蹿到枕头边贴近我的身体，发出呼噜呼噜的声音，
+                        流连之后跳下床去，在客厅里玩耍，发出追逐小球和兔皮老鼠的声音。</text>
+                    <text>有一天早上起身，看到床的一侧放着鼠杆玩具，想来它半夜玩得兴起，把玩具叼到了床上</text>
+                    <text>它身上规则的黑白条纹来自生命的秩序。玻璃球般的绿色眼珠，在黑暗中熠熠闪光。风从窗外吹进来，拂动窗帘，
+                        它耸起鼻子捕捉季节的味道。睡觉时，蒙住自己的脸，蜷缩起柔软的爪子，温软的小小蹄肉呈现粉红色。小嘴巴总是有一股鱼腥味。</text>
+                </view>
+            </sc-dialog>
+        </view>
+    </view>
+</view>

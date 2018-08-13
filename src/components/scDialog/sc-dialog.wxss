@@ -9,7 +9,7 @@
     background-color: rgba(0, 0, 0, .3);
 }
 
-.sc-dialog {
+.sc-dialog-content {
     position: fixed;
     box-sizing: border-box;
     overflow-y: auto;

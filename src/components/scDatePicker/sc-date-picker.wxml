@@ -1,7 +1,7 @@
 <!-- 
  Created by bai on 2018/5/2
  -->
-<sc-dialog id="{{'picker-dialog-'+dialogCount}}">
+<sc-dialog id="{{'sc-date-picker-dialog-'+dialogCount}}" bind:open="dialogOpen" bind:close="dialogClose" bind:opened="dialogOpened" bind:closed="dialogClosed">
     <view class="sc-date-picker sc-class">
         <view class="sc-date-picker-header">
             <view class="sc-date-picker-year-select" bind:tap="_changeViewToYear">
@@ -12,7 +12,7 @@
             </view>
         </view>
         <view class="sc-date-picker-container">
-            <view hidden="{{!yearView}}" style="height: 720rpx;">
+            <view hidden="{{!yearView}}">
                 <swiper current="{{currentSwiperItemYearIndex}}" circular display-multiple-items="7" vertical
                         duration="{{duration}}"
                         style="height: 640rpx;">
@@ -26,18 +26,18 @@
                     </block>
                 </swiper>
             </view>
-            <view hidden="{{yearView}}" style="height: 720rpx;">
+            <view hidden="{{yearView}}">
                 <view class="sc-date-picker-arrow-action">
-                    <sc-button sc-class="sc-btn sc-btn-icon" style="display: inline-block;"
+                    <sc-button sc-class="sc-btn sc-btn-icon" fab flat size="small"
                                bind:tap="{{!lockedTap? '_last' :''}}">
-                        <text class="sc-icon iconfont icon-back1"></text>
+                        <i class="date-switch-icon iconfont icon-back1"></i>
                     </sc-button>
                     <view class="sc-date-picker-datetime-show">
                         <text>{{showDateObject.months+1}}月 {{showDateObject.years}}</text>
                     </view>
-                    <sc-button sc-class="sc-btn sc-btn-icon" style="display: inline-block;"
+                    <sc-button sc-class="sc-btn sc-btn-icon" fab flat size="small"
                                bind:tap="{{!lockedTap? '_next' :''}}">
-                        <text class="sc-icon iconfont icon-right"></text>
+                        <i class="date-switch-icon iconfont icon-right"></i>
                     </sc-button>
                 </view>
                 <view class="sc-date-picker-date">

@@ -27,7 +27,7 @@ Component({
         },
         hoverClass:{
             type:String,
-            value:'button-hover'
+            value:''
         },
         hoverStopPropagation:{
             type:Boolean,
@@ -62,6 +62,18 @@ Component({
         sendMessageCard: {
             type: Boolean,
             value: false
+        },
+        flat:{
+            type: Boolean,
+            value: false
+        },
+        raised:{
+            type: Boolean,
+            value: false
+        },
+        fab:{
+            type: Boolean,
+            value: false
         }
     },
     data: {
@@ -70,7 +82,8 @@ Component({
             'getphonenumber': 'getphonenumber',
             'launchApp': 'error',
             'contact': 'contact'
-        }
+        },
+        tap:false
     },
     relations: {
         '../scForm/sc-form': {
@@ -83,6 +96,29 @@ Component({
             if (!this.properties.disabled) {
                 this.triggerEvent(`${this.data.openTypeToBindEvent[this.properties.openType]}`, e.detail, {})
             }
+        },
+        _tap(e){
+            this._addRipple_(e);
+            this.setData({
+                tap:true
+            })
+        },
+        _longPress(e){
+            this._longPress_(e);
+            this.setData({
+                tap:true
+            })
+        },
+        _rippleAnimationEnd(){
+            this._rippleAnimationEnd_();
+        },
+        _touchEnd(){
+            this._touchEnd_();
+            setTimeout(() => {
+                this.setData({
+                    tap:false
+                })
+            },150)
         }
     }
 });

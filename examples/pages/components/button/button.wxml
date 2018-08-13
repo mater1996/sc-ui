@@ -1,0 +1,102 @@
+<!--index.wxml-->
+<view class="ui-test-container">
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">
+            Text Button
+        </text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view class="code">
+                    <text>{{usage.flatBth}}</text>
+                </view>
+            </view>
+            <view class="text-overline">提示：{{tip}}</view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-button sc-class="sc-btn" flat>NORMAL</sc-button>
+        </view>
+    </view>
+    <text class="text-driver" style="margin-top: 16px"></text>
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">
+            Outlined Button
+        </text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view class="code">
+                    <text>{{usage.outlinedBtn}}</text>
+                </view>
+            </view>
+            <view class="text-overline">提示：{{tip}}</view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-button sc-class="sc-btn sc-outlined-btn" flat>normal</sc-button>
+            <sc-button sc-class="sc-btn sc-outlined-btn">normal</sc-button>
+        </view>
+    </view>
+    <text class="text-driver" style="margin-top: 16px"></text>
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">
+            Unelevated Button
+        </text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view class="code">
+                    <text>{{usage.unelevatedBtn}}</text>
+                </view>
+            </view>
+            <view class="text-overline">提示：{{tip}}</view>
+        </view>
+        <view class="ui-test-item-content ">
+            <sc-button sc-class="sc-btn">normal</sc-button>
+        </view>
+    </view>
+    <text class="text-driver" style="margin-top: 16px"></text>
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">
+            Raised Button(凸起按钮)
+        </text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view class="code">
+                    <text>{{usage.raisedBtn}}</text>
+                </view>
+            </view>
+            <view class="text-overline">提示：{{tip}}</view>
+        </view>
+        <view class="ui-test-item-content ">
+            <sc-button sc-class="sc-btn" size="small" raised>NORMAL</sc-button>
+        </view>
+    </view>
+    <text class="text-driver" style="margin-top: 16px"></text>
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">
+            FAB Button(浮动的动作按钮)
+        </text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view class="code">
+                    <text>{{usage.FABBtn}}</text>
+                </view>
+            </view>
+            <view class="text-overline">提示: {{tip}}</view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-button raised fab size="small">
+                <i class="iconfont icon-weibiaoti-"></i>
+            </sc-button>
+            <sc-button raised fab>
+                <i class="iconfont icon-appreciate" style="color: red"></i>
+            </sc-button>
+            <sc-button raised fab size="large" sc-class="mini-btn">
+                <i class="iconfont icon-like" style="color: #0b93d5"></i>
+            </sc-button>
+        </view>
+    </view>
+
+</view>

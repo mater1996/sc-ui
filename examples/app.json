@@ -1,16 +1,25 @@
 {
   "pages":[
-    "pages/scuitest/sc-ui-test"
+    "pages/scuitest/sc-ui-test",
+    "pages/style/font/font",
+    "pages/style/layout/layout",
+    "pages/style/icon/icon",
+    "pages/components/button/button",
+    "pages/components/selectionControls/selectionControls",
+    "pages/components/input/input",
+    "pages/components/tab/tab",
+    "pages/components/dialog/dialog",
+    "pages/components/snackbar/snackbar",
+    "pages/components/datepicker/datepicker",
+    "pages/components/progress/progress",
+    "pages/components/form/form",
+    "pages/components/cell/cell"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "partTimeJob",
     "navigationBarTextStyle":"black",
-    "enablePullDownRefresh":true
-  },
-  "networkTimeout": {
-    "request": 10000,
-    "downloadFile": 10000
+    "enablePullDownRefresh":false
   }
 }

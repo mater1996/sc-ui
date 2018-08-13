@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="ui-test-container">
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">
+            Progress
+        </text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view>html</view>
+                <view class="code">
+                    <text>{{usage.progress}}</text>
+                </view>
+            </view>
+            <view class="text-overline">提示：{{tip}}</view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-progress color="red"></sc-progress>
+            <sc-progress color="red" size="16"></sc-progress>
+            <sc-progress type="determinate" width="50"></sc-progress>
+            <sc-progress type="determinate" size="16" width="80"></sc-progress>
+        </view>
+    </view>
+    <text class="text-driver" style="margin-top: 16px"></text>
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">
+            Circle Progress
+        </text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view class="code">
+                    <text>{{usage.circleProgress}}</text>
+                </view>
+            </view>
+            <view class="text-overline">提示：{{tip}}</view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-loading></sc-loading>
+            <sc-loading color="red"></sc-loading>
+            <sc-loading color="red" size="108" width="12"></sc-loading>
+        </view>
+    </view>
+</view>

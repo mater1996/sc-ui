@@ -50,6 +50,9 @@ Component({
     relations: {
         '../scDatePicker/sc-date-picker': {
             type: 'parent', // 关联的目标节点应为子节点
+        },
+        '../scTimePicker/sc-time-picker': {
+            type: 'parent', // 关联的目标节点应为子节点
         }
     },
     externalClasses: ['sc-class'],
@@ -61,19 +64,19 @@ Component({
             this.setData({
                 closing: true,
             });
-            this.triggerEvent('close', {});
+            this.triggerEvent('close', {bubbles: true });
         },
         _animationend(e) {
             const animationName = e.detail.animationName;
             if (animationName === 'dialogFadeIn' || animationName === 'maskFadeIn') {
-                this._queryMultipleNodes('.dialog > .sc-dialog').then(res => {
+                this._queryMultipleNodes('.sc-dialog > .sc-dialog-content').then(res => {
                     this.setData({
                         scrollHeight: res[0].height + 'px',
                         opening: false,
                         opened: true,
                         closed: false
                     });
-                    this.triggerEvent('opened', {});
+                    this.triggerEvent('opened', {bubbles: true });
                 });
             }
             if (animationName === 'dialogFadeOut' || animationName === 'maskFadeOut') {
@@ -83,7 +86,7 @@ Component({
                     opened: false,
                     show: false
                 });
-                this.triggerEvent('closed', {});
+                this.triggerEvent('closed', {bubbles: true });
             }
         },
         _queryMultipleNodes: function (e) {
@@ -100,7 +103,7 @@ Component({
                 show: true,
                 opening: true
             });
-            this.triggerEvent('open', {});
+            this.triggerEvent('open', {bubbles: true });
         }
     }
 });

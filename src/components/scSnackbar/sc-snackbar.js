@@ -25,7 +25,7 @@ Component({
 
     },
     relations: {},
-    externalClasses: ['sc-class'],
+    externalClasses: ['sc-class','sc-button-class'],
     methods: {
         _open(o) {
             let d = JSON.parse(JSON.stringify(this.data.defaultOption));

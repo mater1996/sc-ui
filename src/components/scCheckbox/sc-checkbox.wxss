@@ -1,30 +1,80 @@
-.sc-checkbox-icon{
+.sc-checkbox {
     position: relative;
     display: flex;
-    width: 18px;
-    height: 18px;
-    margin-right: 8px;
-    box-sizing: border-box;
-    border-radius: 2px;
-    border: 2px solid rgba(0,0,0,.54);
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
+    height: 36px;
 }
 
-.sc-checkbox-disabled .sc-checkbox-icon{
-    background-color: #b0b0b0;
+.sc-checkbox-reverse {
+    flex-direction: row-reverse;
 }
 
-icon{
+.sc-checkbox-main{
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    width: 36rpx;
+    height: 36rpx;
+    margin: 0 16rpx;
+    border-radius: 4rpx;
+    border: 4rpx solid rgba(0,0,0,.54);
+}
+
+.sc-checkbox-main .sc-checkbox-icon-bg{
+    width: 100%;
+    height: 100%;
     opacity: 0;
-    transition: all .3s cubic-bezier(.4,0,.2,1);
-    transform: rotateZ(37deg) scale(0);
-    transform-origin: left;
+    transition: all .12s cubic-bezier(.4,0,.2,1);
+    background-color:#ff4081;
 }
 
-.sc-checkbox-checked .sc-checkbox-icon .icon-checked{
+.sc-checkbox-main .sc-checkbox-icon{
+    opacity: 0;
+    position: absolute;
+    box-sizing: border-box;
+    left: 3px;
+    bottom: 3px;
+    width:8px;
+    height: 13px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotateZ(37deg);
+}
+
+.sc-checkbox-disabled .sc-checkbox-main .sc-checkbox-icon-bg{
     opacity: 1;
-    transform: rotateZ(0deg) scale(1);
+    background-color: #b0b0b0!important;
+}
+
+.sc-checkbox-disabled .sc-checkbox-main{
+    border-color: rgba(0,0,0,.54)!important;
+}
+
+.sc-checkbox-checked .sc-checkbox-icon{
+    animation: icon-checked-animation .12s cubic-bezier(.4,0,.2,1) forwards;
+}
+
+.sc-checkbox-checked .sc-checkbox-icon-bg{
+    opacity: 1;
+}
+
+@keyframes icon-checked-animation {
+    0%{
+        opacity: 0;
+        width: 8px;
+    }
+    33%{
+        height: 0;
+    }
+    66%{
+        height: 7px;
+    }
+    100%{
+        opacity: 1;
+        height: 13px;
+    }
 }
 
 /* ripple */
@@ -32,11 +82,11 @@ icon{
     position: absolute;
     box-sizing: border-box;
     border-radius: 100%;
-    width: 48px;
-    height: 48px;
+    width: 96rpx;
+    height: 96rpx;
     left: 50%;
     top: 50%;
-    transform: translate(-24px,-24px);
+    transform: translate(-48rpx,-48rpx);
 }
 
 .sc-ripple view{
@@ -61,7 +111,7 @@ icon{
     }
     60%{
         transform: scale(1);
-        opacity: 0.3;
+        opacity: 0.16;
     }
 
     100%{

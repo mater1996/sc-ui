@@ -12,6 +12,14 @@ Component({
         width:{
             type:Number,
             value:0
+        },
+        color:{
+            type:String,
+            value:'rgb(63, 81, 181);'
+        },
+        size:{
+            type:String,
+            value:'8'
         }
     },
     externalClasses: ['sc-class','sc-determinate-class'],

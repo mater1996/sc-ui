@@ -8,6 +8,10 @@ Component({
         // 绑定未冒泡的事件手动触发到上一层
         name: {
             type: String,
+        },
+        direction: {
+            type: String,
+            value: 'row'
         }
     },
     data: {

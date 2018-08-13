@@ -21,9 +21,17 @@ Component({
         value: {
             type: null
         },
-        color:{
-            type:String,
-            value:'#ff4081'
+        color: {
+            type: String,
+            value: '#ff4081'
+        },
+        reverse: {
+            type: Boolean,
+            value: false
+        },
+        ripple: {
+            type: Boolean,
+            value: true
         }
     },
     data: {
@@ -39,13 +47,6 @@ Component({
             disabled: this.properties.disabled,
             value: this.properties.value
         });
-        if(!this.data.disabled){
-            this.setData({
-                borderColor:transHexOtTgb.colorRgb(this.properties.color.toString(),.54),
-                backgroundColor:transHexOtTgb.colorRgb(this.properties.color.toString(),1),
-                iconColor:transHexOtTgb.colorHex(this.properties.color.toString(),0),
-            });
-        }
     },
     relations: {
         '../scRadioGroup/sc-radio-group': {
@@ -60,7 +61,7 @@ Component({
                 clicked: true,
                 showRipple: true
             });
-            this.triggerEvent(`radiochange`, {}, {bubbles: true, composed: true});
+            this.triggerEvent(`radiochange`, {value:this.properties.value}, {bubbles: true, composed: true});
         },
         _animationend() {
             this.setData({

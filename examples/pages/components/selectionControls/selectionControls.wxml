@@ -1,0 +1,66 @@
+<!--index.wxml-->
+<view class="ui-test-container">
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">checkbox</text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view class="code">
+                    <text>{{checkboxUsage}}</text>
+                </view>
+            </view>
+            <view class="text-caption">
+                value:{{checkValue}}
+            </view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-checkbox-group bindchange="checkboxChange">
+                <sc-checkbox label="初始选中" checked value="check1" color="red"></sc-checkbox>
+                <sc-checkbox reverse label="初始未选中" checked="{{false}}" value="check2"></sc-checkbox>
+                <sc-checkbox disabled sc-class="sc-checkbox" label="禁用"></sc-checkbox>
+            </sc-checkbox-group>
+        </view>
+    </view>
+    <text class="text-driver" style="margin-top: 16px"></text>
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">switch</text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view class="code">
+                    <text>{{switchUsage}}</text>
+                </view>
+            </view>
+            <view class="text-caption">
+                value:{{switchValue}}
+            </view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-switch class="sc-switch" name="switch1" color="red" bind:change="switchChange"></sc-switch>
+            <sc-switch class="sc-switch" name="switch2" checked bind:change="switchChange"></sc-switch>
+            <sc-switch class="sc-switch" disabled bind:change="switchChange"></sc-switch>
+        </view>
+    </view>
+    <text class="text-driver" style="margin-top: 16px"></text>
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">radio</text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view class="code">
+                    <text>{{radioUsage}}</text>
+                </view>
+            </view>
+            <view class="text-caption">
+                value:{{radioValue}}
+            </view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-radio-group bind:change="radioChange">
+                <sc-radio label="radio1" checked value="radio1" bind:change="radioItemChange"></sc-radio>
+                <sc-radio label="radio2" reverse value="radio2" color="red"></sc-radio>
+                <sc-radio label="disabled" checked disabled></sc-radio>
+            </sc-radio-group>
+        </view>
+    </view>
+</view>

@@ -6,35 +6,36 @@ let swicthCount = 1;
 Component({
     properties: {
         // 绑定未冒泡的事件手动触发到上一层
-        checked:{
-            type:Boolean,
-            value:false
+        checked: {
+            type: Boolean,
+            value: false
         },
-        disabled:{
-            type:Boolean,
-            value:false
+        disabled: {
+            type: Boolean,
+            value: false
         },
-        name:{
-            type:String,
+        name: {
+            type: String,
         },
-        value:{
-            type:null
+        color: {
+            type: String,
+            value: '#ff4081'
         },
-        color:{
-            type:String,
-            value:'#ff4081'
+        ripple: {
+            type: Boolean,
+            value: true
         }
     },
     data: {
-        checked:false,
-        clicked:false,
-        value:null
+        checked: false,
+        clicked: false,
+        value: null
     },
-    ready(){
-        const {checked,value,name = 'switch'+swicthCount++,color} = this.properties;
+    ready() {
+        const {checked, name = 'switch' + swicthCount++} = this.properties;
         this.setData({
             checked,
-            value,
+            value: checked,
             name
         })
     },
@@ -45,17 +46,19 @@ Component({
     },
     externalClasses: ['sc-class'],
     methods: {
-        _changeSwitch(){
-            const {checked,value} = this.data;
+        _changeSwitch() {
+            let {checked, name} = this.data;
+            checked = !checked;
             this.setData({
-                checked:!checked,
-                clicked:true
+                checked: checked,
+                clicked: true,
+                value: checked
             });
-            this.triggerEvent(`change`, {value,checked}, { bubbles: true });
+            this.triggerEvent(`change`, {name, value: checked}, {bubbles: true});
         },
-        _animationend(){
+        _animationend() {
             this.setData({
-                clicked:false
+                clicked: false
             })
         }
     }

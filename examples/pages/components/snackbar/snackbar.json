@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "ui测试",
+  "navigationBarBackgroundColor":"#FFFFFF",
+  "navigationBarTextStyle":"black",
+  "usingComponents":{
+    "sc-button":"/assets/lib/scui/dist/components/scButton/sc-button",
+    "sc-snackbar":"/assets/lib/scui/dist/components/scSnackbar/sc-snackbar"
+  }
+}

@@ -26,16 +26,20 @@
     line-height: 80rpx;
 }
 
-.sc-tab-btn {
-    background-color: inherit;
-    line-height: 66px;
-    min-width: 88px;
-    height: 36px;
-    padding: 0 16px;
+.tab-bar-list sc-button{
     margin: 0;
-    font-size: 32rpx;
-    border-radius: 2px;
 }
+
+.sc-tab-btn {
+    line-height: 96rpx;
+    min-width: 88rpx;
+    height: 96rpx;
+    padding: 0 32rpx;
+    font-size: 28rpx;
+    border-radius: 2px;
+    background-color: transparent;
+}
+
 
 .text-6 {
     font-size: 26rpx;
@@ -48,18 +52,25 @@
 .tab-bar-driver{
     height:4rpx;
     background-color: #0088CC;
+
+}
+
+.tab-bar-driver-transition{
     transition: transform .3s linear;
 }
 
-.tab-bar-driver-trans{
+.tab-bar-driver-trans-transition{
     transition: width .3s linear , transform .3s linear;
     will-change: width;
 }
 
 .tab-container{
-    transition: all .3s ease-in-out;
     flex-wrap: nowrap;
     overflow: visible;
+}
+
+.tab-container.tab-container-transition{
+    transition: all .3s ease-in-out;
 }
 
 .tab-container sc-tab{

@@ -1,6 +1,6 @@
 <!-- 
  Created by bai on 2018/5/2
  -->
-<view class="sc-class" catch:checkchange="_checkChange">
+<view class="sc-class {{direction === 'column' ? 'sc-checkbox-group-column' : 'sc-checkbox-group-row'}}" catch:checkchange="_checkChange">
     <slot></slot>
 </view>

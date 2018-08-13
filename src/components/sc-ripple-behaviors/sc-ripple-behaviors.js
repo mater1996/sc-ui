@@ -1,7 +1,7 @@
 /**
  * Created by bai on 2018/6/17
  */
-
+const regexp =  /(\b[0-9]{1,3}\b)/g;
 module.exports = Behavior({
     behaviors: [],
     properties: {
@@ -16,27 +16,29 @@ module.exports = Behavior({
         rippleDeleteCount: 0,
         rippleDeleteTimer: null,
         rippleColor: '#ffffff',
-        btnClass: 'sc-class'
+        btnSelector: '.sc-class'
     },
     attached: function () {
     },
     methods: {
-        _addRipple(e, holdAnimate) {
+        _addRipple_(e, holdAnimate) {
             if (!this.properties.disabled) {
-                this._queryMultipleNodes('.' + this.data.btnClass).then(res => {
-                    const button = res[0], viewPort = res[1];
-                    const boxWidth = parseInt(button.width);
-                    const boxHeight = parseInt(button.height);
+                this._queryMultipleNodes_(this.data.btnSelector).then(res => {
+                    const {width,height,left,top,backgroundColor='rgb(255,255,255,1)'} = res[0];
+                    const {scrollLeft,scrollTop} = res[1];
+                    const boxWidth = parseInt(width);
+                    const boxHeight = parseInt(height);
+                    const [r,g,b,o=1] = backgroundColor.match(regexp);
                     const wH = boxWidth > boxHeight ? boxWidth : boxHeight;
-                    const nX = (e.detail.x - (button.left + viewPort.scrollLeft)) - wH / 2;
-                    const nY = (e.detail.y - (button.top + viewPort.scrollTop)) - wH / 2;
-                    //设置涟漪div样式，准备播放动画
+                    const nX = (e.detail.x - (left + scrollLeft)) - wH / 2;
+                    const nY = (e.detail.y - (top + scrollTop)) - wH / 2;
                     this.data.rippleList.push({
                         rippleId: `ripple-${this.data.rippleId++}`,
                         width: wH,
                         height: wH,
                         left: nX,
                         top: nY,
+                        backgroundColor:this._rgbIsLight_(r,g,b,o)?'rgb(0,0,0)':'rgb(255,255,255)',
                         startAnimate: true,
                         holdAnimate: holdAnimate || false
                     });
@@ -46,26 +48,24 @@ module.exports = Behavior({
                 });
             }
         },
-        _queryMultipleNodes: function (e) {
+        _queryMultipleNodes_(e) {
             return new Promise((resolve, reject) => {
-                const query = this.createSelectorQuery();
-                query.select(e).boundingClientRect();
-                query.selectViewport().scrollOffset();
-                query.exec(function (res) {
+                this.createSelectorQuery().select(e).fields({
+                    size: true,
+                    rect:true,
+                    computedStyle: ['backgroundColor']
+                }).selectViewport().scrollOffset().exec(function (res) {
                     resolve(res);
-                });
+                })
             })
         },
-        _scbuttonrippleAnimationend() {
+        _rippleAnimationEnd_() {
             // 防抖
             this.data.rippleDeleteCount++;
             if (this.data.timer) {
                 clearTimeout(this.data.timer);
-                this.data.timer = setTimeout(deleteRipple.bind(this), 300);
-            } else {
-                this.data.timer = setTimeout(deleteRipple.bind(this), 300);
             }
-
+            this.data.timer = setTimeout(deleteRipple.bind(this), 300);
             function deleteRipple() {
                 this.data.rippleList.splice(0, this.data.rippleDeleteCount);
                 this.setData({
@@ -76,10 +76,10 @@ module.exports = Behavior({
                 this.data.rippleDeleteCount = 0;
             }
         },
-        _longPress(e) {
-            this._addRipple(e, true);
+        _longPress_(e) {
+            this._addRipple_(e, true);
         },
-        _touchend(e) {
+        _touchEnd_() {
             let lastRipple = this.data.rippleList.slice(-1)[0];
             if (lastRipple && lastRipple.holdAnimate) {
                 this.data.rippleList.pop();
@@ -87,6 +87,9 @@ module.exports = Behavior({
                     rippleList: this.data.rippleList
                 });
             }
+        },
+        _rgbIsLight_(r,g,b,a){
+            return (parseInt(r)*0.299 + parseInt(g)*0.578 + parseInt(b)*0.114 >= 192*a);
         }
     }
 });

@@ -45,7 +45,7 @@ Component({
         this.setData({
             dialogCount: dialogCount++
         });
-        this.data.dialog = this.selectComponent('#picker-dialog-' + this.data.dialogCount);
+        this.data.dialog = this.selectComponent('#sc-date-picker-dialog-' + this.data.dialogCount);
     },
     methods: {
         _nextMonthDay() {
@@ -200,11 +200,9 @@ Component({
                 dayList: [this._lastMonthDay(), this._monthDay(date.clone()), this._nextMonthDay()],
             });
             this.data.dialog._open();
-            this.triggerEvent('open', {});
         },
         _close() {
             this.data.dialog._close();
-            this.triggerEvent('close', {});
         },
         _submit() {
             let {years,months,date,hours,minutes,seconds,milliseconds} = this.data.selectDateObject;
@@ -212,6 +210,18 @@ Component({
             dateTem = dateTem.set('year', years).set('month',months).set('date', date).set('hour',hours).set('minute',minutes).set('second',seconds).set('millisecond',milliseconds);
             this.triggerEvent('submit', {value: dateTem.toDate()});
             this._close();
+        },
+        dialogOpen(){
+            this.triggerEvent('open', {bubbles: true });
+        },
+        dialogClose(){
+            this.triggerEvent('close', {bubbles: true });
+        },
+        dialogOpened(){
+            this.triggerEvent('opened', {bubbles: true });
+        },
+        dialogClosed(){
+            this.triggerEvent('closed', {bubbles: true });
         }
     }
 });

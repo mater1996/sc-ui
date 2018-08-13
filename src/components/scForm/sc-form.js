@@ -38,9 +38,9 @@ Component({
         }
     },
     data: {
-        btnClass:'submit-btn-class'
+        btnSelector:'.submit-btn-class'
     },
-    externalClasses: ['sc-class','submit-btn-class'],
+    externalClasses: ['sc-class','sc-button-class'],
     ready() {
         this.formControllers = this._getAllControl();
     },
@@ -61,15 +61,24 @@ Component({
             };
             for (let key in formControllers) {
                 if (formControllers.hasOwnProperty(key)) {
-                    formControllers[key].length > 0 ? formControllers[key].map(v => {
-                        Object.defineProperty(value, v.data.name, {
-                            writable: true,
-                            value: v.data.value
-                        })
+                    formControllers[key].length > 0 ? formControllers[key].forEach(v => {
+                        value[v.data.name] = v.data.value || null;
                     }) : null;
                 }
             }
             this.triggerEvent(`submit`, {value: value})
+        },
+        _tap(e){
+            this._addRipple_(e);
+        },
+        _longPress(e){
+            this._longPress_(e);
+        },
+        _rippleAnimationEnd(){
+            this._rippleAnimationEnd_();
+        },
+        _touchEnd(){
+            this._touchEnd_();
         }
     }
 });

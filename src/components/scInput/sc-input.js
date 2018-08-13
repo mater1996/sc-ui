@@ -58,7 +58,7 @@ Component({
         cursor: {
             type: Number,
         },
-        selectionstart: {
+        selectionStart: {
             type: Number,
             value: -1
         },
@@ -88,10 +88,6 @@ Component({
         },
         regex: {
             type: String
-        },
-        withIcon:{
-            type:Boolean,
-            value:false
         }
     },
     data: {

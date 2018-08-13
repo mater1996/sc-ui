@@ -1,6 +1,6 @@
 /*@import "../../assets/font-icon/font-icon.wxss";*/
 
-.cell{
+.sc-cell{
     position: relative;
     display: flex;
     flex-direction: row;
@@ -12,11 +12,11 @@
     font-size: 32rpx;
     overflow: hidden;
     border-bottom: 1px solid lightgrey;
-    padding: 0 32rpx;
+    padding: 24rpx 32rpx;
     box-sizing: border-box;
 }
 
-.cell-left{
+.sc-cell-left{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -25,7 +25,7 @@
     flex: 1 0 25%;
 }
 
-.cell-left-container{
+.sc-cell-left-container{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -34,25 +34,31 @@
     padding: 0 16rpx;
 }
 
-.cell-left-container .cell-header{
+.sc-cell-left-container .sc-cell-header{
     white-space: nowrap;
     font-size: 28rpx;
 }
 
-.cell-left-container .cell-sub-header{
+.sc-cell-left-container .sc-cell-sub-header{
     font-size: 24rpx;
 }
 
-.cell-left .iconfont{
+.sc-cell-left .iconfont{
     font-size: 48rpx;
 }
 
-.cell-right{
+.sc-cell-right{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
     align-items: center;
+}
+
+.sc-cell-right .right-text{
+    display: inline-block;
+    color: rgba(0,0,0,.54);
+    font-size: 28rpx;
 }
 
 .sc-ripple {
@@ -99,10 +105,4 @@
         transform: scale(2.5);
         opacity: 0.3;
     }
-}
-
-.right-text{
-    display: inline-block;
-    color: rgba(0,0,0,.54);
-    font-size: 28rpx;
 }

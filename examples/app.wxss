@@ -1,14 +1,67 @@
 /**app.wxss**/
 @import "assets/lib/scui/dist/sc-ui.wxss";
 @import "assets/lib/scui/dist/assets/font-icon/font-icon.wxss";
+@import "assets/lib/scui/dist/assets/font-icon/material.wxss";
 
 page{
     height:100%;
+    box-sizing: border-box;
 }
-
 .hiddenScroll {
     overflow: hidden;
 }
 
+.ui-test-container{
+    width: 100%;
+    padding:0 0 16px;
+    box-sizing: border-box;
+}
 
+.ui-test-container .ui-test-section{
+    margin-top: 8px;
+}
+
+.ui-test-item{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 16px 0 16px;
+}
+
+.ui-test-item:first-child{
+    padding: 0 16px;
+}
+
+.ui-test-item .ui-test-item-header{
+    text-align: center;
+    font-weight: 700;
+}
+
+.ui-test-item .ui-test-item-content{
+    margin-top: 16px;
+    background-color: #eee
+}
+
+.ui-test-item .ui-test-item-subheader{
+    margin-top: 8px;
+}
+
+.ui-test-item-subheader view{
+    margin-top: 8px;
+}
+
+.ui-test-item-subheader .code{
+    display: block;
+    box-sizing: border-box;
+    word-break: break-all;
+    font-size: 14px;
+    line-height: 22px;
+    overflow-x: auto;
+    white-space: pre;
+    word-wrap: normal;
+    padding: 16rpx;
+    margin-top: 16rpx;
+    font-family: Consolas,Inconsolata,Courier,monospace,"PingFang SC","Microsoft YaHei",sans-serif;
+    color: #abb2bf;
+    background-color: #282c34;
+}
 

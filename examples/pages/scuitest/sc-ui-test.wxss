@@ -15,11 +15,6 @@
     /*overflow-x:hidden;*/
 }
 
-.ui-test-container{
-    padding: 16px;
-    width: 100%;
-}
-
 .ui-test-item{
     width: 100%;
     box-sizing: border-box;
@@ -41,7 +36,7 @@
 
 .new-color{
     width: 180px;
-    background-color: #0b93d5;
+    background-color: red;
 }
 
 .submit-btn{

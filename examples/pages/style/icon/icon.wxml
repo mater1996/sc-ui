@@ -1,0 +1,151 @@
+<!--index.wxml-->
+<view class="ui-test-container">
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">
+            图标 icon
+        </text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <text class="code">{{usage}}</text>
+            </view>
+            <view class="text-overline">提示：您可以更换自己的字体图标库来替代这些图标,以下仅展示部分</view>
+        </view>
+        <view class="ui-test-item-content">
+            <view class="iconitem">
+                <i class="iconfont icon-accountbalance"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-accountbalancewallet"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-accountbox"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-accountcircle"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-adb"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-add"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-addaphoto"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-addalarm"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-addalert"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-addbox"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-addcircle"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-addcircleoutline"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-addlocation"></i>
+            </view>
+
+            <view class="iconitem">
+                <i class="iconfont icon-3drotation"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-acunit"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-accessalarm"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-accessalarms"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-accesstime"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-accessibility"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-accessible"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-alarmoff"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-alarmon"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-addshoppingcart"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-addtophotos"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-addtoqueue"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-adjust"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-airlineseatflat"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-airlineseatflatangled"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-airlineseatindividualsuite"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-airplay"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-airplanemodeactive"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-airportshuttle"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-alarm"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-alarmadd"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-arttrack"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-arrowdownward"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-arrowdropdown"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-arrowforward"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-beachaccess"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-autorenew"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-avtimer"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-backspace"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-backup"></i>
+            </view>
+            <view class="iconitem">
+                <i class="iconfont icon-block"></i>
+            </view>
+
+        </view>
+    </view>
+</view>

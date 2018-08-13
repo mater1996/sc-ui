@@ -1,0 +1,48 @@
+<!--index.wxml-->
+<view class="ui-test-container">
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">
+            Cell
+        </text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view class="code">
+                    <text>{{usage}}</text>
+                </view>
+            </view>
+            <view class="text-overline">提示：{{tip}}</view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-cell-group>
+                <sc-cell left-icon="iconfont icon-cloudqueue">
+                    <text>左侧icon</text>
+                </sc-cell>
+                <sc-cell right-icon="iconfont icon-cloudqueue">
+                    <text>右侧icon</text>
+                </sc-cell>
+                <sc-cell right-icon="iconfont icon-right">
+                    <text>带子标题</text>
+                    <text slot="subheader">子标题</text>
+                </sc-cell>
+                <sc-cell right-icon="iconfont icon-right" left-icon="iconfont icon-cloudqueue">
+                    <text>带右侧文本</text>
+                    <text slot="righttext">右侧文本</text>
+                </sc-cell>
+                <sc-cell left-icon="iconfont icon-cloudqueue" ripple="{{false}}">
+                    <text>带动作</text>
+                    <view slot="action"><sc-switch class="sc-switch"></sc-switch></view>
+                </sc-cell>
+                <sc-cell left-icon="iconfont icon-cloudqueue"  ripple="{{false}}">
+                    <text>带动作</text>
+                    <view slot="action"> <sc-radio checked value="radio1"></sc-radio></view>
+                </sc-cell>
+                <sc-cell right-icon="iconfont icon-right icon-right-color" left-icon="iconfont icon-cloudqueue icon-cloudqueue-color">
+                    <text style="color: red">来点颜色</text>
+                    <text slot="subheader" style="color: lightgreen">子标题</text>
+                    <text slot="righttext" style="color: lightgreen">右侧文本</text>
+                </sc-cell>
+            </sc-cell-group>
+        </view>
+    </view>
+</view>

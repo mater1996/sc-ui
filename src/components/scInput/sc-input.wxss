@@ -1,22 +1,13 @@
-.sc-textfield-main{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
-}
-
 .sc-textfield{
     position: relative;
+}
+
+.sc-textfield-main{
+    position: relative;
     padding: 16rpx;
-    width: 100%;
 }
 
-.sc-textfield-icon{
-    padding-left:36rpx;
-}
-
-input{
+.sc-textfield input{
     position: relative;
     display: block;
     height: 64rpx;
@@ -27,12 +18,11 @@ input{
     font-size: 32rpx;
     line-height: 20px;
     resize: none;
-    border: none;
     text-align: left;
     width: 100%;
 }
 
-input::before {
+.sc-textfield input::before {
     content: '';
     position: absolute;
     left: 0;
@@ -55,6 +45,10 @@ input::before {
     color: rgba(0,0,0,.54);
 }
 
+.sc-label-err{
+    color: red;
+}
+
 .sc-textfield-disabled .sc-label{
     color: rgba(0,0,0,.38);
 }
@@ -68,7 +62,6 @@ input::before {
 }
 
 .sc-textfield-floating-label .sc-label-focus{
-    color: currentColor;
     transform: scale(.8) translateY(8rpx);
 }
 
@@ -96,12 +89,12 @@ input::before {
     font-size: 32rpx;
     position: absolute;
     bottom: 58rpx;
-    left: -4rpx;
+    left: -24rpx;
 }
 
 .sc-icon{
     font-size: 32rpx;
     position: absolute;
     bottom: 30rpx;
-    left: -4rpx;
+    left: -24rpx;
 }

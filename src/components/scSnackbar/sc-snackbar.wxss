@@ -37,10 +37,10 @@
 }
 
 .sc-btn {
-    background-color: inherit;
-    line-height: 132rpx;
-    min-width: 176rpx;
+    line-height: 72rpx;
     height: 72rpx;
+    background-color: inherit;
+    min-width: 176rpx;
     padding: 0 48rpx;
     margin: 0;
     font-size: 32rpx;

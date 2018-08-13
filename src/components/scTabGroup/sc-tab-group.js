@@ -14,6 +14,14 @@ Component({
         tabIndex: {
             type: Number,
             value: 0
+        },
+        transition: {
+            type: Boolean,
+            value: true
+        },
+        driverColor: {
+            type: String,
+            value: '#0088CC'
         }
     },
     data: {
@@ -26,26 +34,27 @@ Component({
         scrollViewWidth: 0,
         moveLength: 64,
         allTabItem: [],
-        tabDriverWidth:0,
-        tabDriverLeft:0,
-        isUnEqualNextWidth:false
+        tabDriverWidth: 0,
+        tabDriverLeft: 0,
+        isUnEqualNextWidth: false
     },
     relations: {
         '../scTab/sc-tab': {
             type: 'child',
         }
     },
+    externalClasses: ['sc-class','active-class'],
     ready() {
         this._queryMultipleNodes('#sc-tab').then(res => {
             this.data.scrollViewWidth = res[0].width;
-            this._queryAllNodes('.tab-bar-item').then(res => {
-                const allTabItem = this.data.allTabItem = res;
-                this.data.tabStartPosition = allTabItem[0].left;
-                this.data.tabEndPosition = allTabItem[allTabItem.length - 1].right;
-                this.data.tabListWinth = this.data.tabEndPosition - this.data.tabStartPosition;
-                this.data.tabs = this._getAllTab();
-                this._setTab(this.properties.tabIndex || 0);
-            });
+        });
+        this._queryAllNodes('.tab-bar-item').then(res => {
+            const allTabItem = this.data.allTabItem = res;
+            this.data.tabStartPosition = allTabItem[0].left;
+            this.data.tabEndPosition = allTabItem[allTabItem.length - 1].right;
+            this.data.tabListWinth = this.data.tabEndPosition - this.data.tabStartPosition;
+            this.data.tabs = this._getAllTab();
+            this._setTab(this.properties.tabIndex || 0);
         });
     },
     // externalClasses: ['sc-class','sc-ripple-class'],
@@ -72,10 +81,10 @@ Component({
         _tabBarTap: function (e) {
             let idx = e.target.dataset.idx;
             if (this.data.currentTab !== idx) {
-                const {width:currentTabWidth} = this.data.allTabItem[this.data.currentTab];
+                const {width: currentTabWidth} = this.data.allTabItem[this.data.currentTab];
                 const {width} = this.data.allTabItem[idx];
                 this.setData({
-                    isUnEqualNextWidth:currentTabWidth !==width,
+                    isUnEqualNextWidth: currentTabWidth !== width,
                     currentTab: idx
                 });
                 this._setTab(idx);
@@ -85,7 +94,7 @@ Component({
             const {scrollViewWidth} = this.data;
             if (scrollViewWidth < this.data.tabListWinth) {
                 this._setScroll(index);
-            }else{
+            } else {
                 const nextTab = this.data.allTabItem[index];
                 const {left: btnStartPosition, width} = nextTab;
                 this.setData({
@@ -94,7 +103,7 @@ Component({
                 });
             }
             this._setHeight(index);
-            this.triggerEvent('tabchange', {
+            this.triggerEvent('change', {
                 value: index,
                 data: this.data.tabList[index].data || {}
             })
@@ -108,10 +117,10 @@ Component({
                 tabDriverLeft: btnStartPosition - tabStartPosition
             });
 
-            if (btnStartPosition >= scrollLeft+tabStartPosition && btnEndPosition <= Math.ceil(scrollLeft + scrollViewWidth + tabStartPosition)) {
+            if (btnStartPosition >= scrollLeft + tabStartPosition && btnEndPosition <= Math.ceil(scrollLeft + scrollViewWidth + tabStartPosition)) {
 
             } else {
-                if (btnStartPosition-tabStartPosition <= scrollLeft) {
+                if (btnStartPosition - tabStartPosition <= scrollLeft) {
                     this.setData({
                         scrollLeft: idx === 0 ? 0 : (btnStartPosition - tabStartPosition - (idx > 0 ? (this.data.allTabItem[idx - 1].width / 2) : 0)),
                     });
@@ -163,22 +172,22 @@ Component({
                     }
                     let ct = this.data.currentTab;
                     if (currentTab !== ct) {
-                        const {width:currentTabWidth} = this.data.allTabItem[currentTab];
+                        const {width: currentTabWidth} = this.data.allTabItem[currentTab];
                         const nextTab = this.data.allTabItem[ct];
                         const {left: btnStartPosition, width} = nextTab;
                         this.setData({
-                            isUnEqualNextWidth:currentTabWidth !==width,
+                            isUnEqualNextWidth: currentTabWidth !== width,
                         });
                         if (!(scrollViewWidth >= (tabLength * btnMinWidth))) {
                             this._setScroll(ct);
-                        }else{
+                        } else {
                             this.setData({
                                 tabDriverWidth: width,
                                 tabDriverLeft: btnStartPosition - this.data.tabStartPosition
                             });
                         }
                         this._setHeight(ct);
-                        this.triggerEvent('tabchange', {
+                        this.triggerEvent('change', {
                             value: ct,
                             data: this.data.tabList[ct].data || {}
                         })

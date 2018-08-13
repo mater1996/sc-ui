@@ -5,13 +5,17 @@
 Component({
     properties: {
         // 绑定未冒泡的事件手动触发到上一层
-        circleColor:{
+        color:{
             type:String,
-            color:'#000000'
+            value:'#3F51B5'
         },
-        circleActiveColor:{
+        size:{
             type:String,
-            value:'#ffffff'
+            value:'56'
+        },
+        width:{
+            type:String,
+            value:'6'
         }
     },
     externalClasses: ['sc-class'],

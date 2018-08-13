@@ -1,7 +1,6 @@
-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@import "../../assets/wxss/shadow.wxss";
+
+.sc-button{
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
@@ -15,12 +14,15 @@ button{
     outline: 0;
     transition: all .2s cubic-bezier(.4,0,.2,1);
     will-change: box-shadow;
-    -webkit-user-drag: none;
+}
+
+.sc-button::after {
+    border: none;
 }
 
 .sc-ripple {
     border-radius: 100%;
-    background-color: #000000;
+    background-color: rgb(255,255,255);
     left: 20px;
     top: 20px;
     opacity: 0.3;
@@ -62,4 +64,72 @@ button{
         transform: scale(2.5);
         opacity: 0.3;
     }
+}
+
+.sc-button-flat{
+    background-color: transparent;
+}
+
+.sc-btn-fab {
+    width: 112rpx;
+    min-width: 112rpx;
+    height: 112rpx;
+    padding: 0;
+    overflow: hidden;
+    line-height: normal;
+    border-radius: 50% !important;
+    border-style: none;
+    background-color: rgb(255,255,255);
+}
+
+.sc-btn-fab text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 56rpx;
+    line-height: 56rpx;
+    font-size: 56rpx;
+    -webkit-transform: translate(-28rpx, -28rpx);
+    transform: translate(-28rpx, -28rpx);
+}
+
+.sc-btn-fab text, text::before {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    color: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    direction: ltr;
+}
+
+.sc-btn-fab.sc-btn-small{
+    width: 80rpx;
+    min-width: 80rpx;
+    height: 80rpx;
+}
+
+.sc-btn-fab.sc-btn-small text{
+    width: 40rpx;
+    line-height: 40rpx;
+    font-size: 36rpx;
+    -webkit-transform: translate(-20rpx, -20rpx);
+    transform: translate(-20rpx, -20rpx);
+}
+
+.sc-btn-fab.sc-btn-large{
+    width: 144rpx;
+    min-width: 144rpx;
+    height: 144rpx;
+}
+
+.sc-btn-fab.sc-btn-large text{
+    width: 72rpx;
+    line-height: 72rpx;
+    font-size: 60rpx;
+    -webkit-transform: translate(-36rpx, -36rpx);
+    transform: translate(-36rpx, -36rpx);
 }

@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="ui-test-container">
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">Input</text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view class="code">
+                    <text>{{inputUsage}}</text>
+                </view>
+            </view>
+            <view class="text-overline">提示：{{inputTip}}</view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-input sc-class="sc-input" label="浮动标签" bindinput="input"></sc-input>
+            <sc-input sc-class="sc-input" placeholder="没有浮动标签" bindinput="input"></sc-input>
+            <sc-input sc-class="sc-input"  label="浮动标签" placeholder="占位符" bindinput="input"></sc-input>
+            <sc-input sc-class="sc-input" label="带图标" bindinput="input"
+                      with-icon icon="iconfont icon-weibiaoti-" maxlength="10"></sc-input>
+            <sc-input sc-class="sc-input" label="身份证" bindinput="input" err-text="身份证号不对"
+                      regex="(^\\d{15}$)|(^\\d{18}$)|(^\\d{17}(\\d|X|x)$)"></sc-input>
+            <sc-input sc-class="sc-input" label="禁用" bindinput="input" disabled="{{true}}"></sc-input>
+        </view>
+    </view>
+    <text class="text-driver" style="margin-top: 16px"></text>
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">Textarea</text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view class="code">
+                    <text>{{textareaUsage}}</text>
+                </view>
+            </view>
+            <view class="text-overline">提示：{{textareaTip}}</view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-textarea sc-class="sc-textarea" label="多行文本框"></sc-textarea>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+.ui-test-item-content i{
+    width: 64rpx;
+    height: 64rpx;
+}
+
+.ui-test-item-content .iconitem{
+    display: inline-block;
+    margin: 16rpx;
+}
+
+.ui-test-item-content .iconitem i.iconfont{
+    font-size: 64rpx;
+}

@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="ui-test-container">
+    <view class="ui-test-item">
+        <text class="ui-test-item-header">Snackbar</text>
+        <view class="ui-test-item-subheader">
+            <view class="text-caption">
+                使用:
+                <view>js</view>
+                <view class="code">
+                    <text>{{jsUsage}}</text>
+                </view>
+                <view>html</view>
+                <view class="code">
+                    <text>{{htmlUsage}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="ui-test-item-content">
+            <sc-button sc-class="sc-btn" bind:tap="openSnackBar">打开/关闭</sc-button>
+            <sc-snackbar id="snackbar">这是一个snackbar</sc-snackbar>
+        </view>
+    </view>
+</view>

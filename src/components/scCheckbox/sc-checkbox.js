@@ -15,11 +15,20 @@ Component({
             type: Boolean,
             value: false
         },
-        color: {
-            type: String
-        },
         label: {
             type: String
+        },
+        ripple:{
+            type:Boolean,
+            value:true
+        },
+        reverse:{
+            type:Boolean,
+            value:false
+        },
+        color:{
+            type:String,
+            value:'#ff4081'
         }
     },
     data: {

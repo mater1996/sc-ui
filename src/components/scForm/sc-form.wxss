@@ -1,9 +1,5 @@
-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.form-button{
     position: relative;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     overflow: hidden;
     color: inherit;
@@ -71,8 +67,9 @@ button{
 }
 
 .sc-hide-form-class{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    padding: 32rpx;
+}
+
+.sc-hide-form-class button{
+    display: inline-block;
 }

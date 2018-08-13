@@ -1,0 +1,23 @@
+.item{
+    padding: 8px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+    opacity: 0.9;
+    color: white;
+    text-align: center;
+}
+
+.item:nth-child(1){
+    background-color: #009688;
+}
+
+.item:nth-child(2){
+    background-color: #3949ab;
+}
+
+.item:nth-child(3){
+    background-color: #9c27b0;
+}
+
+sc-radio{
+    margin: 0 16rpx;
+}
