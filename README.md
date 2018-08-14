@@ -3,6 +3,7 @@
 微信小程序material ui
 
 展示
+
 ![img](https://cdn.rawgit.com/xbup/sc-ui/104ff7c2/test.gif)
 
 ## get start
@@ -53,21 +54,19 @@ http://www.iconfont.cn/collections/detail?cid=444
 
 #### docs
 
-```
-├─components
-│  ├─button
-│  ├─cell
-│  ├─dialog
-│  ├─form
-│  ├─input
-│  ├─picker
-│  ├─progress
-│  ├─selectionControls
-│  ├─snackbar
-│  └─tab
-└─style
-    ├─font
-    ├─icon
-    └─layout
-```
+ - components
+   - [button](https://github.com/xbup/sc-ui/tree/master/docs/components/button)
+   - [input](https://github.com/xbup/sc-ui/tree/master/docs/components/input)
+   - [selectionControls](https://github.com/xbup/sc-ui/tree/master/docs/components/selectionControls)
+   - [cell](https://github.com/xbup/sc-ui/tree/master/docs/components/cell)
+   - [form](https://github.com/xbup/sc-ui/tree/master/docs/components/form)
+   - [dialog](https://github.com/xbup/sc-ui/tree/master/docs/components/dialog)
+   - [picker](https://github.com/xbup/sc-ui/tree/master/docs/components/picker)
+   - [snackbar](https://github.com/xbup/sc-ui/tree/master/docs/components/snackbar)
+   - [tab](https://github.com/xbup/sc-ui/tree/master/docs/components/tab)
+ - style
+   - [font](https://github.com/xbup/sc-ui/tree/master/docs/style/font)
+   - [icon](https://github.com/xbup/sc-ui/tree/master/docs/style/icon)
+   - [layout](https://github.com/xbup/sc-ui/tree/master/docs/style/layout)
+
 
