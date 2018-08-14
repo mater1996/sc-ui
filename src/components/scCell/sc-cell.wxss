@@ -1,5 +1,4 @@
 /*@import "../../assets/font-icon/font-icon.wxss";*/
-
 .sc-cell{
     position: relative;
     display: flex;

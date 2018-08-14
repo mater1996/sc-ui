@@ -88,15 +88,14 @@
         </view>
         <view class="ui-test-item-content">
             <sc-button raised fab size="small">
-                <i class="iconfont icon-weibiaoti-"></i>
+                <i class="iconfont icon-avtimer"></i>
             </sc-button>
             <sc-button raised fab>
-                <i class="iconfont icon-appreciate" style="color: red"></i>
+                <i class="iconfont icon-accesstime" style="color: red"></i>
             </sc-button>
-            <sc-button raised fab size="large" sc-class="mini-btn">
-                <i class="iconfont icon-like" style="color: #0b93d5"></i>
+            <sc-button raised fab size="large">
+                <i class="iconfont icon-accountbox" style="color: #0b93d5"></i>
             </sc-button>
         </view>
     </view>
-
 </view>

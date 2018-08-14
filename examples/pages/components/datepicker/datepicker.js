@@ -15,7 +15,8 @@ Page({
         '     bind:closed="pickerClosed"\n' +
         '     bind:submit="datePickerSubmit"\n' +
         '></sc-date-picker>',
-        value:null
+        dateValue:null,
+        timeValue:null
     },
     onLoad: function () {
 
@@ -32,7 +33,13 @@ Page({
     },
     datePickerSubmit(e){
         this.setData({
-            value:e.detail.value
+            dateValue:e.detail.value.toString()
+        })
+    },
+    timePickerSubmit(e){
+        console.log(e);
+        this.setData({
+            timeValue:e.detail.value.toString()
         })
     },
     pickerOpen(){

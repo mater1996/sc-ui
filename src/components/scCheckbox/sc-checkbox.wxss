@@ -15,11 +15,11 @@
     position: relative;
     display: flex;
     box-sizing: border-box;
-    width: 36rpx;
-    height: 36rpx;
-    margin: 0 16rpx;
-    border-radius: 4rpx;
-    border: 4rpx solid rgba(0,0,0,.54);
+    width: 18px;
+    height: 18px;
+    margin: 0 8px;
+    border-radius: 2px;
+    border: 2px solid rgba(0,0,0,.54);
 }
 
 .sc-checkbox-main .sc-checkbox-icon-bg{

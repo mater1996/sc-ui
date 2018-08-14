@@ -1,6 +1,5 @@
 /**app.wxss**/
 @import "assets/lib/scui/dist/sc-ui.wxss";
-@import "assets/lib/scui/dist/assets/font-icon/font-icon.wxss";
 @import "assets/lib/scui/dist/assets/font-icon/material.wxss";
 
 page{
@@ -63,5 +62,6 @@ page{
     font-family: Consolas,Inconsolata,Courier,monospace,"PingFang SC","Microsoft YaHei",sans-serif;
     color: #abb2bf;
     background-color: #282c34;
+    max-height: 180px;
 }
 

@@ -18,8 +18,6 @@ module.exports = Behavior({
         rippleColor: '#ffffff',
         btnSelector: '.sc-class'
     },
-    attached: function () {
-    },
     methods: {
         _addRipple_(e, holdAnimate) {
             if (!this.properties.disabled) {

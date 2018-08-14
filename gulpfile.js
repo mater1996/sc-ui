@@ -14,6 +14,7 @@ const minifycss = require('gulp-minify-css');
 const cleanCSS = require('gulp-clean-css');
 const runSequence = require('run-sequence');
 const jsonlint = require("gulp-jsonlint");
+const stripDebug = require('gulp-strip-debug');
 
 var colors = gutil.colors;
 const handleError = function(err) {
@@ -88,6 +89,7 @@ gulp.task('wxssPro', () => {
 
 gulp.task('scriptsPro', () => {
     return gulp.src('./src/**/*.js')
+        .pipe(stripDebug())
         .pipe(babel({
             presets: ['es2015']
         }))

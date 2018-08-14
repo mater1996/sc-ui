@@ -3,26 +3,10 @@
   "navigationBarBackgroundColor":"#FFFFFF",
   "navigationBarTextStyle":"black",
   "usingComponents":{
-    "sc-button":"/assets/lib/scui/dist/components/scButton/sc-button",
-    "sc-input":"/assets/lib/scui/dist/components/scInput/sc-input",
-    "sc-progress":"/assets/lib/scui/dist/components/scProgress/sc-progress",
-    "sc-textarea":"/assets/lib/scui/dist/components/scTextarea/sc-textarea",
     "sc-checkbox":"/assets/lib/scui/dist/components/scCheckbox/sc-checkbox",
     "sc-checkbox-group":"/assets/lib/scui/dist/components/scCheckboxGroup/sc-checkbox-group",
-    "sc-form":"/assets/lib/scui/dist/components/scForm/sc-form",
     "sc-switch":"/assets/lib/scui/dist/components/scSwitch/sc-switch",
     "sc-radio":"/assets/lib/scui/dist/components/scRadio/sc-radio",
-    "sc-radio-group":"/assets/lib/scui/dist/components/scRadioGroup/sc-radio-group",
-    "sc-cell":"/assets/lib/scui/dist/components/scCell/sc-cell",
-    "sc-cell-group":"/assets/lib/scui/dist/components/scCellGroup/sc-cell-group",
-    "sc-loading":"/assets/lib/scui/dist/components/scLoading/sc-loading",
-    "sc-select":"/assets/lib/scui/dist/components/scSelect/sc-select",
-    "sc-option":"/assets/lib/scui/dist/components/scOption/sc-option",
-    "sc-tab-group":"/assets/lib/scui/dist/components/scTabGroup/sc-tab-group",
-    "sc-tab":"/assets/lib/scui/dist/components/scTab/sc-tab",
-    "sc-dialog":"/assets/lib/scui/dist/components/scDialog/sc-dialog",
-    "sc-snackbar":"/assets/lib/scui/dist/components/scSnackbar/sc-snackbar",
-    "sc-date-picker":"/assets/lib/scui/dist/components/scDatePicker/sc-date-picker",
-    "sc-time-picker":"/assets/lib/scui/dist/components/scTimePicker/sc-time-picker"
+    "sc-radio-group":"/assets/lib/scui/dist/components/scRadioGroup/sc-radio-group"
   }
 }

@@ -7,13 +7,13 @@
         <view class="ui-test-section">
             <text class="text-body2 text-secondary" style="margin: 8px;display: inline-block">风格</text>
             <sc-cell-group>
-                <sc-cell right-icon="iconfont icon-right" data-url="/pages/style/font/font" bind:tap="goPage">
+                <sc-cell right-icon="iconfont icon-keyboardarrowright"  data-url="/pages/style/font/font" bind:tap="goPage">
                     排版
                 </sc-cell>
-                <sc-cell right-icon="iconfont icon-right" data-url="/pages/style/layout/layout" bind:tap="goPage">
+                <sc-cell right-icon="iconfont icon-keyboardarrowright" data-url="/pages/style/layout/layout" bind:tap="goPage">
                     布局
                 </sc-cell>
-                <sc-cell right-icon="iconfont icon-right" data-url="/pages/style/icon/icon" bind:tap="goPage">
+                <sc-cell right-icon="iconfont icon-keyboardarrowright" data-url="/pages/style/icon/icon" bind:tap="goPage">
                     icon
                 </sc-cell>
             </sc-cell-group>
@@ -21,218 +21,37 @@
         <view class="ui-test-section">
             <text class="text-body2 text-secondary" style="margin: 8px;display: inline-block">组件</text>
             <sc-cell-group>
-                <sc-cell right-icon="iconfont icon-right" data-url="/pages/components/button/button" bind:tap="goPage">
+                <sc-cell right-icon="iconfont icon-keyboardarrowright" data-url="/pages/components/button/button" bind:tap="goPage">
                     Button 按钮
                 </sc-cell>
-                <sc-cell right-icon="iconfont icon-right" data-url="/pages/components/selectionControls/selectionControls" bind:tap="goPage">
+                <sc-cell right-icon="iconfont icon-keyboardarrowright" data-url="/pages/components/selectionControls/selectionControls" bind:tap="goPage">
                     select Controls 选择控制
                 </sc-cell>
-                <sc-cell right-icon="iconfont icon-right" data-url="/pages/components/input/input" bind:tap="goPage">
+                <sc-cell right-icon="iconfont icon-keyboardarrowright" data-url="/pages/components/input/input" bind:tap="goPage">
                     Textfield 文本框
                 </sc-cell>
-                <sc-cell right-icon="iconfont icon-right" data-url="/pages/components/form/form" bind:tap="goPage">
+                <sc-cell right-icon="iconfont icon-keyboardarrowright" data-url="/pages/components/form/form" bind:tap="goPage">
                     form 表单
                 </sc-cell>
-                <sc-cell right-icon="iconfont icon-right" data-url="/pages/components/cell/cell" bind:tap="goPage">
+                <sc-cell right-icon="iconfont icon-keyboardarrowright" data-url="/pages/components/cell/cell" bind:tap="goPage">
                     cell 单元格
                 </sc-cell>
-                <sc-cell right-icon="iconfont icon-right" data-url="/pages/components/tab/tab" bind:tap="goPage">
+                <sc-cell right-icon="iconfont icon-keyboardarrowright" data-url="/pages/components/tab/tab" bind:tap="goPage">
                     Tab 标签
                 </sc-cell>
-                <sc-cell right-icon="iconfont icon-right" data-url="/pages/components/dialog/dialog" bind:tap="goPage">
+                <sc-cell right-icon="iconfont icon-keyboardarrowright" data-url="/pages/components/dialog/dialog" bind:tap="goPage">
                     Dialog 模态框
                 </sc-cell>
-                <sc-cell right-icon="iconfont icon-right" data-url="/pages/components/snackbar/snackbar" bind:tap="goPage">
+                <sc-cell right-icon="iconfont icon-keyboardarrowright" data-url="/pages/components/snackbar/snackbar" bind:tap="goPage">
                     Snackbar 消息提示
                 </sc-cell>
-                <sc-cell right-icon="iconfont icon-right" data-url="/pages/components/progress/progress" bind:tap="goPage">
+                <sc-cell right-icon="iconfont icon-keyboardarrowright" data-url="/pages/components/progress/progress" bind:tap="goPage">
                     Progress/Loading 进度指示器
                 </sc-cell>
-                <sc-cell right-icon="iconfont icon-right" data-url="/pages/components/datepicker/datepicker" bind:tap="goPage">
+                <sc-cell right-icon="iconfont icon-keyboardarrowright" data-url="/pages/components/datepicker/datepicker" bind:tap="goPage">
                     Date/time picker 日期/时间选择器
                 </sc-cell>
             </sc-cell-group>
         </view>
-        <!--<view class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">button组件</view>-->
-        <!--<view style="display: flex;justify-content: center;align-items: center">-->
-        <!--<sc-button sc-class="sc-btn box-shadow-9 new-color" style="display: inline-block;margin-right: 16px"-->
-        <!--open-type="getUserInfo" bind:getuserinfo="getUserInfo">-->
-        <!--普通-->
-        <!--</sc-button>-->
-        <!--<sc-button sc-class="sc-btn sc-btn-icon box-shadow-9" style="display: inline-block;margin-right: 16px">-->
-        <!--<text class="sc-icon iconfont icon-phone"></text>-->
-        <!--</sc-button>-->
-        <!--<sc-button sc-class="sc-btn box-shadow-9" style="display: inline-block;margin-right: 16px" disabled="true">-->
-        <!--禁用-->
-        <!--</sc-button>-->
-        <!--</view>-->
-        <!--</view>-->
-
-        <!--<view class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">input组件</view>-->
-        <!--<view style="">-->
-        <!--<sc-input sc-class="sc-input" label="普通" bindinput="input"></sc-input>-->
-        <!--<sc-input input-type="phone" sc-class="sc-input" label="带图标" bindinput="input"-->
-        <!--with-icon icon="iconfont icon-weibiaoti-"></sc-input>-->
-        <!--<sc-input sc-class="sc-input" label="身份证" bindinput="input" err-text="身份证号不对"-->
-        <!--regex="(^\\d{15}$)|(^\\d{18}$)|(^\\d{17}(\\d|X|x)$)"></sc-input>-->
-        <!--<sc-input sc-class="sc-input" label="禁用" bindinput="input" disabled="{{true}}"></sc-input>-->
-        <!--<sc-textarea sc-class="sc-textarea" style="width: 80%" label="多行文本框"></sc-textarea>&lt;!&ndash; 高度控制问题 &ndash;&gt;-->
-        <!--</view>-->
-        <!--</view>-->
-
-        <!--<view class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">checkbox组件</view>-->
-        <!--<view>-->
-        <!--<sc-checkbox-group sc-class="sc-checkbox-group-row" bindchange="checkboxChange">-->
-        <!--<sc-checkbox sc-class="sc-checkbox" label="初始选中" checked="{{true}}" value="check1"></sc-checkbox>-->
-        <!--<sc-checkbox sc-class="sc-checkbox" label="初始未选中" checked="{{false}}" value="check2"></sc-checkbox>-->
-        <!--<sc-checkbox disabled="{{true}}" sc-class="sc-checkbox" label="禁用" checked="{{false}}"></sc-checkbox>-->
-        <!--</sc-checkbox-group>-->
-        <!--</view>-->
-        <!--</view>-->
-
-        <!--<view class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">switch组件</view>-->
-        <!--<view>-->
-        <!--<sc-switch style="height: 36px" sc-class="sc-switch" bind:change="switchChange"></sc-switch>-->
-        <!--<sc-switch style="margin-left: 16px" sc-class="sc-switch" disabled="{{true}}"-->
-        <!--bind:change="switchChange"></sc-switch>-->
-        <!--</view>-->
-        <!--</view>-->
-
-        <!--<view class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">radio组件</view>-->
-        <!--<view>-->
-        <!--<sc-radio-group bind:change="radioChange">-->
-        <!--<sc-radio style="margin-right: 8px" label="radio1" sc-class="sc-radio" checked="{{true}}"-->
-        <!--value="radio1"></sc-radio>-->
-        <!--<sc-radio style="margin-right: 8px" label="radio2" sc-class="sc-radio" value="radio2"></sc-radio>-->
-        <!--<sc-radio style="margin-right: 8px" label="disabled" sc-class="sc-radio" checked disabled></sc-radio>-->
-        <!--</sc-radio-group>-->
-        <!--</view>-->
-        <!--</view>-->
-
-        <!--<view class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">进度条组件</view>-->
-        <!--<view style="width: 100%;text-align: center">-->
-        <!--<sc-progress sc-class="sc-progress"></sc-progress>-->
-        <!--<sc-progress sc-class="sc-progress" sc-determinate-class="sc-progress-determinate" type="determinate"-->
-        <!--width="{{80}}"></sc-progress>-->
-        <!--</view>-->
-        <!--</view>-->
-
-        <!--<view class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">cell组件</view>-->
-        <!--<view style="">-->
-        <!--<sc-cell-group>-->
-        <!--<sc-cell sub-header="subheader" ripple="{{false}}">header</sc-cell>-->
-        <!--<sc-cell left-icon="iconfont icon-phone">header</sc-cell>-->
-        <!--<sc-cell right-icon="iconfont icon-right" right-text="右侧">header</sc-cell>-->
-        <!--<sc-cell switch ripple="{{false}}" value="cellSwitch" checked bind:cellSwitchChange="cellChange">-->
-        <!--header-->
-        <!--</sc-cell>-->
-        <!--</sc-cell-group>-->
-        <!--</view>-->
-        <!--</view>-->
-
-        <!--<view class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">dialog组件</view>-->
-        <!--<view>-->
-        <!--<sc-button sc-class="sc-btn" bind:tap="openDialog">打开/关闭</sc-button>-->
-        <!--<sc-dialog id="dialog" sc-class="box-shadow-8" bind:open="dialogOpen" bind:close="dialogClose" bind:opened="dialogOpened"-->
-        <!--bind:closed="dialogClosed">-->
-        <!--<view style="padding: 16px">-->
-        <!--<text class="text-4">我是海绵宝宝</text>-->
-        <!--<image style="width: 180px;height: 120px;" src="/assets/image/haimianbaobao.jpg"></image>-->
-        <!--</view>-->
-        <!--</sc-dialog>-->
-        <!--</view>-->
-        <!--</view>-->
-
-        <!--<view class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">snackbar组件</view>-->
-        <!--<view>-->
-        <!--<sc-button sc-class="sc-btn" bind:tap="openSnackBar">打开/关闭</sc-button>-->
-        <!--<sc-snackbar id="snackbar">这是一个snackbar</sc-snackbar>-->
-        <!--</view>-->
-        <!--</view>-->
-
-        <!--<view class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">tab组件</view>-->
-        <!--<view style="">-->
-        <!--<sc-tab-group tab-list="{{tabList}}" style="min-height: 180px">-->
-        <!--<sc-tab>页面1</sc-tab>-->
-        <!--<sc-tab>-->
-        <!--页面2-->
-        <!--<image style="width: 180px;height:120px;" src="/assets/image/haimianbaobao.jpg"></image>-->
-        <!--</sc-tab>-->
-        <!--<sc-tab>-->
-        <!--页面3-->
-        <!--<view>-->
-        <!--<sc-input sc-class="sc-input" label="普通" bindinput="input"></sc-input>-->
-        <!--<sc-button sc-class="sc-btn box-shadow-9 new-color" style="display: inline-block;margin-right: 16px"-->
-        <!--open-type="getUserInfo" bind:getuserinfo="getUserInfo">-->
-        <!--普通-->
-        <!--</sc-button>-->
-        <!--</view>-->
-        <!--</sc-tab>-->
-        <!--<sc-tab >-->
-        <!--页面4-->
-        <!--</sc-tab>-->
-        <!--</sc-tab-group>-->
-        <!--</view>-->
-        <!--</view>-->
-
-        <!--<view  class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">datepicker组件</view>-->
-        <!--<sc-button sc-class="sc-btn" bind:tap="openDatePicker">打开/关闭</sc-button>-->
-        <!--<sc-date-picker id="datepicker" bind:submit="datePickerSubmit"></sc-date-picker>-->
-        <!--</view>-->
-
-        <!--<view  class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">timepicker组件</view>-->
-        <!--<sc-button sc-class="sc-btn" bind:tap="openTimePicker">打开/关闭</sc-button>-->
-        <!--<sc-time-picker id="timepicker" bind:submit="datePickerSubmit"></sc-time-picker>-->
-        <!--</view>-->
-
-        <!--<view class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">loading组件</view>-->
-        <!--<view style="">-->
-        <!--<sc-loading sc-class="sc-loading" circle-color="#45FF40"></sc-loading>-->
-        <!--</view>-->
-        <!--</view>-->
-
-        <!--<view class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">select组件</view>-->
-        <!--<view style="">-->
-        <!--<sc-select>-->
-        <!--<sc-option>111</sc-option>-->
-        <!--<sc-option>222</sc-option>-->
-        <!--<sc-option>2333</sc-option>-->
-        <!--</sc-select>-->
-        <!--</view>-->
-        <!--</view>-->
-
-        <!--<view class="ui-test-item">-->
-        <!--<view class="ui-test-item-header">form表单组件</view>-->
-        <!--<sc-form bind:submit="submit" report-submit submit-text="submit" submit-btn-class="sc-btn submit-btn"-->
-        <!--style="width: 100%;text-align: center">-->
-        <!--<sc-input sc-class="sc-input" label="姓名" name="name" bindinput="input" selection-start="{{-1}}"-->
-        <!--cursor="0"></sc-input>-->
-        <!--<sc-radio-group sc-class="sc-radio-group" name="sex">-->
-        <!--<sc-radio style="margin-right: 8px" label="男" sc-class="sc-radio" checked="{{true}}" value="man"></sc-radio>-->
-        <!--<sc-radio style="margin-right: 8px" label="女" sc-class="sc-radio" value="women"></sc-radio>-->
-        <!--</sc-radio-group>-->
-        <!--<sc-checkbox-group name="like" sc-class="sc-checkbox-group-row" bindchange="checkboxChange">-->
-        <!--<sc-checkbox sc-class="sc-checkbox" label="音乐" checked="{{true}}" value="music"></sc-checkbox>-->
-        <!--<sc-checkbox sc-class="sc-checkbox" label="电影" checked="{{false}}" value="movie"></sc-checkbox>-->
-        <!--<sc-checkbox sc-class="sc-checkbox" label="书籍" checked="{{false}}" value="book"></sc-checkbox>-->
-        <!--</sc-checkbox-group>-->
-        <!--</sc-form>-->
-        <!--</view>-->
-        <!--</view>-->
-        <sc-slider></sc-slider>
     </view>
 </view>

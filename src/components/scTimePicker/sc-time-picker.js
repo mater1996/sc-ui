@@ -132,7 +132,6 @@ Component({
                     let date = this.data.date.set('hour', pHour);
                     let dateObject = date.toObject();
                     let minutes = dateObject.minutes;
-                    console.log(minutes.length);
                     dateObject.minutes = minutes.toString().length >= 2 ? minutes : '0' + minutes;
                     this.setData({
                         date: date,
@@ -154,7 +153,6 @@ Component({
                     let date = dayjs(this.data.date.set('minute', selectMinute).toISOString());
                     let dateObject = date.toObject();
                     let minutes = dateObject.minutes;
-                    console.log(dateObject);
                     dateObject.minutes = minutes.toString().length >= 2 ? minutes : '0' + minutes;
                     this.setData({
                         date: date,

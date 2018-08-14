@@ -82,7 +82,7 @@
     background-color: rgb(255,255,255);
 }
 
-.sc-btn-fab text {
+.sc-btn-fab i{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -93,7 +93,7 @@
     transform: translate(-28rpx, -28rpx);
 }
 
-.sc-btn-fab text, text::before {
+.sc-btn-fab i, i::before {
     font-style: normal;
     font-weight: 400;
     line-height: 1;
@@ -112,7 +112,7 @@
     height: 80rpx;
 }
 
-.sc-btn-fab.sc-btn-small text{
+.sc-btn-fab.sc-btn-small i{
     width: 40rpx;
     line-height: 40rpx;
     font-size: 36rpx;
@@ -126,7 +126,7 @@
     height: 144rpx;
 }
 
-.sc-btn-fab.sc-btn-large text{
+.sc-btn-fab.sc-btn-large i{
     width: 72rpx;
     line-height: 72rpx;
     font-size: 60rpx;

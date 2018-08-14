@@ -5,7 +5,7 @@
     height: 72rpx;
     padding: 0 32rpx;
     font-size: 28rpx;
-    border-radius: 2px;
+    border-radius: 4rpx;
     background-color: rgb(255,255,255);
 }
 
@@ -68,9 +68,9 @@
     align-items: center;
     box-sizing: border-box;
     align-self: center;
-    width: 220px;
-    height: 220px;
-    margin: 16px;
+    width: 440rpx;
+    height: 440rpx;
+    margin: 32rpx;
 }
 
 .time-container .time-circle{
@@ -121,7 +121,7 @@
     justify-content: flex-end;
     align-items: center;
     width: 50%;
-    height: 2px;
+    height: 4rpx;
     background-color: #0b93d5;
     top: 50%;
     left: 50%;

@@ -15,7 +15,7 @@
                 </view>
                 <view>valie</view>
                 <view class="text-caption">
-                    <text>选择的时间:{{value}}</text>
+                    <text>选择的时间:{{dateValue}}</text>
                 </view>
             </view>
         </view>
@@ -45,7 +45,7 @@
                 </view>
                 <view>valie</view>
                 <view class="text-caption">
-                    <text>选择的时间:{{value}}</text>
+                    <text>选择的时间:{{timeValue}}</text>
                 </view>
             </view>
         </view>
@@ -56,7 +56,7 @@
                             bind:close="pickerClose"
                             bind:opened="pickerOpened"
                             bind:closed="pickerClosed"
-                            bind:submit="datePickerSubmit"
+                            bind:submit="timePickerSubmit"
             ></sc-time-picker>
         </view>
     </view>

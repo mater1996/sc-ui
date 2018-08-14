@@ -1,9 +1,9 @@
 <!-- 
  Created by bai on 2018/6/29
  -->
-<view class="sc-class sc-dialog">
+<view class="sc-dialog">
     <view wx:if="{{show}}"
-          class="sc-dialog-content {{opening?tin:''}}  {{closing?tout:''}}"
+          class="sc-class sc-dialog-content {{opening?tin:''}}  {{closing?tout:''}}"
           bind:animationend="{{!overlayClose ? '_animationend' : ''}}"
     >
         <slot></slot>

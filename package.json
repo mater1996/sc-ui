@@ -70,5 +70,8 @@
     "clean": "gulp clean --silent",
     "dev": "gulp watch --silent"
   },
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp-strip-debug": "^3.0.0"
+  }
 }
