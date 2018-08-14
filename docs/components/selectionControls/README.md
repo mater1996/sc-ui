@@ -7,7 +7,7 @@
   "sc-switch":"path/to/dist/components/scSwitch/sc-switch",
   "sc-radio-group":"path/to/dist/components/scRadioGroup/sc-radio-group",
   "sc-radio":"path/to/dist/components/scRadio/sc-radio",
-  "sc-checkboxGroup":"path/to/dist/components/scCheckboxGroup/sc-checkbox-group"
+  "sc-checkboxGroup":"path/to/dist/components/scCheckboxGroup/sc-checkbox-group",
   "sc-checkbox":"path/to/dist/components/scCheckbox/sc-checkbox"
 }
 ```
