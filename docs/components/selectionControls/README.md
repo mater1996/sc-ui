@@ -83,13 +83,13 @@ radio 必须结合radio-group使用
 ***
 
 #### 3. sc-checkbox
-radio 必须结合radio-group使用
+checkbox 必须结合checkbox-group使用
 ```html
- <sc-radio-group bind:change="radioChange">
-   <sc-radio label="radio1" checked value="radio1"></sc-radio>
-   <sc-radio label="radio2" reverse value="radio2" color="red"></sc-radio>
-   <sc-radio label="disabled" checked disabled></sc-radio>
- </sc-radio-group>
+ <sc-checkbox-group bind:change="checkboxChange">
+   <sc-checkbox label="checkbox1" checked value="checkbox1"></sc-checkbox>
+   <sc-checkbox label="checkbox2" reverse value="checkbox2" color="red"></sc-checkbox>
+   <sc-checkbox label="disabled" checked disabled></sc-checkbox>
+ </sc-checkbox-group>
 ```
 
 ##### 3.1. sc-checkbox-group
