@@ -7,7 +7,7 @@
 ![img](https://cdn.rawgit.com/xbup/sc-ui/104ff7c2/test.gif)
 
 小程序码
-![img](https://cdn.rawgit.com/xbup/sc-ui/5b814316/gh_8cb2d1e6af9d_1280.jpg)
+![img](https://cdn.rawgit.com/xbup/sc-ui/5b814316/gh_8cb2d1e6af9d_1280.jpg){:height="256px" width="256px"}
 
 ## get start
 
