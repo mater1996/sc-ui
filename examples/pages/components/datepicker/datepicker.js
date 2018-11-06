@@ -6,15 +6,15 @@ const scui = require('../../../assets/lib/scui/dist/sc-ui');
 Page({
     data: {
         jsUsage:'this.data.datePicker = scui.DatePicker("#datepicker");\n' +
-        'this.data.datePicker.open();',
+            'this.data.datePicker.open();',
         htmlUsage:'<sc-button sc-class="sc-btn" bind:tap="openDatePicker">打开/关闭</sc-button>\n' +
-        '  <sc-date-picker id="datepicker"\n' +
-        '     bind:open="pickerOpen"\n' +
-        '     bind:close="pickerClose"\n' +
-        '     bind:opened="pickerOpened"\n' +
-        '     bind:closed="pickerClosed"\n' +
-        '     bind:submit="datePickerSubmit"\n' +
-        '></sc-date-picker>',
+            '  <sc-date-picker id="datepicker"\n' +
+            '     bind:open="pickerOpen"\n' +
+            '     bind:close="pickerClose"\n' +
+            '     bind:opened="pickerOpened"\n' +
+            '     bind:closed="pickerClosed"\n' +
+            '     bind:submit="datePickerSubmit"\n' +
+            '></sc-date-picker>',
         dateValue:null,
         timeValue:null
     },

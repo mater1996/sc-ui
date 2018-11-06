@@ -57,7 +57,6 @@ Component({
             this._setTab(this.properties.tabIndex || 0);
         });
     },
-    // externalClasses: ['sc-class','sc-ripple-class'],
     methods: {
         _queryMultipleNodes: function (e) {
             return new Promise((resolve, reject) => {

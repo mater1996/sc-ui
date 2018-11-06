@@ -13,7 +13,7 @@
                 <view class="code">
                     <text>{{htmlUsage}}</text>
                 </view>
-                <view>valie</view>
+                <view>value</view>
                 <view class="text-caption">
                     <text>选择的时间:{{dateValue}}</text>
                 </view>
@@ -43,7 +43,7 @@
                 <view class="code">
                     <text>{{htmlUsage}}</text>
                 </view>
-                <view>valie</view>
+                <view>value</view>
                 <view class="text-caption">
                     <text>选择的时间:{{timeValue}}</text>
                 </view>

@@ -4,6 +4,11 @@
   "navigationBarTextStyle":"black",
   "usingComponents":{
     "sc-cell":"/assets/lib/scui/dist/components/scCell/sc-cell",
-    "sc-cell-group":"/assets/lib/scui/dist/components/scCellGroup/sc-cell-group"
+    "sc-cell-group":"/assets/lib/scui/dist/components/scCellGroup/sc-cell-group",
+    "sc-checkbox":"/assets/lib/scui/dist/components/scCheckbox/sc-checkbox",
+    "sc-checkbox-group":"/assets/lib/scui/dist/components/scCheckboxGroup/sc-checkbox-group",
+    "sc-switch":"/assets/lib/scui/dist/components/scSwitch/sc-switch",
+    "sc-radio":"/assets/lib/scui/dist/components/scRadio/sc-radio",
+    "sc-radio-group":"/assets/lib/scui/dist/components/scRadioGroup/sc-radio-group"
   }
 }

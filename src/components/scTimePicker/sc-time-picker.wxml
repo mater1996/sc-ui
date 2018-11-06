@@ -13,7 +13,7 @@
                     :
                 </view>
                 <view class="{{minuteView? 'active' :''}}" catch:tap="changeViewToMinute">
-                    {{dateObject.minutes}}
+                    {{dateObject.minutesShow}}
                 </view>
             </view>
             <view class="am-pm">

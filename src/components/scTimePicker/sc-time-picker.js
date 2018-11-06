@@ -87,7 +87,7 @@ Component({
             minute: 55,
             active: false
         }, {
-            minute: 60,
+            minute: 0,
             active: false
         }],
         minuteView: false,
@@ -132,7 +132,7 @@ Component({
                     let date = this.data.date.set('hour', pHour);
                     let dateObject = date.toObject();
                     let minutes = dateObject.minutes;
-                    dateObject.minutes = minutes.toString().length >= 2 ? minutes : '0' + minutes;
+                    // dateObject.minutes = minutes.toString().length >= 2 ? minutes : '0' + minutes;
                     this.setData({
                         date: date,
                         dateObject: dateObject,
@@ -153,7 +153,8 @@ Component({
                     let date = dayjs(this.data.date.set('minute', selectMinute).toISOString());
                     let dateObject = date.toObject();
                     let minutes = dateObject.minutes;
-                    dateObject.minutes = minutes.toString().length >= 2 ? minutes : '0' + minutes;
+                    dateObject.minutesShow = minutes.toString().length >= 2 ? minutes : '0' + minutes;
+                    console.log(dateObject)
                     this.setData({
                         date: date,
                         dateObject: dateObject,
@@ -173,7 +174,7 @@ Component({
                 let date = this.data.date.set('hour', pHour);
                 let dateObject = date.toObject();
                 let minutes = dateObject.minutes;
-                dateObject.minutes = minutes.toString().length >= 2 ? minutes : '0' + minutes;
+                dateObject.minutesShow = minutes.toString().length >= 2 ? minutes : '0' + minutes;
                 this.setData({
                     date: date,
                     dateObject: dateObject,
@@ -215,7 +216,7 @@ Component({
             date = date.set('hour', hour);
             let dateObject = date.toObject();
             let minutes = dateObject.minutes;
-            dateObject.minutes = minutes.toString().length >= 2 ? minutes : '0' + minutes;
+            dateObject.minutesShow = minutes.toString().length >= 2 ? minutes : '0' + minutes;
             this.setData({
                 date: date,
                 dateObject: dateObject,
@@ -236,7 +237,7 @@ Component({
             date = date.set('hour', hour);
             let dateObject = date.toObject();
             let minutes = dateObject.minutes;
-            dateObject.minutes = minutes.toString().length >= 2 ? minutes : '0' + minutes;
+            dateObject.minutesShow = minutes.toString().length >= 2 ? minutes : '0' + minutes;
             this.setData({
                 date: date,
                 dateObject: dateObject,
@@ -295,7 +296,7 @@ Component({
             let date = dayjs(options.date);
             let dateObject = date.toObject();
             let minutes = dateObject.minutes;
-            dateObject.minutes = minutes.toString().length >= 2 ? minutes : '0' + minutes;
+            dateObject.minutesShow = minutes.toString().length >= 2 ? minutes : '0' + minutes;
             this.setData({
                 date: date,
                 dateObject: dateObject,
