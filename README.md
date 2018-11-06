@@ -2,12 +2,13 @@
 
 微信小程序material ui
 
-展示
+##### 展示
 
 ![img](https://cdn.rawgit.com/xbup/sc-ui/104ff7c2/test.gif)
 
-小程序码
-![img](https://cdn.rawgit.com/xbup/sc-ui/5b814316/gh_8cb2d1e6af9d_1280git.jpg)
+##### 小程序码
+
+<img src="https://cdn.rawgit.com/xbup/sc-ui/5b814316/gh_8cb2d1e6af9d_1280.jpg" height="256px" width="256px" />
 
 ## get start
 
