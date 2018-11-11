@@ -1,20 +1,21 @@
 # sc-ui
 
-微信小程序material ui
+微信小程序 material design UI
 
 ##### 展示
 
-![img](https://cdn.rawgit.com/xbup/sc-ui/104ff7c2/test.gif)
+![img](https://cdn.jsdelivr.net/gh/xbup/sc-ui@104ff7c253e0015f7cdba59b0bb0e168f9c687d7/test.gif)
 
-##### 小程序码
+##### 体验
+使用微信扫一扫体验小程序组件示例
 
-<img src="https://cdn.rawgit.com/xbup/sc-ui/5b814316/gh_8cb2d1e6af9d_1280.jpg" height="256px" width="256px" />
+<img src="https://cdn.jsdelivr.net/gh/xbup/sc-ui@5b8143163dbadaa239b4d01e816f4f9ad38e9e08/gh_8cb2d1e6af9d_1280.jpg" height="256px" width="256px" />
 
 ## get start
 
 ##### 下载：目前不支持npm install 请直接clone或下载
 
-### 1. 引入文件
+## 1. 引入文件
 
 将dist文件引入到项目目录任意位置
 
@@ -29,7 +30,7 @@ const scui = require('path/to/dist/sc-ui');
 ```
 
 #### component
-```json
+```js
 "usingComponents":{
     "sc-button":"path/to/dist/components/scButton/sc-button",
     "sc-input":"path/to/dist/components/scInput/sc-input",
@@ -56,21 +57,28 @@ const scui = require('path/to/dist/sc-ui');
 #### icon
 http://www.iconfont.cn/collections/detail?cid=444
 
-#### docs
+## 2. docs(文档)
 
  - components
-   - [button](https://github.com/xbup/sc-ui/tree/master/docs/components/button)
-   - [input](https://github.com/xbup/sc-ui/tree/master/docs/components/input)
-   - [selectionControls](https://github.com/xbup/sc-ui/tree/master/docs/components/selectionControls)
-   - [cell](https://github.com/xbup/sc-ui/tree/master/docs/components/cell)
-   - [form](https://github.com/xbup/sc-ui/tree/master/docs/components/form)
-   - [dialog](https://github.com/xbup/sc-ui/tree/master/docs/components/dialog)
-   - [picker](https://github.com/xbup/sc-ui/tree/master/docs/components/picker)
-   - [snackbar](https://github.com/xbup/sc-ui/tree/master/docs/components/snackbar)
-   - [tab](https://github.com/xbup/sc-ui/tree/master/docs/components/tab)
+   - [button(按钮)](https://github.com/xbup/sc-ui/tree/master/docs/components/button)
+   - [input(输入框)](https://github.com/xbup/sc-ui/tree/master/docs/components/input)
+   - [selectionControls(选择控制器)](https://github.com/xbup/sc-ui/tree/master/docs/components/selectionControls)
+   - [cell(单元格)](https://github.com/xbup/sc-ui/tree/master/docs/components/cell)
+   - [form(表单)](https://github.com/xbup/sc-ui/tree/master/docs/components/form)
+   - [dialog(模态框)](https://github.com/xbup/sc-ui/tree/master/docs/components/dialog)
+   - [picker(日期/时间选择器)](https://github.com/xbup/sc-ui/tree/master/docs/components/picker)
+   - [snackbar(消息提示)](https://github.com/xbup/sc-ui/tree/master/docs/components/snackbar)
+   - [tab(标签)](https://github.com/xbup/sc-ui/tree/master/docs/components/tab)
  - style
-   - [font](https://github.com/xbup/sc-ui/tree/master/docs/style/font)
-   - [icon](https://github.com/xbup/sc-ui/tree/master/docs/style/icon)
-   - [layout](https://github.com/xbup/sc-ui/tree/master/docs/style/layout)
+   - [font(字体)](https://github.com/xbup/sc-ui/tree/master/docs/style/font)
+   - [icon(图标)](https://github.com/xbup/sc-ui/tree/master/docs/style/icon)
+   - [layout(布局)](https://github.com/xbup/sc-ui/tree/master/docs/style/layout)
 
 
+## 3.案例
+
+<img src="https://cdn.jsdelivr.net/gh/xbup/sc-ui@master/gh_acaa36129c87_430.jpg" height="200px" width="200px" />
+
+## 4.License
+[MIT](https://opensource.org/licenses/MIT)
+Copyright (c) 2018-present, xbup
